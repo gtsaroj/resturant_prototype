@@ -4,10 +4,10 @@ export const Banner: React.FC = () => {
   return (
     <div className="relative group/banner w-full    py-1 sm:py-2">
       {/* Banner Image */}
-      <div className="w-full group-hover/banner:blur-sm blur-0 duration-150 lg:h-[70vh] sm:h-[50vh] h-[30vh] relative rounded-lg overflow-hidden">
+      <div className="w-full group-hover/banner:blur-[1px] blur-0 duration-150 lg:h-[70vh] sm:h-[50vh] h-[30vh] relative rounded-lg overflow-hidden">
         <img
           src={BannerImg}
-          className="w-full group-hover/banner:scale-[1.05] scale-[1]   duration-150 h-full object-cover rounded-lg transform transition-transform "
+          className="w-full group-hover/banner:scale-[1.01] scale-[1]   duration-150 h-full object-cover rounded-lg transform transition-transform "
           alt="banner"
         />
         {/* Dark Overlay for Better Text Contrast */}

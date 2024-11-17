@@ -1,7 +1,9 @@
 import { Banner } from "../Components/Banner/Banner";
+import Footer from "../Components/Footer/Footer";
 import { Inquiry } from "../Components/Inquiry/Inquiry";
 import { Menu } from "../Components/Menu/Menu";
 import { Navbar } from "../Components/Navbar/Navbar";
+import { Event } from "./Event";
 
 export const Homepage = () => {
   return (
@@ -11,7 +13,10 @@ export const Homepage = () => {
         <Banner />
         <Inquiry />
       </div>
+      <Event />
       <Menu />
+
+      <Footer />
     </div>
   );
 };

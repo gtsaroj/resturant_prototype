@@ -5,13 +5,13 @@ export const Navbar = () => {
     <nav className="w-full flex items-center justify-between px-6 py-4 bg-[var(--dark-background)] dark:bg-var(--body-bg-dark) transition-all duration-300">
       {/* Logo Section */}
       <div className="flex items-center gap-4">
-        <div className="w-[5.5] h-[5.5rem] rounded-full overflow-hidden">
+        <div className="sm:w-[5rem]  w-[4rem] h-[4rem] sm:h-[5rem] rounded-full overflow-hidden">
           <img className="w-full h-full object-cover" src={Logo} alt="logo" />
         </div>
       </div>
 
       {/* Navigation Links */}
-      <ul className="flex text-lg items-center gap-8  text-var(--text-primary-light) dark:text-var(--text-primary-dark)">
+      <ul className="flex text-lg items-center gap-8 text-[var(--light-text)] ">
         <li className="relative group ">
           <a
             href="/"
