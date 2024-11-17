@@ -11,7 +11,7 @@ const EventCard = ({
   title,
 }: EventTypes) => {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg  overflow-hidden  duration-300">
+    <div className="sm:w-[20rem] w-full bg-white border border-gray-200 rounded-lg  overflow-hidden  duration-300">
       {/* Event Image */}
       <div className="relative">
         <img

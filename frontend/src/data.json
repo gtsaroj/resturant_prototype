@@ -1,127 +1,197 @@
 {
-    "menu": [
-      {
-        "id": "01",
-        "name": "Burgers",
-        "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
-      },
-      {
-        "id": "02",
-        "name": "Pizzas",
-        "image": "https://images.unsplash.com/photo-1601924579356-72d0f8b9a0c4"
-      },
-      {
-        "id": "03",
-        "name": "Pasta",
-        "image": "https://images.unsplash.com/photo-1521389508051-d7ffb5dc8d3d"
-      },
-      {
-        "id": "04",
-        "name": "Salads",
-        "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
-      },
-      {
-        "id": "05",
-        "name": "Sandwiches",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
-      },
-      {
-        "id": "06",
-        "name": "Desserts",
-        "image": "https://images.unsplash.com/photo-1534351590666-13e2a9d4a0d3"
-      },
-      {
-        "id": "07",
-        "name": "Smoothies",
-        "image": "https://images.unsplash.com/photo-1533158311241-2c7b8a6a3a48"
-      },
-      {
-        "id": "08",
-        "name": "Fries & Sides",
-        "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb35"
-      },
-      {
-        "id": "09",
-        "name": "Drinks",
-        "image": "https://images.unsplash.com/photo-1568043210943-279be15001f2"
-      },
-      {
-        "id": "10",
-        "name": "Grills",
-        "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90"
-      }
-    ],
-    "products": [
-      {
-        "id": "prod_01_001",
-        "name": "Chicken Burger",
-        "price": 340,
-        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
-        "category": "01"
-      },
-      {
-        "id": "prod_01_002",
-        "name": "Beef Burger",
-        "price": 380,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "01"
-      },
-      {
-        "id": "prod_01_003",
-        "name": "Veggie Burger",
-        "price": 300,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "01"
-      },
-      {
-        "id": "prod_02_001",
-        "name": "Margherita Pizza",
-        "price": 500,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "02"
-      },
-      {
-        "id": "prod_02_002",
-        "name": "Pepperoni Pizza",
-        "price": 550,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "02"
-      },
-      {
-        "id": "prod_02_003",
-        "name": "BBQ Chicken Pizza",
-        "price": 600,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "02"
-      },
-      {
-        "id": "prod_02_004",
-        "name": "Veggie Supreme Pizza",
-        "price": 580,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "02"
-      },
-      {
-        "id": "prod_03_001",
-        "name": "Spaghetti Bolognese",
-        "price": 350,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "03"
-      },
-      {
-        "id": "prod_03_002",
-        "name": "Penne Arrabbiata",
-        "price": 300,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "03"
-      },
-      {
-        "id": "prod_03_003",
-        "name": "Fettuccine Alfredo",
-        "price": 320,
-        "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-        "category": "03"
-      }
-    ]
-  }
-  
+  "menu": [
+    {
+      "id": "01",
+      "name": "Burgers",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "02",
+      "name": "Pizzas",
+      "image": "https://images.unsplash.com/photo-1601924579356-72d0f8b9a0c4"
+    },
+    {
+      "id": "03",
+      "name": "Pasta",
+      "image": "https://images.unsplash.com/photo-1521389508051-d7ffb5dc8d3d"
+    },
+    {
+      "id": "04",
+      "name": "Salads",
+      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+    },
+    {
+      "id": "05",
+      "name": "Sandwiches",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+    },
+    {
+      "id": "06",
+      "name": "Desserts",
+      "image": "https://images.unsplash.com/photo-1534351590666-13e2a9d4a0d3"
+    },
+    {
+      "id": "07",
+      "name": "Smoothies",
+      "image": "https://images.unsplash.com/photo-1533158311241-2c7b8a6a3a48"
+    },
+    {
+      "id": "08",
+      "name": "Fries & Sides",
+      "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb35"
+    },
+    {
+      "id": "09",
+      "name": "Drinks",
+      "image": "https://images.unsplash.com/photo-1568043210943-279be15001f2"
+    },
+    {
+      "id": "10",
+      "name": "Grills",
+      "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_01_001",
+      "name": "Chicken Burger",
+      "price": 340,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_002",
+      "name": "Beef Burger",
+      "price": 380,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_003",
+      "name": "Veggie Burger",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_02_001",
+      "name": "Margherita Pizza",
+      "price": 500,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_002",
+      "name": "Pepperoni Pizza",
+      "price": 550,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_003",
+      "name": "BBQ Chicken Pizza",
+      "price": 600,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_004",
+      "name": "Veggie Supreme Pizza",
+      "price": 580,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_03_001",
+      "name": "Spaghetti Bolognese",
+      "price": 350,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_002",
+      "name": "Penne Arrabbiata",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_003",
+      "name": "Fettuccine Alfredo",
+      "price": 320,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+
+    {
+      "id": "prodfsda_01_001",
+      "name": "Chicken Burger",
+      "price": 340,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_fsda002",
+      "name": "Beef Burger",
+      "price": 380,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_01fsa_003",
+      "name": "Veggie Burger",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_0fesopj'2_001",
+      "name": "Margherita Pizza",
+      "price": 500,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02feopsaj'f_002",
+      "name": "Pepperoni Pizza",
+      "price": 550,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_sdfj02_003",
+      "name": "BBQ Chicken Pizza",
+      "price": 600,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_0fdjoi04",
+      "name": "Veggie Supreme Pizza",
+      "price": 580,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_03_00dsjio1",
+      "name": "Spaghetti Bolognese",
+      "price": 350,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_002sdvfg",
+      "name": "Penne Arrabbiata",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_00ds3",
+      "name": "Fettuccine Alfredo",
+      "price": 320,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    }
+  ]
+}
