@@ -60,13 +60,13 @@ export const Event: React.FC = () => {
   return (
     <div className="w-full flex flex-col items-start justify-center gap-10 px-3 py-10">
       <div className="w-full flex items-center ">
-        <h3 className="h-[1px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-white/100  to-black/0 dark:to-white/0"></h3>
-        <p className="font-semibold text-center sm:text-[22px] text-[12px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
+        <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-white/100  to-black/0 dark:to-white/0"></h3>
+        <p className="font-bold text-center sm:text-[22px] text-[14px]  sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
           Explore Our Events!
         </p>
-        <h3 className="h-[1px] w-full  bg-gradient-to-r from-black/0 dark:from-white/0 to-black/100 dark:to-white/100"></h3>
+        <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-white/0 to-black/100 dark:to-white/100"></h3>
       </div>
-      <div className="w-full grid md:grid-cols-3 grid-cols-1 place-content-center sm:grid-cols-2 gap-4">
+      <div className="w-full grid md:grid-cols-3 grid-cols-1 justify-items-center sm:justify-items-stretch sm:grid-cols-2 gap-4">
         {events?.map((event, index) => (
           <EventCard
             ctaLink={event.ctaLink}

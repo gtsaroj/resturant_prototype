@@ -11,7 +11,7 @@ export const Banner: React.FC = () => {
           alt="banner"
         />
         {/* Dark Overlay for Better Text Contrast */}
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
       </div>
 
       {/* Banner Text with Animation */}

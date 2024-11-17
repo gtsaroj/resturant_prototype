@@ -26,25 +26,25 @@ export const Menu = () => {
   )?.name;
 
   return (
-    <div className="flex w-full flex-col items-start px-5 justify-center gap-8">
+    <div className="flex w-full flex-col items-start px-5 pt-10 justify-center gap-8">
       {/* Menu Selector */}
       <div className="w-full flex flex-col gap-10 items-center justify-center">
         <div className="w-full flex items-center ">
-          <h3 className="h-[1px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-white/100  to-black/0 dark:to-white/0"></h3>
-          <p className="font-semibold text-center sm:text-[22px] text-[12px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
+          <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-white/100  to-black/0 dark:to-white/0"></h3>
+          <p className="font-bold text-center sm:text-[22px] text-[15px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
             What's on your mind?
           </p>
-          <h3 className="h-[1px] w-full  bg-gradient-to-r from-black/0 dark:from-white/0 to-black/100 dark:to-white/100"></h3>
+          <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-white/0 to-black/100 dark:to-white/100"></h3>
         </div>
-        <div className="w-full overflow-auto">
+        <div className="w-full overflow-x-auto ">
           <Menus menu={menu} action={(id) => setInitialMenu(id)} />
         </div>
       </div>
 
       {/* Product Listing or Empty State */}
       <div className="w-full flex flex-col p-5 rounded-xl  items-start justify-center gap-3 bg-neutral-50">
-        <h1 className=" text-xl tracking-wide ">{name as string}</h1>
-        <div className="w-full   flex flex-wrap overflow-auto items-center justify-start gap-5 mt-5">
+        <h1 className=" sm:text-xl text-[16px] tracking-wide ">{name as string}</h1>
+        <div className="w-full  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2   gap-5 mt-5">
           {selectedProducts && selectedProducts.length > 0 ? (
             selectedProducts.map((product) => (
               <ProductCard
@@ -77,9 +77,10 @@ export const Menu = () => {
 };
 
 export const Menus = ({ action, menu }: MenuProps) => {
+  const gridCol = `grid-cols-${menu.length/2} `
   return (
     <div
-      className={`w-full min-w-96 text-nowrap grid gap-x-[7.5rem] sm:gap-x-5 gap-y-5  grid-cols-7 `}
+      className={`w-full min-w-96 text-nowrap grid gap-x-[7.5rem] sm:gap-x-5 gap-y-5  ${gridCol} `}
     >
       {menu?.map((product) => (
         <div
