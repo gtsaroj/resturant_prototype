@@ -5,8 +5,10 @@ import { Homepage } from "./Pages/Home";
 import About from "./Pages/About";
 import { Menu } from "./Components/Menu/Menu";
 import { Event } from "./Pages/Event";
+import useScrollToTop from "./Hook/useScrollToTop";
 
 export const MainPage = () => {
+  useScrollToTop()
   return (
     <div className="w-full flex flex-col items-center justify-center ">
       <Navbar />
