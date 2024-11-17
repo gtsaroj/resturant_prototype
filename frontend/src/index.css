@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary-color: #b60054;
+  --primary-dark: #9c0c4f;
+  --secondary-color: #587cd2;
+
+  --body-bg: #f1e7ec;
+  --light-foreground: rgb(235, 228, 240);
+  --light-background: rgb(223, 221, 223);
+
+  --dark-background: rgb(3, 2, 3);
+
+  --primary-text: #333333;
+  --secondary-text: #777777;
+  --light-text: #fff;
+
+  --accent-color: #ffb347;
+  --border-color: #e0e0e0;
+
+  /* Typography */
+  --font-family-base: "Arial", sans-serif;
+  --font-size-base: 16px;
+  --line-height: 1.5;
+  --hover-color: #ffb347;
+
+  /* Spacing */
+  --spacing-unit: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-slider-thumb {
+  width: 0px;
+  background-color: #f5eeee;
+}
+::-webkit-scrollbar-button {
+  background-color: #333333;
+  padding: 0%;
+}
+body {
+  background-color: var(--body-bg);
+  color: var(--body-foreground);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: 0.2s;
+  border: 1px solid var(--border-color);
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@layer components {
+  .scrollbar-invisible {
+    @apply overscroll-y-auto;
+    width: 6px;
+  }
+  .scrollbar-custom {
+    @apply overflow-y-scroll; /* Enables scrolling */
+  }
+
+  .item-scrollbar {
+    @apply overflow-x-auto;
+  }
+  .item-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 5px;
+    cursor: pointer;
+  }
+  .item-scrollbar::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    width: 3px;
+    height: 3px;
+    @apply bg-gray-500 rounded-md; /* Customize the scrollbar thumb */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 4.5px; /* Adjust scrollbar width */
+    height: 5px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-md; /* Customize the scrollbar thumb */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400; /* Hover effect */
+    @apply cursor-pointer;
+  }
+}
