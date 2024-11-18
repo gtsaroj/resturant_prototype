@@ -33,11 +33,11 @@ export const Menu = () => {
       {/* Menu Selector */}
       <div className="w-full group/category relative flex flex-col gap-10 items-center justify-center">
         <div className="w-full flex items-center ">
-          <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-white/100  to-black/0 dark:to-white/0"></h3>
+          <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-black/100  to-black/0 dark:to-black/0"></h3>
           <p className="font-bold text-center sm:text-[22px] text-[15px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
             What's on your mind?
           </p>
-          <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-white/0 to-black/100 dark:to-white/100"></h3>
+          <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-black/0 to-black/100 dark:to-black/100"></h3>
         </div>
         <div ref={menuReference} className=" w-full  overflow-x-auto ">
           <Menus menu={menu} action={(id) => setInitialMenu(id)} />
@@ -71,7 +71,7 @@ export const Menu = () => {
         <h1 className=" sm:text-xl text-[16px] tracking-wide ">
           {name as string}
         </h1>
-        <div className="w-full  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2   gap-5 mt-5">
+        <div className="w-full place-items-center grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2   gap-5 mt-5">
           {selectedProducts && selectedProducts.length > 0 ? (
             selectedProducts.map((product) => (
               <ProductCard
@@ -83,7 +83,7 @@ export const Menu = () => {
               />
             ))
           ) : (
-            <div className="w-full flex flex-col items-center justify-center text-center gap-4 p-5 rounded-lg  ">
+            <div className="w-full col-span-5 flex flex-col items-center justify-center text-center gap-4 p-5 rounded-lg  ">
               <img
                 src="https://via.placeholder.com/150/FFB6C1/000000?text=No+Products"
                 alt="No Products Available"
@@ -110,20 +110,20 @@ export const Menus = ({ action, menu }: MenuProps) => {
         display: "grid",
         gridTemplateColumns: `repeat(${menu.length / 2}, minmax(0,1fr) ) `,
       }}
-      className={`w-[1500px] text-nowrap grid gap-x-[7.5rem] sm:gap-x-5 gap-y-5`}
+      className={`sm:w-[1500px] w-[600px] text-nowrap grid px-4 sm:gap-x-2 gap-y-5 sm:gap-y-10`}
     >
       {menu?.map((product) => (
         <div
           onClick={() => action(product.id)}
-          className="flex w-16 cursor-pointer flex-col items-center justify-center"
+          className="flex w-16 gap-1 cursor-pointer flex-col items-center justify-center"
           key={product.id}
         >
           <img
             src={product.image}
-            className="w-10 rounded-full h-8"
+            className="sm:size-12 size-10 rounded-full overflow-hidden object-cover"
             alt="product"
           />
-          <p className="text-sm text-[var(--primary-text)]">{product.name}</p>
+          <p className="sm:text-[15px] text-[12px] tracking-wide text-[var(--primary-text)]">{product.name}</p>
         </div>
       ))}
     </div>

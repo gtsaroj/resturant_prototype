@@ -12,14 +12,14 @@ import CollegeLogo from "../../assets/logo/pingputali.jpg";
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex flex-col w-full text-white ">
-      <footer className="w-full mt-16  rounded-t  bg-[var(--primary-color)] text-white place-items-center grid px-5">
-        <div className="flex flex-col items-center justify-between w-full gap-5 p-3 border-b-4 border-b-[var(--light-border)] sm:flex-row">
-          <div className="px-5 py-3 bg-[var(--light-background)] rounded">
+    <div className="flex flex-col w-full text-white px-2 ">
+      <footer className="w-full mt-16  rounded-t bg-white border-[1px] border-[var(--border-color)] text-black  place-items-center grid px-5">
+        <div className="flex flex-col items-center justify-between w-full gap-5 p-3 border-b-4 border-b-[var(--border-color)] sm:flex-row">
+          <div className="px-5 py-3 bg-[var(--light-background)]  text-[var(--primary-text)] rounded">
             <img src={CollegeLogo} alt="logo" className="max-h-[60px] " />
           </div>
-          <div className="flex flex-col items-center justify-center gap-3">
-            <p className="text-lg font-bold tracking-wide ">Follow us: </p>
+          <div className="flex flex-col text-[var(--primary-text)] items-center justify-center gap-3">
+            <p className="text-lg font-bold  tracking-wide ">Follow us: </p>
             <div className="flex items-center gap-9">
               <a
                 aria-label="go to facebook"
@@ -45,12 +45,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className=" flex lg:gap-x-20  justify-start flex-wrap w-full  ">
+        <div className=" flex lg:gap-x-20  text-[var(--primary-text)] justify-start flex-wrap w-full  ">
           <div className="flex lg:col-span-1 sm:col-span-2 col-span-3 flex-col gap-6 px-5 py-8 ">
             <p className="font-bold tracking-wider">Quick Contact</p>
             <div className="flex flex-col gap-5">
               <div className="flex  items-center gap-2 text-sm">
-                <div className="p-2 bg-[var(--light-foreground)] text-[var(--primary-text)]  rounded-full flex items-center justify-center">
+                <div className="p-2 bg-[var(--light-foreground)] text-[var(--primary-text)] rounded-full flex items-center justify-center">
                   <MapPin />
                 </div>
                 <div>
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col items-start gap-5 px-5 py-8">
             <p className="font-bold tracking-wider">Quick Links</p>
-            <div className="flex  flex-col gap-3 text-sm text-white ">
+            <div className="flex  flex-col gap-3 text-sm text-[var(--primary-text)] ">
               <a
                 href="/"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col sm:col-span-1 col-span-2 items-start gap-5 px-5 py-8">
             <p className="font-bold tracking-wider">Resources</p>
-            <div className="flex flex-col gap-5 text-sm text-white">
+            <div className="flex flex-col gap-5 text-sm text-[var(--primary-text)] ">
               <a
                 href="/"
                 target="_blank"
@@ -146,7 +146,7 @@ const Footer: React.FC = () => {
                 id="subscribe"
                 type="email"
                 placeholder="Enter your email..."
-                className="w-full  min-w-64 border-[1px] border-r-0 border-[var(--border-color)]  p-3.5 rounded-l-lg  outline-none"
+                className="w-full   border-[1px] border-r-0 border-[var(--border-color)]  p-3.5 rounded-l-lg  outline-none"
               />
               <button
                 type="submit"

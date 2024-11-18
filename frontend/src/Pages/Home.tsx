@@ -3,6 +3,7 @@ import { Inquiry } from "../Components/Inquiry/Inquiry";
 import { Menu } from "../Components/Menu/Menu";
 import { Event } from "../Components/Event";
 import BannerImg from "../assets/pinkputali_banner.jpg";
+import { Feedback } from "../Components/Feedback/Feedback";
 
 export const Homepage = () => {
   return (
@@ -13,8 +14,9 @@ export const Homepage = () => {
         description="Savor the fusion of Nepalese flavors with a sip of cocktails"
       />
       <Inquiry />
-      <Event />
       <Menu />
+      <Event />
+      <Feedback/>
     </div>
   );
 };

@@ -13,7 +13,7 @@ export const Event: React.FC = () => {
       description: "An evening of live jazz music with a curated menu.",
       price: 50,
       tags: ["Live Music", "Special Menu"],
-      ctaLink: "/reserve",
+      ctaLink: "#",
       availableSeats: 8,
     },
     {
@@ -26,7 +26,7 @@ export const Event: React.FC = () => {
       description: "Sip on fine wines while enjoying an art exhibit.",
       price: 40,
       tags: ["Art", "Wine Tasting"],
-      ctaLink: "/book",
+      ctaLink: "#",
       availableSeats: 20,
     },
     {
@@ -39,7 +39,7 @@ export const Event: React.FC = () => {
       description: "Learn to cook authentic Italian dishes with a top chef.",
       price: 100,
       tags: ["Cooking", "Hands-On"],
-      ctaLink: "/register",
+      ctaLink: "#",
       availableSeats: 15,
     },
     {
@@ -52,7 +52,7 @@ export const Event: React.FC = () => {
       description: "A night of laughter featuring top comedians.",
       price: 30,
       tags: ["Comedy", "Nightlife"],
-      ctaLink: "/tickets",
+      ctaLink: "#",
       availableSeats: 50,
     },
   ];
@@ -60,11 +60,11 @@ export const Event: React.FC = () => {
   return (
     <div className="w-full flex flex-col items-start justify-center gap-10 px-3 py-10">
       <div className="w-full flex items-center ">
-        <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-white/100  to-black/0 dark:to-white/0"></h3>
-        <p className="font-bold text-center sm:text-[22px] text-[14px]  sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
+        <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-black/100  to-black/0 dark:to-black/0"></h3>
+        <p className="font-bold text-center sm:text-[22px] text-[15px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
           Explore Our Events!
         </p>
-        <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-white/0 to-black/100 dark:to-white/100"></h3>
+        <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-black/0 to-black/100 dark:to-black/100"></h3>
       </div>
       <div className="w-full grid md:grid-cols-3 grid-cols-1 justify-items-center sm:justify-items-stretch sm:grid-cols-2 gap-4">
         {events?.map((event, index) => (

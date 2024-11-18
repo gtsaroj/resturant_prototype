@@ -4,13 +4,13 @@ import { FaFacebookMessenger, FaWhatsapp, FaViber } from "react-icons/fa";
 export const Inquiry = () => {
   const mapReference = useRef<null | HTMLIFrameElement>(null);
   return (
-    <div className=" w-full lg:flex-row flex-col-reverse h-full py-16 flex items-start gap-10 ">
+    <div className=" w-full lg:flex-row flex-col-reverse h-full py-10 flex items-start gap-10 ">
       {/* Google Map iframe */}
       <div
         onClick={() => mapReference.current?.click()}
         className="relative  w-full   lg:w-[55%] h-[250px] cursor-pointer lg:h-[400px] rounded-lg overflow-hidden"
       >
-        <div className="absolute z-[100] h-[100px] bottom-0 left-0   w-full  bg-gradient-to-t from-black to-transparent"></div>
+        <div className="absolute  h-[100px] bottom-0 left-0   w-full  bg-gradient-to-t from-black to-transparent"></div>
 
         <iframe
           ref={mapReference}

@@ -69,16 +69,29 @@ const reviews = [
     name: "John Doe",
     rating: 5,
     comment: "Amazing fusion of flavors! The cocktails are a must-try.",
+    image:
+      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671122.jpg",
   },
   {
     name: "Jane Smith",
     rating: 4,
     comment: "Great atmosphere and friendly staff. Will definitely return.",
+    image:
+      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671140.jpg",
   },
   {
     name: "Mike Johnson",
     rating: 5,
     comment: "The best Nepalese cuisine I've had outside of Nepal!",
+    image:
+      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671116.jpg",
+  },
+  {
+    name: "Alice Brown",
+    rating: 3,
+    comment: "Good food, but the service was a bit slow during peak hours.",
+    image:
+      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671132.jpg",
   },
 ];
 
@@ -86,7 +99,9 @@ export default function About() {
   return (
     <div className="w-full px-2">
       <Banner
-        image={"https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D"}
+        image={
+          "https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D"
+        }
         title="About Us"
         description="We take pride in serving quality food with a commitment to excellence. Find out more about us!"
       />
@@ -94,12 +109,16 @@ export default function About() {
       {/* Mission & Vision Section */}
       <section className="py-16 px-4 bg-pink-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Our Mission & Vision</h2>
+          <h2 className="sm:text-3xl text-xl font-bold mb-8">
+            Our Mission & Vision
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardContent>
-                <h3 className="text-2xl font-semibold mb-4">Mission</h3>
-                <p className="text-gray-600">
+                <h3 className="sm:text-2xl text-xl font-semibold mb-4">
+                  Mission
+                </h3>
+                <p className="text-gray-600 sm:text-[16px] text-[15px] ">
                   To offer the best fusion of Nepalese flavors in a cozy and
                   inviting atmosphere, paired with innovative cocktails.
                 </p>
@@ -107,8 +126,10 @@ export default function About() {
             </Card>
             <Card>
               <CardContent>
-                <h3 className="text-2xl font-semibold mb-4">Vision</h3>
-                <p className="text-gray-600">
+                <h3 className="sm:text-2xl text-xl font-semibold mb-4">
+                  Vision
+                </h3>
+                <p className="text-gray-600 sm:text-[16px] text-[15px] ">
                   To become the premier destination for Nepalese fusion cuisine
                   and cocktails, creating unforgettable dining experiences.
                 </p>
@@ -121,7 +142,9 @@ export default function About() {
       {/* Gallery Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Gallery</h2>
+          <h2 className="sm:text-3xl text-xl font-bold mb-8 text-center">
+            Our Gallery
+          </h2>
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {galleryImages.map((image, index) => (
               <img
@@ -137,7 +160,7 @@ export default function About() {
 
       {/* Location Section */}
       <section className="py-16 px-5 w-full flex flex-col items-stretch justify-center ">
-        <h2 className="text-3xl text-center tracking-wider font-bold mb-8">
+        <h2 className="sm:text-3xl text-xl text-center tracking-wider font-bold mb-8">
           Visit Us
         </h2>
         <div className="flex w-full h-[400px] flex-col md:flex-row items-center justify-center gap-8">
@@ -154,23 +177,39 @@ export default function About() {
       {/* Reviews Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="sm:text-3xl text-xl tracking-wider font-bold mb-8 text-center">
             What Our Customers Say
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {reviews.map((review, index) => (
               <Card key={index}>
                 <CardContent>
-                  <div className="flex items-center mb-4">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-current text-yellow-500"
+                  <div className="flex flex-col justify-start">
+                    <div className="w-full flex items-start justify-start gap-5">
+                      <img
+                        src={review.image}
+                        className="size-12 rounded-full border "
+                        alt={review.name}
                       />
-                    ))}
+                      <div className="flex flex-col  gap-2 items-start justify-end">
+                        <span className="text-[1rem] font-semibold">
+                          {review.name}
+                        </span>
+                        <div className="flex items-center justify-start  gap-1 mb-4">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-5 h-5 fill-current text-yellow-500"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-gray-600 mb-4">{review.comment}</p>
-                  <p className="font-semibold">{review.name}</p>
+
+                  <p className="text-gray-600 mb-4 italic">
+                    " {review.comment} "
+                  </p>
                 </CardContent>
               </Card>
             ))}

@@ -32,13 +32,13 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
           <Link
             onClick={() => action && action()}
             to={data.pathname}
-            className={`hover:text-[var(--hover-color)] sm:text-[1rem] text-sm ${
-              pathname === data.pathname ? "text-[var(--hover-color)] " : ""
+            className={`hover:text-[var(--secondary-color)] sm:text-[1rem] text-[16px] ${
+              pathname === data.pathname ? "text-[var(--secondary-color)] " : ""
             } transition duration-300`}
           >
             {data.name}
           </Link>
-          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--hover-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--secondary-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
         </li>
       ))}
     </ul>
@@ -47,26 +47,23 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
 
 export const Navbar = () => {
   const [open, setOpen] = React.useState<boolean>(false);
-
-  const [nav, setNav] = React.useState<boolean>(false);
-
-  const changeColor = () => {
-    if (window.scrollY >= 10) {
-      setNav(true);
-    } else {
-      setNav(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeColor);
-
-    return () => {
-      window.removeEventListener("scroll", changeColor);
-    };
-  }, []);
+  const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
 
   const navbarRef = useRef<null | HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollerDetect = () => {
+      if (window.scrollY >= 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", scrollerDetect);
+    return () => {
+      window.removeEventListener("scroll", scrollerDetect);
+    };
+  }, []);
 
   useEffect(() => {
     const closeModal = (event: MouseEvent) => {
@@ -90,11 +87,11 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`w-full duration-1000 ${
-        nav
-          ? "fixed z-[100] top-0 translate-y-[-2px] shadow-sm shadow-black "
-          : "static translate-y-0 z-[1000] "
-      } flex items-center justify-between px-6 py-4 bg-[var(--dark-background)] dark:bg-var(--body-bg-dark) transition-all duration-300`}
+      className={`w-full  
+          ${isScrolled ? "fixed  -top-20    translate-y-20  " : " -translate-y-0 static"}
+            z-[1000]   translate-y-[-2px] shadow-sm shadow-black 
+      
+       flex items-center justify-between px-6 py-4 bg-[var(--dark-background)] transition-all duration-300`}
     >
       {/* Logo Section */}
       <div
@@ -121,7 +118,7 @@ export const Navbar = () => {
           )}
         </button>
         <div
-          className={` flex flex-col items-center pt-6   justify-stretch bottom-0 duration-150 bg-[var(--dark-background)] w-[13rem]   z-[100] h-screen  fixed top-0 ${
+          className={` flex flex-col items-center pt-6   justify-stretch bottom-0 duration-150 bg-[var(--dark-background)] w-[13rem]   z-[100] h-screen  fixed top-6 ${
             open ? "right-[0px] visible " : "right-[-1000px] hidden "
           } `}
         >
@@ -136,15 +133,18 @@ export const Navbar = () => {
                 <MenuSquare className=" size-7" />
               )}
             </button>
-            <div className="w-full flex flex-col items-center justify-center gap-3 border-b-[1px] pb-4 border-gray-900 ">
-              <div className="size-[51px] rounded-full overflow-hidden">
+            <div
+              onClick={() => navigate("/")}
+              className="w-full  cursor-pointer flex flex-col items-center justify-center gap-3 border-b-[1px] pb-4 border-gray-900 "
+            >
+              <div className="size-[60px] rounded-full overflow-hidden">
                 <img
                   className="w-full h-full object-cover"
                   src={Logo}
                   alt="logo"
                 />
               </div>
-              <h1 className=" text-xs  text-white ">Pink putali Restaurant</h1>
+              <h1 className=" text-sm  text-white ">Pink putali Restaurant</h1>
             </div>
           </div>
           <NavbarContainer action={() => setOpen(!open)} />
@@ -153,7 +153,7 @@ export const Navbar = () => {
       <div className="hidden lg:flex items-center gap-4">
         <a
           href="#"
-          className="px-6 py-3 text-white bg-[var(--secondary-color)] rounded-full hover:bg-[var(--secondary-dark)] transition duration-300"
+          className="px-6 py-3 text-white bg-[var(--primary-color)] rounded-full hover:bg-[var(--secondary-dark)] transition duration-300"
         >
           Reserve Now
         </a>
