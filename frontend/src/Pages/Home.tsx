@@ -1,7 +1,7 @@
 import { Banner } from "../Components/Banner/Banner";
 import { Inquiry } from "../Components/Inquiry/Inquiry";
 import { Menu } from "../Components/Menu/Menu";
-import { Event } from "./Event";
+import { Event } from "../Components/Event";
 import BannerImg from "../assets/pinkputali_banner.jpg";
 
 export const Homepage = () => {

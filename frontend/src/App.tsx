@@ -2,10 +2,12 @@ import Footer from "./Components/Footer/Footer";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { BrowserRouter, Route, Outlet, Routes } from "react-router-dom";
 import { Homepage } from "./Pages/Home";
-import About from "./Pages/About";
+import About from "./Pages/About.page";
 import { Menu } from "./Components/Menu/Menu";
-import { Event } from "./Pages/Event";
+import { Event } from "./Components/Event";
 import useScrollToTop from "./Hook/useScrollToTop";
+import { EventPage } from "./Pages/Event.page";
+import { MenuPage } from "./Pages/Menu.page";
 
 export const MainPage = () => {
   useScrollToTop()
@@ -25,8 +27,8 @@ function App() {
         <Route path="/" element={<MainPage />}>
           <Route index element={<Homepage />}></Route>
           <Route path="about" element={<About />} />
-          <Route path="menu" element={<Menu />} />
-          <Route path="event" element={<Event />} />
+          <Route path="menu" element={<MenuPage />} />
+          <Route path="event" element={<EventPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -6,6 +6,16 @@
       "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
     },
     {
+      "id": "03331",
+      "name": "Chilly",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "03ijol331",
+      "name": "Chilly",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
       "id": "02",
       "name": "Pizzas",
       "image": "https://images.unsplash.com/photo-1601924579356-72d0f8b9a0c4"
@@ -24,6 +34,76 @@
       "id": "05",
       "name": "Sandwiches",
       "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+    },
+    {
+      "id": "01",
+      "name": "Burgers",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "03331",
+      "name": "Chilly",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "03ijol331",
+      "name": "Chilly",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "02",
+      "name": "Pizzas",
+      "image": "https://images.unsplash.com/photo-1601924579356-72d0f8b9a0c4"
+    },
+    {
+      "id": "03",
+      "name": "Pasta",
+      "image": "https://images.unsplash.com/photo-1521389508051-d7ffb5dc8d3d"
+    },
+    {
+      "id": "04",
+      "name": "Salads",
+      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+    },
+    {
+      "id": "06",
+      "name": "Desserts",
+      "image": "https://images.unsplash.com/photo-1534351590666-13e2a9d4a0d3"
+    },
+    {
+      "id": "07",
+      "name": "Smoothies",
+      "image": "https://images.unsplash.com/photo-1533158311241-2c7b8a6a3a48"
+    },
+    {
+      "id": "08",
+      "name": "Fries & Sides",
+      "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb35"
+    },
+    {
+      "id": "09",
+      "name": "Drinks",
+      "image": "https://images.unsplash.com/photo-1568043210943-279be15001f2"
+    },
+    {
+      "id": "10",
+      "name": "Grills",
+      "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90"
+    },
+    {
+      "id": "02",
+      "name": "Pizzas",
+      "image": "https://images.unsplash.com/photo-1601924579356-72d0f8b9a0c4"
+    },
+    {
+      "id": "03",
+      "name": "Pasta",
+      "image": "https://images.unsplash.com/photo-1521389508051-d7ffb5dc8d3d"
+    },
+    {
+      "id": "04",
+      "name": "Salads",
+      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
     },
     {
       "id": "06",

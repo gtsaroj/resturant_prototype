@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Star } from "lucide-react";
-import BannerImg from "../assets/pinkputali_banner.jpg";
 import { Banner } from "../Components/Banner/Banner";
 
 // Custom Card component
@@ -87,9 +86,9 @@ export default function About() {
   return (
     <div className="w-full px-2">
       <Banner
-        image={BannerImg}
-        title="Welcome to Pink Putali"
-        description="Savor the fusion of Nepalese flavors with a sip of cocktails"
+        image={"https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D"}
+        title="About Us"
+        description="We take pride in serving quality food with a commitment to excellence. Find out more about us!"
       />
 
       {/* Mission & Vision Section */}

@@ -25,32 +25,32 @@ export const Inquiry = () => {
       {/* Inquiry Form Section */}
       <div className="w-full lg:w-[40%]  h-full   flex flex-col items-center justify-start gap-6 sm:gap-14 text-center">
         <div className="w-full flex flex-col gap-9 items-center justify-center">
-        <h1 className="sm:text-3xl text-2xl font-semibold tracking-wider text-[var(--primary-text)]">
-          Do you have an inquiry?
-        </h1>
+          <h1 className="sm:text-3xl text-2xl font-semibold tracking-wider text-[var(--primary-text)]">
+            Do you have an inquiry?
+          </h1>
 
-        {/* Social Media Links */}
-        <div className="flex gap-10 sm:gap-14 justify-center">
-          <a
-            className="bg-[var(--primary-color)] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[var(--primary-dark)]"
-            href="#"
-          >
-            <FaFacebookMessenger className="text-xl sm:text-2xl" />
-          </a>
-          <a
-            className="bg-[var(--primary-color)] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[var(--primary-dark)]"
-            href="#"
-          >
-            <FaWhatsapp className="text-xl sm:text-2xl" />
-          </a>
-          <a
-            className="bg-[var(--primary-color)] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[var(--primary-dark)]"
-            href="#"
-          >
-            <FaViber className="text-xl sm:text-2xl" />
-          </a>
+          {/* Social Media Links */}
+          <div className="flex gap-10 sm:gap-14 justify-center">
+            <a
+              className="bg-[#0078FF] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#0061D1] "
+              href="#"
+            >
+              <FaFacebookMessenger className="text-xl sm:text-2xl" />
+            </a>
+            <a
+              className="bg-[#1a9e30] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#128c3b] "
+              href="#"
+            >
+              <FaWhatsapp className="text-xl sm:text-2xl" />
+            </a>
+            <a
+              className="bg-[#7200C8] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#5C00A2]"
+              href="#"
+            >
+              <FaViber className="text-xl sm:text-2xl" />
+            </a>
+          </div>
         </div>
-       </div>
 
         {/* Subscription Form */}
         <form className="flex sm:flex-row flex-col  text-[var(--primary-text)] lg:flex-row items-center justify-center gap-2 sm:gap-4 w-full mt-8">
