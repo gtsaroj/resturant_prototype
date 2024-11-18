@@ -30,7 +30,7 @@ export const ProductCard: React.FC<ProductTypes> = ({
         </p>
 
         {/* Add to Cart Button */}
-        <button className="w-full py-2 text-[13px] font-medium text-white  rounded-md mt-3 bg-[var(--primary-color)] hover:bg-[var(--primary-dark)] transition-colors">
+        <button className="w-full border-[var(--border-color)] border-[1px] py-2 text-[13px]  text-[var(--primary-text)] font-semibold hover:text-white  rounded-md mt-3 bg-transparent hover:bg-[var(--primary-dark)] transition-colors">
           Order now
         </button>
       </div>

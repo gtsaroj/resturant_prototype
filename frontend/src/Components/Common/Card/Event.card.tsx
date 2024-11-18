@@ -52,7 +52,7 @@ const EventCard = ({
         {/* CTA Button */}
         <a
           href={ctaLink}
-          className="block w-full text-center text-sm font-medium text-white bg-[var(--primary-color)] py-2 rounded-md mt-4 hover:bg-[var(--primary-dark)] transition-colors"
+          className="block border-[1px] hover:text-white border-[var(--border-color)] font-semibold w-full text-center text-sm text-[var(--primary-text)] bg-transparent py-2 rounded-md mt-4 hover:bg-[var(--primary-dark)] transition-colors"
         >
           Reserve Now
         </a>

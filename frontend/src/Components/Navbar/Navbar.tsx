@@ -2,55 +2,70 @@ import { MenuSquare, X } from "lucide-react";
 import Logo from "../../assets/logo/pingputali.jpg";
 import React, { useEffect, useRef } from "react";
 import { CiMenuFries } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { GrLanguage } from "react-icons/gr";
 
-export const NavbarContainer = () => {
+export const NavbarContainer = ({ action }: { action?: () => void }) => {
+  const navbarData = [
+    {
+      name: "Home",
+      pathname: "/",
+    },
+    {
+      name: "Menu",
+      pathname: "/menu",
+    },
+    {
+      name: "About",
+      pathname: "/about",
+    },
+    {
+      name: "Event",
+      pathname: "/event",
+    },
+  ];
+
+  const { pathname } = useLocation();
   return (
-    <ul className="flex sm:flex-row flex-col text-lg items-center  sm:justify-center pt-10 sm:pt-0 gap-14 sm:gap-8 text-[var(--light-text)] ">
-      <li className="relative group ">
-        <Link
-          to="/"
-          className=" hover:text-[var(--hover-color)] transition duration-300"
-        >
-          Home
-        </Link>
-        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--hover-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </li>
-      <li className="relative group">
-        <Link
-          to="/menu"
-          className="hover:text-[var(--hover-color)] transition duration-300"
-        >
-          Menu
-        </Link>
-        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--hover-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </li>
-      <li className="relative group">
-        <Link
-          to="/about"
-          className="hover:text-[var(--hover-color)] transition duration-300"
-        >
-          About
-        </Link>
-        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--hover-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </li>
-      <li className="relative group">
-        <Link
-          to="/event"
-          className="hover:text-[var(--hover-color)] transition duration-300"
-        >
-          Event
-        </Link>
-        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--hover-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-      </li>
+    <ul className="flex sm:flex-row flex-col text-lg items-center  sm:justify-center pt-10 sm:pt-0 gap-10 sm:gap-8 text-[var(--light-text)] ">
+      {navbarData?.map((data) => (
+        <li className="relative group ">
+          <Link
+            onClick={() => action && action()}
+            to={data.pathname}
+            className={`hover:text-[var(--secondary-color)] sm:text-[1rem] text-[16px] ${
+              pathname === data.pathname ? "text-[var(--secondary-color)] " : ""
+            } transition duration-300`}
+          >
+            {data.name}
+          </Link>
+          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--secondary-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+        </li>
+      ))}
     </ul>
   );
 };
 
 export const Navbar = () => {
   const [open, setOpen] = React.useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
 
   const navbarRef = useRef<null | HTMLDivElement>(null);
+  const [language, setLanguage] = React.useState<"NP" | "EN">("EN");
+
+  useEffect(() => {
+    const scrollerDetect = () => {
+      if (window.scrollY >= 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", scrollerDetect);
+    return () => {
+      window.removeEventListener("scroll", scrollerDetect);
+    };
+  }, []);
 
   useEffect(() => {
     const closeModal = (event: MouseEvent) => {
@@ -70,10 +85,25 @@ export const Navbar = () => {
     }
   }, [open]);
 
+  const navigate = useNavigate();
+
   return (
-    <nav className="w-full flex items-center justify-between px-6 py-4 bg-[var(--dark-background)] dark:bg-var(--body-bg-dark) transition-all duration-300">
+    <nav
+      className={`w-full  
+          ${
+            isScrolled
+              ? "fixed  -top-20    translate-y-20  "
+              : " -translate-y-0 static"
+          }
+            z-[1000] shadow-sm shadow-black 
+      
+       flex items-center justify-between px-6 py-4 bg-[var(--dark-background)] transition-all duration-300`}
+    >
       {/* Logo Section */}
-      <div className="flex items-center gap-4">
+      <div
+        onClick={() => navigate("/")}
+        className="flex cursor-pointer items-center gap-4"
+      >
         <div className="sm:w-[4rem]  w-[3rem] h-[3rem] sm:h-[4rem] rounded-full overflow-hidden">
           <img className="w-full h-full object-cover" src={Logo} alt="logo" />
         </div>
@@ -81,22 +111,27 @@ export const Navbar = () => {
       <div className="hidden sm:flex ">
         <NavbarContainer />
       </div>
+      {/* mobile navbar */}
       <div ref={navbarRef} className="relative  flex sm:hidden ">
         <button
           onClick={() => setOpen(!open)}
           className=" bg-transparent hover:bg-transparent border-none "
         >
-          {open ? <X className="size-7" /> : <CiMenuFries className=" size-7" />}
+          {open ? (
+            <X className="size-7" />
+          ) : (
+            <CiMenuFries className=" size-7" />
+          )}
         </button>
         <div
-          className={` flex flex-col items-center pt-9 gap-[3.5rem]  justify-stretch bottom-0 duration-150 bg-[var(--dark-background)] w-[15rem]   z-50 h-screen  fixed top-0 ${
-            open ? "right-[-30px] visible " : "right-[-1000px] invisible "
+          className={` flex flex-col items-center pt-6   justify-stretch bottom-0 duration-150 bg-[var(--dark-background)] w-[13rem]   z-[100] h-screen  fixed top-6 ${
+            open ? "right-[0px] visible " : "right-[-1000px] hidden "
           } `}
         >
-          <div className="flex w-full justify-end px-10  items-center gap-4">
+          <div className="flex flex-col w-full justify-end  items-center gap-4">
             <button
               onClick={() => setOpen(!open)}
-              className=" bg-transparent hover:bg-transparent border-none "
+              className=" pr-2 pb-5 w-full flex items-center justify-end bg-transparent hover:bg-transparent border-none "
             >
               {open ? (
                 <X className="size-7" />
@@ -104,17 +139,57 @@ export const Navbar = () => {
                 <MenuSquare className=" size-7" />
               )}
             </button>
+            <div
+              onClick={() => navigate("/")}
+              className="w-full  cursor-pointer flex flex-col items-center justify-center gap-3 border-b-[1px] pb-4 border-gray-900 "
+            >
+              <div className="size-[60px] rounded-full overflow-hidden">
+                <img
+                  className="w-full h-full object-cover"
+                  src={Logo}
+                  alt="logo"
+                />
+              </div>
+              <h1 className=" text-sm  text-white ">Pink putali Restaurant</h1>
+            </div>
           </div>
-          <NavbarContainer />
+          <NavbarContainer action={() => setOpen(!open)} />
+          <div className="mt-10  flex items-center gap-2 justify-start">
+            <label
+              className="text-white text-sm font-semibold  block"
+              htmlFor="language-select"
+            >
+              Choose Language:
+            </label>
+            <select
+              id="language-select"
+              className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 bg-gray-800 text-white border border-gray-700 "
+              onChange={(e) => setLanguage(e.target.value as "NP" | "EN")}
+            >
+              {["NP", "EN"].map((ln) => (
+                <option key={ln} value={ln}>
+                  {ln}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
-      <div className="hidden lg:flex items-center gap-4">
-        <Link
-          to="/reservation"
-          className="px-6 py-3 text-white bg-[var(--primary-color)] rounded-full hover:bg-[#ff5580] transition duration-300"
+      <div className=" hidden lg:flex items-center gap-4">
+        <select className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 ">
+          <GrLanguage className="  text-white " />
+          {["NP", "EN"].map((ln) => (
+            <option value={ln} onChange={() => setLanguage(ln as "NP" | "EN")}>
+              {ln}
+            </option>
+          ))}
+        </select>
+        <a
+          href="#"
+          className="px-6  lg:flex py-3 text-white bg-[var(--primary-color)] rounded-full hover:bg-[var(--secondary-dark)] transition duration-300"
         >
           Reserve Now
-        </Link>
+        </a>
       </div>
     </nav>
   );

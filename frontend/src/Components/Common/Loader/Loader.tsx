@@ -11,7 +11,7 @@ export const Loader: React.FC<LoaderTypes> = ({ time }) => {
       setIsAnimating(false);
     }, time);
 
-    return () => clearTimeout(timeInterval); // Clean up on unmount
+    return () => clearTimeout(timeInterval); 
   }, [time]);
 
   // Variants for the sliding and opacity animations
@@ -20,7 +20,7 @@ export const Loader: React.FC<LoaderTypes> = ({ time }) => {
     animate: {
       x: "0%", // Move to the center
       opacity: 0, // Fade out as they approach the center
-      transition: { duration: 2, ease: "easeInOut" },
+      transition: { duration: Number(time)/1000, ease: "easeInOut" },
     },
     exit: { opacity: 0 },
     // Fade out when done
@@ -31,7 +31,7 @@ export const Loader: React.FC<LoaderTypes> = ({ time }) => {
     animate: {
       x: "0%", // Move to the center
       opacity: 0, // Fade out as they approach the center
-      transition: { duration: 2, ease: "easeInOut" },
+      transition: { duration: Number(time)/1000, ease: "easeInOut" },
     },
     exit: { opacity: 0 }, // Fade out when done
   };
@@ -46,17 +46,22 @@ export const Loader: React.FC<LoaderTypes> = ({ time }) => {
         variants={sideAnimation}
         className="w-1/2 h-screen bg-[var(--primary-color)]"
       ></motion.div>
-
-      {/* Right panel sliding in and fading */}
-      <div className="w-[15rem] h-[13rem] border-[1px] border-[var(--primary-color)] rounded-full">
-        <img className="w-full h-full rounded-full " src={Logo} alt="logo" />
+      <div className="sm:w-[8rem] w-[7.7rem] h-[6rem] sm:h-[7.7rem] border-[5px] border-[var(--primary-color)] rounded-full flex items-center justify-center">
+        <motion.img
+          className="w-full h-full rounded-full"
+          src={Logo}
+          alt="logo"
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+        />
       </div>
+
       <motion.div
         initial="initial"
         animate="animate"
         exit="exit"
         variants={rightSideAnimation}
-        className="w-1/2 h-screen bg-white"
+        className="w-1/2 h-screen bg-[var(--secondary-color)] "
       ></motion.div>
     </div>
   ) : null;

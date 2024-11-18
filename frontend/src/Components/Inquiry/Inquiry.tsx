@@ -4,13 +4,13 @@ import { FaFacebookMessenger, FaWhatsapp, FaViber } from "react-icons/fa";
 export const Inquiry = () => {
   const mapReference = useRef<null | HTMLIFrameElement>(null);
   return (
-    <div className=" w-full lg:flex-row flex-col-reverse h-full py-16 flex items-start gap-10 ">
+    <div className=" w-full lg:flex-row flex-col-reverse h-full py-10 flex items-start gap-10 ">
       {/* Google Map iframe */}
       <div
         onClick={() => mapReference.current?.click()}
         className="relative  w-full   lg:w-[55%] h-[250px] cursor-pointer lg:h-[400px] rounded-lg overflow-hidden"
       >
-        <div className="absolute z-[100] h-[100px] bottom-0 left-0   w-full  bg-gradient-to-t from-black to-transparent"></div>
+        <div className="absolute  h-[100px] bottom-0 left-0   w-full  bg-gradient-to-t from-black to-transparent"></div>
 
         <iframe
           ref={mapReference}
@@ -25,32 +25,32 @@ export const Inquiry = () => {
       {/* Inquiry Form Section */}
       <div className="w-full lg:w-[40%]  h-full   flex flex-col items-center justify-start gap-6 sm:gap-14 text-center">
         <div className="w-full flex flex-col gap-9 items-center justify-center">
-        <h1 className="sm:text-3xl text-2xl font-semibold tracking-wider text-[var(--primary-text)]">
-          Do you have an inquiry?
-        </h1>
+          <h1 className="sm:text-3xl text-2xl font-semibold tracking-wider text-[var(--primary-text)]">
+            Do you have an inquiry?
+          </h1>
 
-        {/* Social Media Links */}
-        <div className="flex gap-10 sm:gap-14 justify-center">
-          <a
-            className="bg-[var(--primary-color)] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[var(--primary-dark)]"
-            href="#"
-          >
-            <FaFacebookMessenger className="text-xl sm:text-2xl" />
-          </a>
-          <a
-            className="bg-[var(--primary-color)] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[var(--primary-dark)]"
-            href="#"
-          >
-            <FaWhatsapp className="text-xl sm:text-2xl" />
-          </a>
-          <a
-            className="bg-[var(--primary-color)] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[var(--primary-dark)]"
-            href="#"
-          >
-            <FaViber className="text-xl sm:text-2xl" />
-          </a>
+          {/* Social Media Links */}
+          <div className="flex gap-10 sm:gap-14 justify-center">
+            <a
+              className="bg-[#0078FF] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#0061D1] "
+              href="#"
+            >
+              <FaFacebookMessenger className="text-xl sm:text-2xl" />
+            </a>
+            <a
+              className="bg-[#1a9e30] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#128c3b] "
+              href="#"
+            >
+              <FaWhatsapp className="text-xl sm:text-2xl" />
+            </a>
+            <a
+              className="bg-[#7200C8] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#5C00A2]"
+              href="#"
+            >
+              <FaViber className="text-xl sm:text-2xl" />
+            </a>
+          </div>
         </div>
-       </div>
 
         {/* Subscription Form */}
         <form className="flex sm:flex-row flex-col  text-[var(--primary-text)] lg:flex-row items-center justify-center gap-2 sm:gap-4 w-full mt-8">

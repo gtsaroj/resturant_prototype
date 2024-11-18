@@ -1,12 +1,23 @@
-import BannerImg from "../../assets/pinkputali_banner.jpg";
+import { title } from "framer-motion/client";
+import { transliterate } from "transliteration";
 
-export const Banner: React.FC = () => {
+export const Banner = ({
+  image,
+  title,
+  description,
+}: {
+  image: string;
+  title: string;
+  description?: string;
+
+
+  }) => {
   return (
     <div className="relative group/banner w-full    py-1 sm:py-2">
       {/* Banner Image */}
       <div className="w-full group-hover/banner:blur-[1px] blur-0 duration-150 lg:h-[70vh] sm:h-[50vh] h-[30vh] relative rounded-lg overflow-hidden">
         <img
-          src={BannerImg}
+          src={image}
           className="w-full group-hover/banner:scale-[1.01] scale-[1]   duration-150 h-full object-cover rounded-lg transform transition-transform "
           alt="banner"
         />
@@ -15,8 +26,12 @@ export const Banner: React.FC = () => {
       </div>
 
       {/* Banner Text with Animation */}
-      <h1 className="absolute top-[50%] left-[30%]  text-[1rem]  sm:text-[3rem]  lg:text-[3.5rem] font-bold text-white tracking-wider z-10  animate-fadeIn">
-        Welcome To Putali Pink
+      <h1 className="absolute flex flex-col w-full justify-center items-center  top-1/2 text-[1.5rem]  sm:text-[3rem]  lg:text-[3.5rem] font-bold text-white tracking-wider z-10  animate-fadeIn">
+        {transliterate(title as string)}
+        <span className=" text-[10px] sm:text-[15px] text-center font-thin text-gray-200 ">
+          {" "}
+          {transliterate(description as string)}
+        </span>
       </h1>
     </div>
   );
