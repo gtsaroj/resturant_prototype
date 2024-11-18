@@ -3,6 +3,7 @@ import Logo from "../../assets/logo/pingputali.jpg";
 import React, { useEffect, useRef } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { GrLanguage } from "react-icons/gr";
 
 export const NavbarContainer = ({ action }: { action?: () => void }) => {
   const navbarData = [
@@ -50,6 +51,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
 
   const navbarRef = useRef<null | HTMLDivElement>(null);
+  const [language, setLanguage] = React.useState<"NP" | "EN">("EN");
 
   useEffect(() => {
     const scrollerDetect = () => {
@@ -88,8 +90,12 @@ export const Navbar = () => {
   return (
     <nav
       className={`w-full  
-          ${isScrolled ? "fixed  -top-20    translate-y-20  " : " -translate-y-0 static"}
-            z-[1000]   translate-y-[-2px] shadow-sm shadow-black 
+          ${
+            isScrolled
+              ? "fixed  -top-20    translate-y-20  "
+              : " -translate-y-0 static"
+          }
+            z-[1000] shadow-sm shadow-black 
       
        flex items-center justify-between px-6 py-4 bg-[var(--dark-background)] transition-all duration-300`}
     >
@@ -148,12 +154,39 @@ export const Navbar = () => {
             </div>
           </div>
           <NavbarContainer action={() => setOpen(!open)} />
+          <div className="mt-10  flex items-center gap-2 justify-start">
+            <label
+              className="text-white text-sm font-semibold  block"
+              htmlFor="language-select"
+            >
+              Choose Language:
+            </label>
+            <select
+              id="language-select"
+              className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 bg-gray-800 text-white border border-gray-700 "
+              onChange={(e) => setLanguage(e.target.value as "NP" | "EN")}
+            >
+              {["NP", "EN"].map((ln) => (
+                <option key={ln} value={ln}>
+                  {ln}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
-      <div className="hidden lg:flex items-center gap-4">
+      <div className=" hidden lg:flex items-center gap-4">
+        <select className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 ">
+          <GrLanguage className="  text-white " />
+          {["NP", "EN"].map((ln) => (
+            <option value={ln} onChange={() => setLanguage(ln as "NP" | "EN")}>
+              {ln}
+            </option>
+          ))}
+        </select>
         <a
           href="#"
-          className="px-6 py-3 text-white bg-[var(--primary-color)] rounded-full hover:bg-[var(--secondary-dark)] transition duration-300"
+          className="px-6  lg:flex py-3 text-white bg-[var(--primary-color)] rounded-full hover:bg-[var(--secondary-dark)] transition duration-300"
         >
           Reserve Now
         </a>
