@@ -8,13 +8,20 @@ export const verifyWebhook = asyncHandler(async (req: any, res: any) => {
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
 
-    if (mode && token === verifyToken) {
-      console.log("WEBHOOK_VERIFIED");
-      res
-        .status(200)
-        .json(new ApiResponse(200, challenge, "Webhook verified.", true));
+    if (mode && token) {
+      if (mode === "subscribe" && token === verifyToken) {
+        res
+          .status(200)
+          .json(new ApiResponse(200, challenge, "Webhook verified.", true));
+      } else {
+        res.status(403).json(new ApiResponse(403, [], "Token invalid.", false));
+      }
     } else {
-      res.status(403).json(new ApiResponse(403, [], "Token invalid.", false));
+      res
+        .status(400)
+        .json(
+          new ApiResponse(400, [], "Bad requests. Invalid parameters.", false)
+        );
     }
   } catch (error) {
     res
