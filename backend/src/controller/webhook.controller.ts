@@ -7,7 +7,9 @@ export const verifyWebhook = asyncHandler(async (req: any, res: any) => {
     const mode = req.query["hub.mode"];
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
-
+    console.log({ mode });
+    console.log({ token });
+    console.log({ challenge });
     if (mode && token) {
       if (mode === "subscribe" && token === verifyToken) {
         res
