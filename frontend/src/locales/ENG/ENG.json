@@ -1,0 +1,18 @@
+{
+  "HomePage_banner": {
+    "title": "Welcome to Pink Putali",
+    "description": "Savor the fusion of Nepalese flavors with a sip of cocktails"
+  },
+  "MenuPage_banner": {
+    "title": "Explore Our",
+    "description": "Savor the finest dishes made with fresh ingredients, carefully crafted by our chefs.           "
+  },
+  "AboutPage_banner": {
+    "title": "About Us",
+    "description": "We take pride in serving quality food with a commitment to excellence. Find out more about us!"
+  },
+  "EventPage_banner": {
+    "title": "Join Our Exciting Events",
+    "description": "Don't miss out on our special events - good food, great company, and unforgettable moments.  "
+  }
+}

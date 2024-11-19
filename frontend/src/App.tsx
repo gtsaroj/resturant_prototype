@@ -25,19 +25,19 @@ export const MainPage = () => {
       setTimeout(() => {
         sessionStorage.setItem("loaderShown", "true");
         setShowLoader(false);
-      }, 1000);
+      }, 5000);
     }
   }, []);
 
   return showLoader ? (
-    <Loader time={1000} />
+    <Loader time={5000} />
   ) : (
     <div className="w-full  flex flex-col items-center justify-center ">
+      <Navbar />
       <div className="max-w-[1500px] w-full flex flex-col items-center justify-center">
-        <Navbar />
         <Outlet />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

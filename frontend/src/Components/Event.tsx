@@ -2,6 +2,8 @@ import React from "react";
 import EventCard from "./Common/Card/Event.card";
 
 export const Event: React.FC = () => {
+
+
   const events = [
     {
       title: "Live Jazz Night",

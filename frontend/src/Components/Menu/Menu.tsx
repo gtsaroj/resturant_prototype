@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import data from "../../data.json";
 import { ProductCard } from "../Common/Card/Product.Card";
 import { MenuProps, ProductTypes } from "../../types/product.types";
-import {  ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Menu = () => {
   const { menu, products } = data;
@@ -123,7 +123,9 @@ export const Menus = ({ action, menu }: MenuProps) => {
             className="sm:size-12 size-10 rounded-full overflow-hidden object-cover"
             alt="product"
           />
-          <p className="sm:text-[15px] text-[12px] tracking-wide text-[var(--primary-text)]">{product.name}</p>
+          <p className="sm:text-[15px] text-[12px] tracking-wide text-[var(--primary-text)]">
+            {product.name}
+          </p>
         </div>
       ))}
     </div>
