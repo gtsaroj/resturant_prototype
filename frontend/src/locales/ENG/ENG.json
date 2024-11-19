@@ -14,5 +14,61 @@
   "EventPage_banner": {
     "title": "Join Our Exciting Events",
     "description": "Don't miss out on our special events - good food, great company, and unforgettable moments.  "
+  },
+  "navbar": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "event": "Event"
+  },
+  "inquiry": {
+    "title": "Do you have an inquiry?",
+    "button": "Suscribe"
+  },
+  "category": {
+    "title": "What's on your mind?",
+    "order": "Order Now",
+    "noProductsTitle": "No products available at the moment",
+    "noProductsDescription": "Please check back later or explore other categories."
+  },
+  "event": {
+    "title": "Explore Our Events!",
+    "reserve": "Reserver Now"
+  },
+  "feedback": {
+    "title": "Leave Feedback",
+    "submit": "Submit"
+  },
+
+  "footer": {
+    "followUs": "Follow us:",
+    "quickContact": "Quick Contact",
+    "address": {
+      "location": "New Baneshwor",
+      "city": "Kathmandu, Nepal"
+    },
+    "phone": "01-4589134, 01-4588627, 9801644462",
+    "email": "inquiry@putalipink.com",
+    "openingHour": "Opening Hour",
+    "openingTime": "06:00 AM - 06:00 PM",
+    "quickLinks": "Quick Links",
+    "links": {
+      "home": "Home",
+      "inquiry": "Inquiry",
+      "aboutUs": "About us",
+      "event": "Event",
+      "resources": "Resources",
+      "terms": "Terms & Condition",
+      "privacy": "Privacy Policy",
+      "subscribe": "Subscribe"
+    },
+    "subscribe": {
+      "placeholder": "Enter your email..."
+    },
+    "copyright": "Copyright © 2024 All Rights Reserved.",
+    "developedBy": "Developed By: ",
+    "and": "and",
+    "saroj": "Saroj ",
+    "aayush": "Aayush"
   }
 }

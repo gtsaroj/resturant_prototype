@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { EventTypes } from "../../../types/event.types";
 
 const EventCard = ({
@@ -10,6 +11,9 @@ const EventCard = ({
   time,
   title,
 }: EventTypes) => {
+  const { t } = useTranslation();
+  const { reserve } = t("event");
+
   return (
     <div className="sm:w-[20rem] w-full bg-white border border-gray-200 rounded-lg  overflow-hidden  duration-300">
       {/* Event Image */}
@@ -54,7 +58,7 @@ const EventCard = ({
           href={ctaLink}
           className="block border-[1px] hover:text-white border-[var(--border-color)] font-semibold w-full text-center text-sm text-[var(--primary-text)] bg-transparent py-2 rounded-md mt-4 hover:bg-[var(--primary-dark)] transition-colors"
         >
-          Reserve Now
+          {reserve}
         </a>
       </div>
     </div>

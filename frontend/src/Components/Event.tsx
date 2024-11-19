@@ -1,9 +1,10 @@
 import React from "react";
 import EventCard from "./Common/Card/Event.card";
+import { useTranslation } from "react-i18next";
 
 export const Event: React.FC = () => {
-
-
+  const { t } = useTranslation();
+  const { title } = t("event") as any;
   const events = [
     {
       title: "Live Jazz Night",
@@ -64,7 +65,7 @@ export const Event: React.FC = () => {
       <div className="w-full flex items-center ">
         <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-black/100  to-black/0 dark:to-black/0"></h3>
         <p className="font-bold text-center sm:text-[22px] text-[15px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
-          Explore Our Events!
+          {title}
         </p>
         <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-black/0 to-black/100 dark:to-black/100"></h3>
       </div>

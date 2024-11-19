@@ -3,25 +3,29 @@ import Logo from "../../assets/logo/pingputali.jpg";
 import React, { useEffect, useRef } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { GrLanguage } from "react-icons/gr";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 export const NavbarContainer = ({ action }: { action?: () => void }) => {
+  const { t } = useTranslation();
+
+  const { home, menu, event, about } = t("navbar") as any;
+
   const navbarData = [
     {
-      name: "Home",
+      name: home,
       pathname: "/",
     },
     {
-      name: "Menu",
+      name: menu,
       pathname: "/menu",
     },
     {
-      name: "About",
+      name: event,
       pathname: "/about",
     },
     {
-      name: "Event",
+      name: about,
       pathname: "/event",
     },
   ];
