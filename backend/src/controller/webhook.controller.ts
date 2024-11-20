@@ -12,18 +12,12 @@ export const verifyWebhook = asyncHandler(async (req: any, res: any) => {
     console.log({ challenge });
     if (mode && token) {
       if (mode === "subscribe" && token === verifyToken) {
-        res
-          .status(200)
-          .json(new ApiResponse(200, challenge, "Webhook verified.", true));
+        res.status(200).send(challenge);
       } else {
-        res.status(403).json(new ApiResponse(403, [], "Token invalid.", false));
+        res.status(403).send(challenge);
       }
     } else {
-      res
-        .status(400)
-        .json(
-          new ApiResponse(400, [], "Bad requests. Invalid parameters.", false)
-        );
+      res.status(400).send(challenge);
     }
   } catch (error) {
     res
