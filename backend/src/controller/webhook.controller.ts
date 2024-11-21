@@ -7,9 +7,6 @@ export const verifyWebhook = asyncHandler(async (req: any, res: any) => {
     const mode = req.query["hub.mode"];
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
-    console.log({ mode });
-    console.log({ token });
-    console.log({ challenge });
     if (mode && token) {
       if (mode === "subscribe" && token === verifyToken) {
         res.status(200).send(challenge);
@@ -41,6 +38,7 @@ export const getWebhook = asyncHandler(async (req: any, res: any) => {
       body.entry.forEach((entry: any) => {
         const webhookEvent = entry.messaging[0];
         senderPSID = webhookEvent.sender.id;
+        console.log({ senderPSID });
       });
       res
         .status(200)
@@ -53,16 +51,7 @@ export const getWebhook = asyncHandler(async (req: any, res: any) => {
           )
         );
     } else {
-      res
-        .status(404)
-        .json(
-          new ApiResponse(
-            404,
-            [],
-            "Webhook event is not from a page subscription.",
-            true
-          )
-        );
+      res.status(404).send("Webhook event is not from a page subscription.");
     }
   } catch (error) {
     res
