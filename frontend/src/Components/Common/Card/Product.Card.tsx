@@ -1,5 +1,8 @@
 import React from "react";
 import { ProductTypes } from "../../../types/product.types";
+import { addOrder } from "../../../services/message.services";
+import { generateUniqueId } from "../../../utility/generateId";
+import { useTranslation } from "react-i18next";
 
 export const ProductCard: React.FC<ProductTypes> = ({
   id,
@@ -7,6 +10,8 @@ export const ProductCard: React.FC<ProductTypes> = ({
   name,
   price,
 }: ProductTypes) => {
+  const {t} = useTranslation()
+
   return (
     <div
       key={id}
@@ -26,12 +31,17 @@ export const ProductCard: React.FC<ProductTypes> = ({
 
         {/* Price */}
         <p className="text-[14px] font-medium text-gray-700 mt-2">
-          {price ? `Rs. ${price}` : "Free"}
+          {price ? `NPR. ${price}` : "Free"}
         </p>
 
         {/* Add to Cart Button */}
-        <button className="w-full border-[var(--border-color)] border-[1px] py-2 text-[13px]  text-[var(--primary-text)] font-semibold hover:text-white  rounded-md mt-3 bg-transparent hover:bg-[var(--primary-dark)] transition-colors">
-          Order now
+        <button
+          onClick={() =>
+            addOrder({ imageUrl: image, name: name, price: price,recipientId:"psid" })
+          }
+          className="w-full border-[var(--border-color)] border-[1px] py-2 text-[13px]  text-[var(--primary-text)] font-semibold hover:text-white  rounded-md mt-3 bg-transparent hover:bg-[var(--primary-dark)] transition-colors"
+        >
+        {t("order")}
         </button>
       </div>
     </div>

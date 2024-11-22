@@ -1,4 +1,5 @@
 {
+  "title": "Pink Putali Restaurant",
   "HomePage_banner": {
     "title": "Welcome to Pink Putali",
     "description": "Savor the fusion of Nepalese flavors with a sip of cocktails"
@@ -31,11 +32,13 @@
     "noProductsTitle": "No products available at the moment",
     "noProductsDescription": "Please check back later or explore other categories."
   },
+  "order": "Order Now",
   "event": {
     "title": "Explore Our Events!",
     "reserve": "Reserver Now"
   },
   "feedback": {
+    "message": "Your feedback has been submitted successfully.",
     "title": "Leave Feedback",
     "submit": "Submit"
   },
@@ -70,5 +73,261 @@
     "and": "and",
     "saroj": "Saroj ",
     "aayush": "Aayush"
-  }
+  },
+  "menu": [
+    {
+      "id": "01",
+      "name": "Burgers",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "02",
+      "name": "Chilly",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+
+    {
+      "id": "03",
+      "name": "Smoothies",
+      "image": "https://kmapasiri.wordpress.com/wp-content/uploads/2013/02/smoothies-article.jpg"
+    },
+    {
+      "id": "04",
+      "name": "Pizza",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg"
+    },
+    {
+      "id": "05",
+      "name": "Drinks",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/364739360/YI/YS/PL/78160520/bar-and-restaurant-river-side-location-page3-500x500.jpeg"
+    },
+    {
+      "id": "06",
+      "name": "Grills",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/grilled-persian-chicken-secondary-65f85449d8810.jpg"
+    },
+    {
+      "id": "07",
+      "name": "Biryani",
+      "image": "https://www.licious.in/blog/wp-content/uploads/2023/01/Shutterstock_2047827035-1024x683.jpg"
+    },
+    {
+      "id": "08",
+      "name": "Pilaf",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/pilaf-collection-b1aaa51.jpg?resize=768,574"
+    },
+    {
+      "id": "09",
+      "name": "Thukpa",
+      "image": "https://romandianmasala.com/wp-content/uploads/2022/02/DSC01534-2.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Sukuti",
+      "image": "https://cdn.tasteatlas.com/images/dishes/cc879765847047629baf56168ed7501c.jpg?m=facebook"
+    },
+    {
+      "id": "11",
+      "name": "Tea",
+      "image": "https://cdn.shopify.com/s/files/1/0382/1836/7107/t/3/assets/dehydrated-tea-hero-image-1639694925155_1200x.jpg?v=1639694928"
+    },
+    {
+      "id": "12",
+      "name": "Chowmein",
+      "image": "https://tastesbetterfromscratch.com/wp-content/uploads/2023/10/Chow-Mein-1.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_01_001",
+      "name": "Chicken Burger",
+      "price": 340,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_002",
+      "name": "Beef Burger",
+      "price": 380,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_003",
+      "name": "Veggie Burger",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_02_001",
+      "name": "Margherita Pizza",
+      "price": 500,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_002",
+      "name": "Pepperoni Pizza",
+      "price": 550,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_003",
+      "name": "BBQ Chicken Pizza",
+      "price": 600,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_004",
+      "name": "Veggie Supreme Pizza",
+      "price": 580,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_03_001",
+      "name": "Spaghetti Bolognese",
+      "price": 350,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_002",
+      "name": "Penne Arrabbiata",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_003",
+      "name": "Fettuccine Alfredo",
+      "price": 320,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+
+    {
+      "id": "prodfsda_01_001",
+      "name": "Chicken Burger",
+      "price": 340,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_fsda002",
+      "name": "Beef Burger",
+      "price": 380,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_01fsa_003",
+      "name": "Veggie Burger",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_0fesopj'2_001",
+      "name": "Margherita Pizza",
+      "price": 500,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02feopsaj'f_002",
+      "name": "Pepperoni Pizza",
+      "price": 550,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_sdfj02_003",
+      "name": "BBQ Chicken Pizza",
+      "price": 600,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_0fdjoi04",
+      "name": "Veggie Supreme Pizza",
+      "price": 580,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_03_00dsjio1",
+      "name": "Spaghetti Bolognese",
+      "price": 350,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_002sdvfg",
+      "name": "Penne Arrabbiata",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_00ds3",
+      "name": "Fettuccine Alfredo",
+      "price": 320,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    }
+  ],
+  "eventData": [
+    {
+      "title": "Live Jazz Night",
+      "image": "https://imgs.search.brave.com/Q7TJOWBQ8tu3jN0CtPkw_2m1qvxFVo59Zw_yH2UdHwg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MzEwNTgwMjAzODct/M2JlMzQ0NTU2YmU2/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjAuMyZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE9IeDhaWFps/Ym5SOFpXNThNSHg4/TUh4OGZEQT0",
+      "date": "2024-11-25",
+      "time": "7:00 PM - 10:00 PM",
+      "location": "The Gourmet Restaurant, Downtown",
+      "description": "An evening of live jazz music with a curated menu.",
+      "price": 50,
+      "tags": ["Live Music", "Special Menu"],
+      "ctaLink": "#",
+      "availableSeats": 8
+    },
+    {
+      "title": "Art & Wine Night",
+      "image": "https://imgs.search.brave.com/vHKxiNssdtyxLTbPJJEiz56ks2yz4EIFRxsxXQEvLtU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXN0/YXVyYW50LmVhdGFw/cC5jby9ocy1mcy9o/dWJmcy9yZXN0YXVy/YW50JTIwZXZlbnQl/MjBpZGVhcy53ZWJw/P3dpZHRoPTY3MCZo/ZWlnaHQ9NDQwJm5h/bWU9cmVzdGF1cmFu/dCUyMGV2ZW50JTIw/aWRlYXMud2VicA",
+      "date": "2024-12-05",
+      "time": "6:00 PM - 9:00 PM",
+      "location": "Artisan Lounge, Uptown",
+      "description": "Sip on fine wines while enjoying an art exhibit.",
+      "price": 40,
+      "tags": ["Art", "Wine Tasting"],
+      "ctaLink": "#",
+      "availableSeats": 20
+    },
+    {
+      "title": "Cooking Masterclass: Italian Cuisine",
+      "image": "https://imgs.search.brave.com/MgQ-tr18tNm7Sz4fJg5_totwdxPKq49_HUu8a0305ew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE0/OTQzNDY0ODA3NzUt/OTM2YTlmMGQwODc3/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjAuMyZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE5ueDhjbVZ6/ZEdGMWNtRnVkSHhs/Ym53d2ZId3dmSHg4/TUE9PQ",
+      "date": "2024-12-12",
+      "time": "5:00 PM - 8:00 PM",
+      "location": "The Culinary Studio, Midtown",
+      "description": "Learn to cook authentic Italian dishes with a top chef.",
+      "price": 100,
+      "tags": ["Cooking", "Hands-On"],
+      "ctaLink": "#",
+      "availableSeats": 15
+    },
+    {
+      "title": "Stand-Up Comedy Night",
+      "image": "https://imgs.search.brave.com/ZlS35yGM86yh5iNWataWzdHWkzeo74w-1XQwA5wT-ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3NhbGVz/LmFwcGluc3QuaW8v/MjAxOS8wNC9pbWFn/ZTI2LTEuanBn",
+      "date": "2024-11-30",
+      "time": "8:00 PM - 10:30 PM",
+      "location": "Laugh Out Loud Comedy Club",
+      "description": "A night of laughter featuring top comedians.",
+      "price": 30,
+      "tags": ["Comedy", "Nightlife"],
+      "ctaLink": "#",
+      "availableSeats": 50
+    }
+  ]
 }
