@@ -1,16 +1,24 @@
 import React, { useEffect, useRef } from "react";
-import data from "../../data.json";
+
 import { ProductCard } from "../Common/Card/Product.Card";
-import { MenuProps, ProductTypes } from "../../types/product.types";
+import { MenuProps, MenuTypes, ProductTypes } from "../../types/product.types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const Menu = () => {
-  const { menu, products } = data;
-
   const { t } = useTranslation();
+  const menu = React.useMemo(
+    () => t("menu") as unknown as Array<MenuTypes>,
+    [t]
+  );
+  const products = React.useMemo(
+    () => t("products") as unknown as Array<ProductTypes>,
+    [t]
+  );
 
-  const { title, noProductsTitle, noProductsDescription } = t("category") as any;
+  const { title, noProductsTitle, noProductsDescription } = t(
+    "category"
+  ) as any;
 
   const [initialMenu, setInitialMenu] = React.useState<string>("");
   const [selectedProducts, setSelectedProducts] = React.useState<
@@ -25,8 +33,10 @@ export const Menu = () => {
     const selectedMenu = products?.filter(
       (product) => product.category === initialMenu
     );
+
     setSelectedProducts(selectedMenu);
   }, [initialMenu, products]);
+
   const name = selectedProducts?.find(
     (product) => product.category === initialMenu
   )?.name;

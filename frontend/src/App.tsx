@@ -6,15 +6,20 @@ import About from "./Pages/About.page";
 import useScrollToTop from "./Hook/useScrollToTop";
 import { EventPage } from "./Pages/Event.page";
 import { MenuPage } from "./Pages/Menu.page";
-import React from "react";
+import React, { useEffect } from "react";
 import { Loader } from "./Components/Common/Loader/Loader";
 
 export const MainPage = () => {
   useScrollToTop();
 
-  const [showLoader, setShowLoader] = React.useState<boolean>(
-    localStorage.getItem("showLoader") === "true" ? true : false
-  );
+  const [showLoader, setShowLoader] = React.useState<boolean>();
+
+  useEffect(() => {
+    const loader = localStorage.getItem("showloader");
+    if (loader) {
+      setShowLoader(true);
+    }
+  }, []);
 
   React.useEffect(() => {
     if (sessionStorage.getItem("loaderShown")) {
@@ -25,12 +30,16 @@ export const MainPage = () => {
       setTimeout(() => {
         sessionStorage.setItem("loaderShown", "true");
         setShowLoader(false);
-      }, 5000);
+      }, 2000);
     }
   }, []);
 
+  if (showLoader === undefined) {
+    return null;
+  }
+
   return showLoader ? (
-    <Loader time={5000} />
+    <Loader time={2000} />
   ) : (
     <div className="w-full  flex flex-col items-center justify-center ">
       <Navbar />

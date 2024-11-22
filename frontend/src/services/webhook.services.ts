@@ -4,9 +4,10 @@ export const getWebhook = async () => {
   try {
     const response = await makeRequest({
       method: "get",
+      url :"/webhook"
     });
 
-    return response;
+    return response.data
   } catch (error) {
     throw new Error("Error while fetching webhook " + error);
   }

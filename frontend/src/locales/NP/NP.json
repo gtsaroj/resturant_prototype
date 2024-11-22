@@ -1,8 +1,9 @@
 {
   "HomePage_banner": {
     "title": "पिंक पुतलीमा स्वागत छ",
-    "description": "नेपालि स्वादको मिलनसँग ककटेलको स्वाद लिनुहोस्"
+    "description": "नेपाली स्वाद र ककटेलको मिश्रणको आनन्द लिनुहोस्"
   },
+  "title": "पिंक पुतली रेस्टुरेन्ट",
   "MenuPage_banner": {
     "title": "हाम्रो मेनु अन्वेषण गर्नुहोस्",
     "description": "ताजा सामग्रीले बनाइएको उत्कृष्ट परिकारहरूको स्वाद लिनुहोस्, जुन हाम्रो सेफले ध्यानपूर्वक तयार गरेका छन्।"
@@ -15,6 +16,7 @@
     "title": "हाम्रा रोमाञ्चक इभेन्टहरूमा सहभागी हुनुहोस्",
     "description": "हाम्रो विशेष इभेन्टहरू नछुटाउनुहोस् - राम्रो खाना, उत्कृष्ट साथीहरूको साथ, र अविस्मरणीय क्षणहरू।"
   },
+  "order": "अर्डर गर्नुहोस्",
   "navbar": {
     "home": "गृहपृष्ठ",
     "menu": "मेनु",
@@ -33,11 +35,12 @@
   },
   "event": {
     "title": "हाम्रा कार्यक्रमहरू अन्वेषण गर्नुहोस्!",
-    "reserve": "अहिले रिजर्भ गर्नुहोस्"
+    "reserve": "रिजर्भ गर्नुहोस्"
   },
   "feedback": {
     "title": "प्रतिक्रिया दिनुहोस्",
-    "submit": "पेश गर्नुहोस्"
+    "submit": "पेश गर्नुहोस्",
+    "message" :"तपाईंको प्रतिक्रिया सफलतापूर्वक पेश गरिएको छ।"
   },
 
   "footer": {
@@ -70,5 +73,190 @@
     "and": "र",
     "saroj": "सरोज",
     "aayush": "आयुष।"
-  }
+  },
+  "menu": [
+    {
+      "id": "01",
+      "name": "बर्गर",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "02",
+      "name": "चिली",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "03",
+      "name": "स्मूदी",
+      "image": "https://kmapasiri.wordpress.com/wp-content/uploads/2013/02/smoothies-article.jpg"
+    },
+    {
+      "id": "04",
+      "name": "पिज्जा",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg"
+    },
+    {
+      "id": "05",
+      "name": "पेय",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/364739360/YI/YS/PL/78160520/bar-and-restaurant-river-side-location-page3-500x500.jpeg"
+    },
+    {
+      "id": "06",
+      "name": "ग्रिल",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/grilled-persian-chicken-secondary-65f85449d8810.jpg"
+    },
+    {
+      "id": "07",
+      "name": "बिर्यानी",
+      "image": "https://www.licious.in/blog/wp-content/uploads/2023/01/Shutterstock_2047827035-1024x683.jpg"
+    },
+    {
+      "id": "08",
+      "name": "पिलोफ",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/pilaf-collection-b1aaa51.jpg?resize=768,574"
+    },
+    {
+      "id": "09",
+      "name": "थुक्पा",
+      "image": "https://romandianmasala.com/wp-content/uploads/2022/02/DSC01534-2.jpg"
+    },
+    {
+      "id": "10",
+      "name": "सुकेको मासु",
+      "image": "https://cdn.tasteatlas.com/images/dishes/cc879765847047629baf56168ed7501c.jpg?m=facebook"
+    },
+    {
+      "id": "11",
+      "name": "चिया",
+      "image": "https://cdn.shopify.com/s/files/1/0382/1836/7107/t/3/assets/dehydrated-tea-hero-image-1639694925155_1200x.jpg?v=1639694928"
+    },
+    {
+      "id": "12",
+      "name": "चाउमिन",
+      "image": "https://tastesbetterfromscratch.com/wp-content/uploads/2023/10/Chow-Mein-1.jpg"
+    }
+  ],
+
+  "products": [
+    {
+      "id": "prod_01_001",
+      "name": "चिकन बर्गर",
+      "price": "३४०",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_002",
+      "name": "बीफ बर्गर",
+      "price": "३८०",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_01_003",
+      "name": "वेजी बर्गर",
+      "price": "३००",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "01"
+    },
+    {
+      "id": "prod_02_001",
+      "name": "मार्घेरिटा पिज्जा",
+      "price": "५००",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_002",
+      "name": "पेपरोनी पिज्जा",
+      "price": "५५०",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_003",
+      "name": "बारबिक्यु चिकन पिज्जा",
+      "price": "६००",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_02_004",
+      "name": "वेजी सुप्रीम पिज्जा",
+      "price": "५८०",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "02"
+    },
+    {
+      "id": "prod_03_001",
+      "name": "स्पैगेटी बोलोग्नेसे",
+      "price": "३५०",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_002",
+      "name": "पेन्ने अराबियाता",
+      "price": "३००",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    },
+    {
+      "id": "prod_03_003",
+      "name": "फेटुकिनी आल्फ्रेडो",
+      "price": "३२०",
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "category": "03"
+    }
+  ],
+  "eventData": [
+    {
+      "title": "लाइभ जाज नाइट",
+      "image": "https://imgs.search.brave.com/Q7TJOWBQ8tu3jN0CtPkw_2m1qvxFVo59Zw_yH2UdHwg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MzEwNTgwMjAzODct/M2JlMzQ0NTU2YmU2/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjAuMyZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE9IeDhaWFps/Ym5SOFpXNThNSHg4/TUh4OGZEQT0",
+      "date": "२०२४-११-२५",
+      "time": "७:०० PM - १०:०० PM",
+      "location": "द गॉरमेट रेस्टुरेन्ट, डाउनटाउन",
+      "description": "जाज संगीतको साँझ संग विशेष मेनु.",
+      "price": "५०",
+      "tags": ["लाइभ संगीत", "विशेष मेनु"],
+      "ctaLink": "#",
+      "availableSeats": "८"
+    },
+    {
+      "title": "कला र वाइन नाइट",
+      "image": "https://imgs.search.brave.com/vHKxiNssdtyxLTbPJJEiz56ks2yz4EIFRxsxXQEvLtU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXN0/YXVyYW50LmVhdGFw/cC5jby9ocy1mcy9o/dWJmcy9yZXN0YXVy/YW50JTIwZXZlbnQl/MjBpZGVhcy53ZWJw/P3dpZHRoPTY3MCZo/ZWlnaHQ9NDQwJm5h/bWU9cmVzdGF1cmFu/dCUyMGV2ZW50JTIw/aWRlYXMud2VicA",
+      "date": "२०२४-१२-०५",
+      "time": "६:०० PM - ९:०० PM",
+      "location": "आर्टिसन लाउन्ज, उपटाउन",
+      "description": "सुँघ्नको लागि उत्तम वाइनको साथ कला प्रदर्शनी",
+      "price": "४०",
+      "tags": ["कला", "वाइन चाख्न"],
+      "ctaLink": "#",
+      "availableSeats": "२०"
+    },
+    {
+      "title": "कुकिंग मास्टरक्लास: इटालियन भोजन",
+      "image": "https://imgs.search.brave.com/MgQ-tr18tNm7Sz4fJg5_totwdxPKq49_HUu8a0305ew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE0/OTQzNDY0ODA3NzUt/OTM2YTlmMGQwODc3/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjAuMyZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE5ueDhjbVZ6/ZEdGMWNtRnVkSHhs/Ym53d2ZId3dmSHg4/TUE9PQ",
+      "date": "२०२४-१२-१२",
+      "time": "५:०० PM - ८:०० PM",
+      "location": "द क्युलिनरी स्टूडियो, मिडटाउन",
+      "description": "सात वर्षको अनुभव भएका शेफसँग इटालियन खाना बनाउने सीप सिक्नुहोस्",
+      "price": "१००",
+      "tags": ["खाना पकाउने", "ह्यान्ड्स-ऑन"],
+      "ctaLink": "#",
+      "availableSeats": "१५"
+    },
+    {
+      "title": "स्ट्यान्ड-अप कमेडी नाइट",
+      "image": "https://imgs.search.brave.com/ZlS35yGM86yh5iNWataWzdHWkzeo74w-1XQwA5wT-ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3NhbGVz/LmFwcGluc3QuaW8v/MjAxOS8wNC9pbWFn/ZTI2LTEuanBn",
+      "date": "२०२४-११-३०",
+      "time": "८:०० PM - १०:३० PM",
+      "location": "लाफ आउट लाउड कमेडी क्लब",
+      "description": "एक रात हाँसोको र विख्यात कमेडियन्सका साथ",
+      "price": "३०",
+      "tags": ["कमेडी", "रात्री जीवन"],
+      "ctaLink": "#",
+      "availableSeats": "५०"
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 export interface MessageTypes {
-  recipientId: string;
+  recipientId?: string;
   price: number;
   imageUrl: string;
   name: string;

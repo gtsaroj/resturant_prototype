@@ -1,11 +1,15 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { FormEvent, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-export const Feedback = () => {
+export const Feedback: React.FC = () => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useTranslation();
 
-  const handleSubmit = (e : FormEvent<HTMLFormElement>) => {
+  const { title, submit, message } = t("feedback");
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (rating && comment) {
       console.log({ rating, comment }); // Replace with API call or state management
@@ -20,13 +24,14 @@ export const Feedback = () => {
       {submitted ? (
         <div className="text-center">
           <h2 className="text-lg font-semibold text-green-500">Thank You!</h2>
-          <p className="text-gray-600 mt-2">
-            Your feedback has been submitted successfully.
-          </p>
+          <p className="text-gray-600 mt-2">{message}</p>
         </div>
       ) : (
-        <form onSubmit={(e)=>handleSubmit(e)} className="space-y-6 flex flex-col w-full">
-          <h2 className="text-lg font-semibold text-gray-800">Leave Feedback</h2>
+        <form
+          onSubmit={(e) => handleSubmit(e)}
+          className="space-y-6 flex flex-col w-full"
+        >
+          <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
 
           {/* Rating Input */}
           <div className="flex items-center gap-2">
@@ -47,7 +52,8 @@ export const Feedback = () => {
           </div>
 
           {/* Comment Input */}
-          <textarea required
+          <textarea
+            required
             className="w-full p-3 border border-gray-300  rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:outline-none"
             placeholder="Write your feedback here..."
             value={comment}
@@ -61,7 +67,7 @@ export const Feedback = () => {
             className="w-full py-2 tracking-wider px-4 hover:text-white bg-transparent  text-[var(--primary-text)] font-medium rounded-lg transition-colors duration-200 "
             disabled={!rating || !comment}
           >
-            Submit
+            {submit}
           </button>
         </form>
       )}
