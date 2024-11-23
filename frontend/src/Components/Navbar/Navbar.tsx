@@ -3,24 +3,29 @@ import Logo from "../../assets/logo/pingputali.jpg";
 import React, { useEffect, useRef } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { GrLanguage } from "react-icons/gr";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 export const NavbarContainer = ({ action }: { action?: () => void }) => {
+  const { t } = useTranslation();
+
+  const { home, menu, event, about } = t("navbar") as any;
+
   const navbarData = [
     {
-      name: "Home",
+      name: home,
       pathname: "/",
     },
     {
-      name: "Menu",
+      name: menu,
       pathname: "/menu",
     },
     {
-      name: "About",
+      name: event,
       pathname: "/about",
     },
     {
-      name: "Event",
+      name: about,
       pathname: "/event",
     },
   ];
@@ -49,9 +54,16 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
 export const Navbar = () => {
   const [open, setOpen] = React.useState<boolean>(false);
   const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
+  const [language, setLanguage] = React.useState<"EN" | "NP">();
 
   const navbarRef = useRef<null | HTMLDivElement>(null);
-  const [language, setLanguage] = React.useState<"NP" | "EN">("EN");
+
+  const { t } = useTranslation();
+
+  const changeLanguage = (language: "EN" | "NP") => {
+    i18next.changeLanguage(language);
+    setLanguage(language);
+  };
 
   useEffect(() => {
     const scrollerDetect = () => {
@@ -85,6 +97,13 @@ export const Navbar = () => {
     }
   }, [open]);
 
+  const isSetLanguage = localStorage.getItem("i18nextLng") as "EN" | "NP";
+  useEffect(() => {
+    if (isSetLanguage === "EN" || isSetLanguage === "NP") {
+      setLanguage(isSetLanguage);
+    }
+  }, [isSetLanguage]);
+
   const navigate = useNavigate();
 
   return (
@@ -92,7 +111,7 @@ export const Navbar = () => {
       className={`w-full  
           ${
             isScrolled
-              ? "fixed  -top-20    translate-y-20  "
+              ? "fixed  -top-20 translate-y-20  "
               : " -translate-y-0 static"
           }
             z-[1000] shadow-sm shadow-black 
@@ -150,7 +169,7 @@ export const Navbar = () => {
                   alt="logo"
                 />
               </div>
-              <h1 className=" text-sm  text-white ">Pink putali Restaurant</h1>
+              <h1 className=" text-sm  text-white ">{t("title")} </h1>
             </div>
           </div>
           <NavbarContainer action={() => setOpen(!open)} />
@@ -162,9 +181,10 @@ export const Navbar = () => {
               Choose Language:
             </label>
             <select
+              value={language}
               id="language-select"
               className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 bg-gray-800 text-white border border-gray-700 "
-              onChange={(e) => setLanguage(e.target.value as "NP" | "EN")}
+              onChange={(e) => changeLanguage(e.target.value as "EN" | "NP")}
             >
               {["NP", "EN"].map((ln) => (
                 <option key={ln} value={ln}>
@@ -176,12 +196,13 @@ export const Navbar = () => {
         </div>
       </div>
       <div className=" hidden lg:flex items-center gap-4">
-        <select className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 ">
-          <GrLanguage className="  text-white " />
+        <select
+          value={language}
+          onChange={(e) => changeLanguage(e.target.value as "EN" | "NP")}
+          className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 "
+        >
           {["NP", "EN"].map((ln) => (
-            <option value={ln} onChange={() => setLanguage(ln as "NP" | "EN")}>
-              {ln}
-            </option>
+            <option value={ln}>{ln}</option>
           ))}
         </select>
         <a

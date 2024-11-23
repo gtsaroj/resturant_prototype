@@ -1,7 +1,11 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { FaFacebookMessenger, FaWhatsapp, FaViber } from "react-icons/fa";
 
 export const Inquiry = () => {
+  const { t } = useTranslation();
+
+  const { title, button } = t("inquiry") as any;
   const mapReference = useRef<null | HTMLIFrameElement>(null);
   return (
     <div className=" w-full lg:flex-row flex-col-reverse h-full py-10 flex items-start gap-10 ">
@@ -26,7 +30,7 @@ export const Inquiry = () => {
       <div className="w-full lg:w-[40%]  h-full   flex flex-col items-center justify-start gap-6 sm:gap-14 text-center">
         <div className="w-full flex flex-col gap-9 items-center justify-center">
           <h1 className="sm:text-3xl text-2xl font-semibold tracking-wider text-[var(--primary-text)]">
-            Do you have an inquiry?
+            {title}
           </h1>
 
           {/* Social Media Links */}
@@ -64,7 +68,7 @@ export const Inquiry = () => {
             type="submit"
             className="sm:w-[30%] w-full text-white  p-[0.6rem] sm:py-[1.1rem] rounded-lg  lg:mt-0"
           >
-            Subscribe
+            {button}
           </button>
         </form>
       </div>

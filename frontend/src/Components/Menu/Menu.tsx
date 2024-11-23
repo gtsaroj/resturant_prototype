@@ -1,11 +1,24 @@
 import React, { useEffect, useRef } from "react";
-import data from "../../data.json";
+
 import { ProductCard } from "../Common/Card/Product.Card";
-import { MenuProps, ProductTypes } from "../../types/product.types";
-import {  ChevronLeft, ChevronRight } from "lucide-react";
+import { MenuProps, MenuTypes, ProductTypes } from "../../types/product.types";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const Menu = () => {
-  const { menu, products } = data;
+  const { t } = useTranslation();
+  const menu = React.useMemo(
+    () => t("menu") as unknown as Array<MenuTypes>,
+    [t]
+  );
+  const products = React.useMemo(
+    () => t("products") as unknown as Array<ProductTypes>,
+    [t]
+  );
+
+  const { title, noProductsTitle, noProductsDescription } = t(
+    "category"
+  ) as any;
 
   const [initialMenu, setInitialMenu] = React.useState<string>("");
   const [selectedProducts, setSelectedProducts] = React.useState<
@@ -20,8 +33,10 @@ export const Menu = () => {
     const selectedMenu = products?.filter(
       (product) => product.category === initialMenu
     );
+
     setSelectedProducts(selectedMenu);
   }, [initialMenu, products]);
+
   const name = selectedProducts?.find(
     (product) => product.category === initialMenu
   )?.name;
@@ -35,7 +50,7 @@ export const Menu = () => {
         <div className="w-full flex items-center ">
           <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-black/100  to-black/0 dark:to-black/0"></h3>
           <p className="font-bold text-center sm:text-[22px] text-[15px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
-            What's on your mind?
+            {title}
           </p>
           <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-black/0 to-black/100 dark:to-black/100"></h3>
         </div>
@@ -90,11 +105,9 @@ export const Menu = () => {
                 className="w-24 h-24 opacity-75"
               />
               <h2 className="text-lg font-semibold text-gray-700">
-                No products available at the moment
+                {noProductsTitle}
               </h2>
-              <p className="text-gray-500">
-                Please check back later or explore other categories.
-              </p>
+              <p className="text-gray-500">{noProductsDescription}</p>
             </div>
           )}
         </div>
@@ -123,7 +136,9 @@ export const Menus = ({ action, menu }: MenuProps) => {
             className="sm:size-12 size-10 rounded-full overflow-hidden object-cover"
             alt="product"
           />
-          <p className="sm:text-[15px] text-[12px] tracking-wide text-[var(--primary-text)]">{product.name}</p>
+          <p className="sm:text-[15px] text-[12px] tracking-wide text-[var(--primary-text)]">
+            {product.name}
+          </p>
         </div>
       ))}
     </div>

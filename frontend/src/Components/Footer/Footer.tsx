@@ -9,8 +9,36 @@ import {
   Phone,
 } from "lucide-react";
 import CollegeLogo from "../../assets/logo/pingputali.jpg";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+  const {
+    followUs,
+    quickContact,
+    address: { location, city },
+    phone,
+    email,
+    openingHour,
+    openingTime,
+    quickLinks,
+    links: {
+      home,
+      inquiry,
+      aboutUs,
+      event,
+      resources,
+      terms,
+      privacy,
+      subscribe,
+    },
+    subscribe: { placeholder },
+    copyright,
+    developedBy,
+    saroj,
+    aayush,
+    and,
+  } = t("footer") as any;
   return (
     <div className="flex flex-col w-full text-white px-2 ">
       <footer className="w-full mt-16  rounded-t bg-white border-[1px] border-[var(--border-color)] text-black  place-items-center grid px-5">
@@ -19,7 +47,7 @@ const Footer: React.FC = () => {
             <img src={CollegeLogo} alt="logo" className="max-h-[60px] " />
           </div>
           <div className="flex flex-col text-[var(--primary-text)] items-center justify-center gap-3">
-            <p className="text-lg font-bold  tracking-wide ">Follow us: </p>
+            <p className="text-lg font-bold  tracking-wide ">{followUs} </p>
             <div className="flex items-center gap-9">
               <a
                 aria-label="go to facebook"
@@ -47,15 +75,15 @@ const Footer: React.FC = () => {
         </div>
         <div className=" flex lg:gap-x-20  text-[var(--primary-text)] justify-start flex-wrap w-full  ">
           <div className="flex lg:col-span-1 sm:col-span-2 col-span-3 flex-col gap-6 px-5 py-8 ">
-            <p className="font-bold tracking-wider">Quick Contact</p>
+            <p className="font-bold tracking-wider">{quickContact}</p>
             <div className="flex flex-col gap-5">
               <div className="flex  items-center gap-2 text-sm">
                 <div className="p-2 bg-[var(--light-foreground)] text-[var(--primary-text)] rounded-full flex items-center justify-center">
                   <MapPin />
                 </div>
                 <div>
-                  <p>New baneshwor</p>
-                  <p>Kathmandu, Nepal</p>
+                  <p>{location}</p>
+                  <p>{city}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm">
@@ -63,7 +91,7 @@ const Footer: React.FC = () => {
                   <Phone />
                 </div>
                 <div>
-                  <p>01-4589134, 01-4588627, 9801644462</p>
+                  <p>{phone}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm">
@@ -75,7 +103,7 @@ const Footer: React.FC = () => {
                     href="mailto:inquiry@texascollege.edu.np"
                     className="break-all text-wrap"
                   >
-                    inquiry@putalipink.com
+                    {email}
                   </a>
                 </div>
               </div>
@@ -84,68 +112,68 @@ const Footer: React.FC = () => {
                   <Clock />
                 </div>
                 <div>
-                  <p>Opening Hour</p>
-                  <p>06:00 AM - 06:00 PM</p>
+                  <p>{openingHour}</p>
+                  <p>{openingTime} </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex flex-col items-start gap-5 px-5 py-8">
-            <p className="font-bold tracking-wider">Quick Links</p>
+            <p className="font-bold tracking-wider">{quickLinks}</p>
             <div className="flex  flex-col gap-3 text-sm text-[var(--primary-text)] ">
               <a
                 href="/"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
-                Home
+                {home}
               </a>
               <a
                 href="/"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
-                Inquiry
+                {inquiry}
               </a>
               <a
                 href="/"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
-                About us
+                {aboutUs}
               </a>{" "}
               <a
                 href="/"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
-                Event
+                {event}
               </a>
             </div>
           </div>
           <div className="flex flex-col sm:col-span-1 col-span-2 items-start gap-5 px-5 py-8">
-            <p className="font-bold tracking-wider">Resources</p>
+            <p className="font-bold tracking-wider">{resources}</p>
             <div className="flex flex-col gap-5 text-sm text-[var(--primary-text)] ">
               <a
                 href="/"
                 target="_blank"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
-                Terms & Condition
+                {terms}
               </a>
               <a
                 target="_blank"
                 href="/"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
-                Privacy Policy
+                {privacy}
               </a>
             </div>
           </div>
           {/* suscriber */}
           <div className="flex  lg:col-span-1 col-span-2 flex-col items-start gap-5 px-5 py-8">
-            <p className="font-bold tracking-wider">Suscribe</p>
+            <p className="font-bold tracking-wider">{subscribe}</p>
             <form className="flex  rounded-xl text-[var(--primary-text)]  justify-center  w-full">
               <input
                 id="subscribe"
                 type="email"
-                placeholder="Enter your email..."
+                placeholder={placeholder}
                 className="w-full   border-[1px] border-r-0 border-[var(--border-color)]  p-3.5 rounded-l-lg  outline-none"
               />
               <button
@@ -159,23 +187,23 @@ const Footer: React.FC = () => {
         </div>
       </footer>
       <div className="w-full flex justify-between flex-col md:flex-row py-4 px-5 text-sm text-[var(--primary-text)] gap-3 items-center">
-        <p>Copyright © 2024 All Rights Reserved.</p>
+        <p>{copyright}</p>
         <p className="cursor-pointer">
-          Developed By:{" "}
+          {developedBy}{" "}
           <a
             href="https://saroj-gt.web.app/"
             target="_blank"
             className="hover:text-[var(--primary-color)]  hover:underline "
           >
-            Saroj
+            {saroj}
           </a>{" "}
-          and{" "}
+          {and}{" "}
           <a
             href="https://aayush-al.web.app/"
             target="_blank"
             className="hover:text-[var(--primary-color)]  hover:underline"
           >
-            Aayush.
+            {aayush}
           </a>
         </p>
       </div>

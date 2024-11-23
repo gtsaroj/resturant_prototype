@@ -1,7 +1,7 @@
 import { makeRequest } from "../makeRequest";
 import { MessageTypes } from "../types/message.types";
 
-export const sendMessage = async ({
+export const addOrder = async ({
   imageUrl,
   name,
   price,
@@ -10,7 +10,7 @@ export const sendMessage = async ({
   try {
     const response = await makeRequest({
       method: "post",
-      url: "/order",
+      url: "/message/order",
       data: {
         imageUrl,
         name,
