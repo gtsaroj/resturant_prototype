@@ -17,13 +17,14 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
       pathname: "/",
     },
     {
-      name: menu,
-      pathname: "/menu",
-    },
-    {
       name: event,
       pathname: "/about",
     },
+    {
+      name: menu,
+      pathname: "/menu",
+    },
+
     {
       name: about,
       pathname: "/event",
