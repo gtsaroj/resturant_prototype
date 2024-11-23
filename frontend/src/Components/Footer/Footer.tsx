@@ -10,8 +10,11 @@ import {
 } from "lucide-react";
 import CollegeLogo from "../../assets/logo/pingputali.jpg";
 import { useTranslation } from "react-i18next";
+import { FormEvent } from "react";
+import React from "react";
 
 const Footer: React.FC = () => {
+  const [mail, setMail] = React.useState<string>("");
   const { t } = useTranslation();
   const {
     followUs,
@@ -32,13 +35,18 @@ const Footer: React.FC = () => {
       privacy,
       subscribe,
     },
-    subscribe: { placeholder },
     copyright,
     developedBy,
     saroj,
     aayush,
     and,
   } = t("footer") as any;
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    alert(mail);
+  };
+
   return (
     <div className="flex flex-col w-full text-white px-2 ">
       <footer className="w-full mt-16  rounded-t bg-white border-[1px] border-[var(--border-color)] text-black  place-items-center grid px-5">
@@ -169,18 +177,24 @@ const Footer: React.FC = () => {
           {/* suscriber */}
           <div className="flex  lg:col-span-1 col-span-2 flex-col items-start gap-5 px-5 py-8">
             <p className="font-bold tracking-wider">{subscribe}</p>
-            <form className="flex  rounded-xl text-[var(--primary-text)]  justify-center  w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="flex group/form border-[2px] ring-[var(--primary-color)] hover:ring-2 border-[var(--border-color)] rounded-lg text-[var(--primary-text)]  justify-center  w-full"
+            >
               <input
+                required
+                onChange={(e) => setMail(e.target.value)}
+                value={mail}
                 id="subscribe"
                 type="email"
-                placeholder={placeholder}
-                className="w-full   border-[1px] border-r-0 border-[var(--border-color)]  p-3.5 rounded-l-lg  outline-none"
+                placeholder={"eg. abc@gmail.com"}
+                className="w-full  p-3.5 rounded-l-lg  outline-none"
               />
               <button
                 type="submit"
-                className="py-[0.90rem]  border-r-[1px] border-[var(--border-color)]   px-3  rounded-r-lg  "
+                className="py-[0.95rem]  border-0  px-3  rounded-r-lg  "
               >
-                <ChevronRight />
+                <ChevronRight className="size-6" />
               </button>
             </form>
           </div>

@@ -38,6 +38,7 @@
     "reserve": "Reserver Now"
   },
   "feedback": {
+    "h1" :"Share Your Experience",
     "message": "Your feedback has been submitted successfully.",
     "title": "Leave Feedback",
     "submit": "Submit"
