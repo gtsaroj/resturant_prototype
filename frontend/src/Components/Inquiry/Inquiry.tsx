@@ -59,9 +59,10 @@ export const Inquiry = () => {
         {/* Subscription Form */}
         <form className="flex sm:flex-row flex-col  text-[var(--primary-text)] lg:flex-row items-center justify-center gap-2 sm:gap-4 w-full mt-8">
           <input
+            required
             id="subscribe"
             type="email"
-            placeholder="Enter your email..."
+            placeholder="eg. abc@gmail.com"
             className="w-full  lg:w-[70%] sm:p-4 p-2 rounded-lg border-2 border-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
           />
           <button

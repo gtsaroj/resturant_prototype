@@ -60,7 +60,7 @@ export const MainPage = () => {
       onLanguageSelect={(value: "EN" | "NP") => changeLanguageFn(value)}
     />
   ) : (
-    <div className="w-full  flex flex-col items-center justify-center ">
+    <div className="w-full flex flex-col items-center justify-center ">
       <Navbar />
       <div className="max-w-[1500px] w-full flex flex-col items-center justify-center">
         <Outlet />
