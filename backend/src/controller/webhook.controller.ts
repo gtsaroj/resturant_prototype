@@ -36,20 +36,12 @@ export const getWebhook = asyncHandler(async (req: any, res: any) => {
     let senderPSID: string = "";
     if (body.object === "page") {
       body.entry.forEach((entry: any) => {
-        const webhookEvent = entry.messaging[0];
+        const webhookEvent = entry.messaging;
+        console.log({ webhookEvent });
         senderPSID = webhookEvent.sender.id;
         console.log({ senderPSID });
       });
-      res
-        .status(200)
-        .json(
-          new ApiResponse(
-            200,
-            senderPSID,
-            "Successfully got PSID with webhook event.",
-            true
-          )
-        );
+      res.sendStatus(200);
     } else {
       res.status(404).send("Webhook event is not from a page subscription.");
     }

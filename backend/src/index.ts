@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import orderRouter from "./routes/message.routes.js";
 import { getWebhook, verifyWebhook } from "./controller/webhook.controller.js";
+import { sendMessage } from "./controller/message.controller.js";
 dotenv.config();
 
 const app = express();
@@ -21,5 +22,5 @@ app.get("/test", (_, res) => {
 //routes
 app.get("/webhook", verifyWebhook);
 app.post("/webhook", getWebhook);
-app.use("/message", orderRouter);
+app.post("/order", sendMessage);
 export default app;

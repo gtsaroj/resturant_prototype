@@ -1,36 +1,39 @@
 import axios from "axios";
 import { asyncHandler } from "../helper/AsyncHandler.js";
 import { ApiResponse } from "../helper/ApiResponse.js";
-
+import { sendMessageToFb } from "../message/sendMessage.js";
 
 export const sendMessage = asyncHandler(async (req: any, res: any) => {
+  console.log("reached send message controller");
   try {
-    const { recipientId, price, imageUrl, name } = req.body;
-    const pageId = process.env.PAGE_ID;
-    const accessToken = process.env.ACCESS_TOKEN;
+    const { price, imageUrl, name } = req.body;
+    const message = `New order: \n
+    image: ${imageUrl} \n
+    Name: ${name}, \n
+    Price: ${price} \n
+    `;
 
-    const messageData = {
-      recipient: { id: recipientId },
-      message: {
-        attachment: {
-          type: "template",
-          payload: {
-            template_type: "generic",
-            elements: [
-              {
-                title: name,
-                subtitle: `Price: Rs ${price}`,
-                image_url: imageUrl,
-              },
-            ],
-          },
-        },
-      },
-    };
-    await axios.post(
-      `https://graph.facebook.com/v21.0/${pageId}/messages?access_token=${accessToken}`,
-      messageData
-    );
+    // const messageData = {
+    //   recipient: { id: recipientId },
+    //   message: {
+    //     attachment: {
+    //       type: "template",
+    //       payload: {
+    //         template_type: "generic",
+    //         elements: [
+    //           {
+    //             title: name,
+    //             subtitle: `Price: Rs ${price}`,
+    //             image_url: imageUrl,
+    //           },
+    //         ],
+    //       },
+    //     },
+    //   },
+    // };
+
+    const response = await sendMessageToFb(message);
+    console.log(response);
     return res
       .status(201)
       .json(new ApiResponse(201, [], "Order message sent successfully.", true));

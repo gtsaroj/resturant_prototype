@@ -34,7 +34,7 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
   return (
     <ul className="flex sm:flex-row flex-col text-lg items-center  sm:justify-center pt-10 sm:pt-0 gap-10 sm:gap-8 text-[var(--light-text)] ">
       {navbarData?.map((data) => (
-        <li className="relative group ">
+        <li className="relative group " key={data.name}>
           <Link
             onClick={() => action && action()}
             to={data.pathname}
@@ -121,20 +121,20 @@ export const Navbar = () => {
       {/* Logo Section */}
       <div
         onClick={() => navigate("/")}
-        className="flex cursor-pointer items-center gap-4"
+        className="flex items-center gap-4 cursor-pointer"
       >
         <div className="sm:w-[4rem]  w-[3rem] h-[3rem] sm:h-[4rem] rounded-full overflow-hidden">
-          <img className="w-full h-full object-cover" src={Logo} alt="logo" />
+          <img className="object-cover w-full h-full" src={Logo} alt="logo" />
         </div>
       </div>
       <div className="hidden sm:flex ">
         <NavbarContainer />
       </div>
       {/* mobile navbar */}
-      <div ref={navbarRef} className="relative  flex sm:hidden ">
+      <div ref={navbarRef} className="relative flex sm:hidden ">
         <button
           onClick={() => setOpen(!open)}
-          className=" bg-transparent hover:bg-transparent border-none "
+          className="bg-transparent border-none hover:bg-transparent"
         >
           {open ? (
             <X className="size-7" />
@@ -147,10 +147,10 @@ export const Navbar = () => {
             open ? "right-[0px] visible " : "right-[-1000px] hidden "
           } `}
         >
-          <div className="flex flex-col w-full justify-end  items-center gap-4">
+          <div className="flex flex-col items-center justify-end w-full gap-4">
             <button
               onClick={() => setOpen(!open)}
-              className=" pr-2 pb-5 w-full flex items-center justify-end bg-transparent hover:bg-transparent border-none "
+              className="flex items-center justify-end w-full pb-5 pr-2 bg-transparent border-none hover:bg-transparent"
             >
               {open ? (
                 <X className="size-7" />
@@ -164,18 +164,18 @@ export const Navbar = () => {
             >
               <div className="size-[60px] rounded-full overflow-hidden">
                 <img
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   src={Logo}
                   alt="logo"
                 />
               </div>
-              <h1 className=" text-sm  text-white ">{t("title")} </h1>
+              <h1 className="text-sm text-white ">{t("title")} </h1>
             </div>
           </div>
           <NavbarContainer action={() => setOpen(!open)} />
-          <div className="mt-10  flex items-center gap-2 justify-start">
+          <div className="flex items-center justify-start gap-2 mt-10">
             <label
-              className="text-white text-sm font-semibold  block"
+              className="block text-sm font-semibold text-white"
               htmlFor="language-select"
             >
               Choose Language:
@@ -195,14 +195,16 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className=" hidden lg:flex items-center gap-4">
+      <div className="items-center hidden gap-4 lg:flex">
         <select
           value={language}
           onChange={(e) => changeLanguage(e.target.value as "EN" | "NP")}
           className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 "
         >
           {["NP", "EN"].map((ln) => (
-            <option value={ln}>{ln}</option>
+            <option key={ln} value={ln}>
+              {ln}
+            </option>
           ))}
         </select>
         <a
