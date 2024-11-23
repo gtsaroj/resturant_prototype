@@ -1,7 +1,6 @@
 import React from "react";
 import { ProductTypes } from "../../../types/product.types";
 import { addOrder } from "../../../services/message.services";
-import { generateUniqueId } from "../../../utility/generateId";
 import { useTranslation } from "react-i18next";
 
 export const ProductCard: React.FC<ProductTypes> = ({
@@ -10,7 +9,7 @@ export const ProductCard: React.FC<ProductTypes> = ({
   name,
   price,
 }: ProductTypes) => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div
@@ -37,11 +36,16 @@ export const ProductCard: React.FC<ProductTypes> = ({
         {/* Add to Cart Button */}
         <button
           onClick={() =>
-            addOrder({ imageUrl: image, name: name, price: price,recipientId:"psid" })
+            addOrder({
+              imageUrl: image,
+              name: name,
+              price: price,
+              recipientId: "psid",
+            })
           }
           className="w-full border-[var(--border-color)] border-[1px] py-2 text-[13px]  text-[var(--primary-text)] font-semibold hover:text-white  rounded-md mt-3 bg-transparent hover:bg-[var(--primary-dark)] transition-colors"
         >
-        {t("order")}
+          {t("order")}
         </button>
       </div>
     </div>

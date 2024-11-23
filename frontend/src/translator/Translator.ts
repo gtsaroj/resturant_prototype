@@ -9,14 +9,21 @@ i18next
   .use(initReactI18next)
   .init({
     debug: true,
-    lng: "NP",
-    fallbackLng: "NP",
     returnObjects: true,
     resources: {
       EN: {
         translation: { ...engLng },
       },
-      NP: { translation: { ...npLng } },
+      NP: {
+        translation: { ...npLng },
+      },
+    },
+    detection: {
+      order: ["localStorage", "navigator", "htmlTag"], // Check localStorage first
+      caches: ["localStorage"], // Save the language in localStorage
+    },
+    interpolation: {
+      escapeValue: false, // React already handles escaping
     },
   });
 

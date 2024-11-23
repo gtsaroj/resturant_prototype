@@ -8,11 +8,16 @@ import { EventPage } from "./Pages/Event.page";
 import { MenuPage } from "./Pages/Menu.page";
 import React, { useEffect } from "react";
 import { Loader } from "./Components/Common/Loader/Loader";
+import i18next from "i18next";
+import LanguageModal from "./Components/LanguageModal/LanguageModal";
 
 export const MainPage = () => {
   useScrollToTop();
-
+  const isSetLanguage = localStorage.getItem("i18nextLng") as "EN" | "NP";
   const [showLoader, setShowLoader] = React.useState<boolean>();
+  const [language, setLanguage] = React.useState<"EN" | "NP" | undefined>(
+    undefined
+  );
 
   useEffect(() => {
     const loader = localStorage.getItem("showloader");
@@ -33,13 +38,27 @@ export const MainPage = () => {
       }, 2000);
     }
   }, []);
+  React.useEffect(() => {
+    if (isSetLanguage === "EN" || isSetLanguage === "NP") {
+      setLanguage(isSetLanguage);
+    }
+  }, [isSetLanguage]);
 
   if (showLoader === undefined) {
     return null;
   }
 
+  const changeLanguageFn = (language: "EN" | "NP") => {
+    i18next.changeLanguage(language);
+    setLanguage(language);
+  };
+
   return showLoader ? (
     <Loader time={2000} />
+  ) : !language ? (
+    <LanguageModal
+      onLanguageSelect={(value: "EN" | "NP") => changeLanguageFn(value)}
+    />
   ) : (
     <div className="w-full  flex flex-col items-center justify-center ">
       <Navbar />

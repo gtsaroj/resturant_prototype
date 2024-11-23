@@ -7,7 +7,7 @@ export const Feedback: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const { t } = useTranslation();
 
-  const { title, submit, message } = t("feedback");
+  const { title, submit, message } = t("feedback") as any;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

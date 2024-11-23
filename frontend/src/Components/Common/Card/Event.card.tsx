@@ -12,7 +12,7 @@ const EventCard = ({
   title,
 }: EventTypes) => {
   const { t } = useTranslation();
-  const { reserve } = t("event");
+  const { reserve } = t("event") as any;
 
   return (
     <div className="sm:w-[20rem] w-full bg-white border border-gray-200 rounded-lg  overflow-hidden  duration-300">

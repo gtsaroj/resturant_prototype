@@ -5,16 +5,26 @@ import { Banner } from "../Components/Banner/Banner";
 import { useTranslation } from "react-i18next";
 
 // Custom Card component
-const Card = ({ children, className = "" }) => (
+const Card = ({
+  children,
+  className = "",
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) => (
   <div className={`bg-white rounded-lg shadow-md overflow-hidden ${className}`}>
     {children}
   </div>
 );
 
 // Custom CardContent component
-const CardContent = ({ children, className = "" }) => (
-  <div className={`p-6 ${className}`}>{children}</div>
-);
+const CardContent = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => <div className={`p-6 ${className}`}>{children}</div>;
 
 // Dummy data for gallery and reviews
 const galleryImages = [
@@ -136,7 +146,7 @@ export default function About() {
                   Vision
                 </h3>
                 <p className="text-gray-600 sm:text-[16px] text-[15px] ">
-                  To become the premier destination for Nepalese fusion cuisine
+                  To become the  premier destination for Nepalese fusion cuisine
                   and cocktails, creating unforgettable dining experiences.
                 </p>
               </CardContent>
