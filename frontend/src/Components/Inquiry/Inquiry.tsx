@@ -1,23 +1,20 @@
-import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { FaFacebookMessenger, FaWhatsapp, FaViber } from "react-icons/fa";
+import ReactLoading from "react-loading";
+import { useSuscribeFn } from "../../Hook/useSuscribe";
 
 export const Inquiry = () => {
   const { t } = useTranslation();
-
+  const { isLoading, mutate, setEmail, email } = useSuscribeFn();
   const { title, button } = t("inquiry") as any;
-  const mapReference = useRef<null | HTMLIFrameElement>(null);
+
   return (
     <div className=" w-full lg:flex-row flex-col-reverse h-full py-10 flex items-start gap-10 ">
       {/* Google Map iframe */}
-      <div
-        onClick={() => mapReference.current?.click()}
-        className="relative  w-full   lg:w-[55%] h-[250px] cursor-pointer lg:h-[400px] rounded-lg overflow-hidden"
-      >
+      <div className="relative  w-full   lg:w-[55%] h-[250px] cursor-pointer lg:h-[400px] rounded-lg overflow-hidden">
         <div className="absolute  h-[100px] bottom-0 left-0   w-full  bg-gradient-to-t from-black to-transparent"></div>
 
         <iframe
-          ref={mapReference}
           allowFullScreen={true}
           className="w-full h-full rounded-lg transform transition-all duration-500 hover:scale-105"
           loading="lazy"
@@ -36,20 +33,24 @@ export const Inquiry = () => {
           {/* Social Media Links */}
           <div className="flex gap-10 sm:gap-14 justify-center">
             <a
+              target="_blank"
               className="bg-[#0078FF] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#0061D1] "
-              href="#"
+              href="https://www.facebook.com/messages/t/100032742726174"
             >
               <FaFacebookMessenger className="text-xl sm:text-2xl" />
             </a>
             <a
+              target="_blank"
+              href={`https://wa.me/9848255044
+                `}
               className="bg-[#1a9e30] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#128c3b] "
-              href="#"
             >
               <FaWhatsapp className="text-xl sm:text-2xl" />
             </a>
             <a
               className="bg-[#7200C8] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#5C00A2]"
-              href="#"
+              href="viber://send?&phone=9848255044
+              "
             >
               <FaViber className="text-xl sm:text-2xl" />
             </a>
@@ -57,8 +58,14 @@ export const Inquiry = () => {
         </div>
 
         {/* Subscription Form */}
-        <form className="flex sm:flex-row flex-col  text-[var(--primary-text)] lg:flex-row items-center justify-center gap-2 sm:gap-4 w-full mt-8">
+        <form
+          onSubmit={mutate}
+          className="flex sm:flex-row flex-col  text-[var(--primary-text)] lg:flex-row items-center justify-center gap-2 sm:gap-4 w-full mt-8"
+        >
           <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            name="from_email"
             required
             id="subscribe"
             type="email"
@@ -66,10 +73,23 @@ export const Inquiry = () => {
             className="w-full  lg:w-[70%] sm:p-4 p-2 rounded-lg border-2 border-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
           />
           <button
+            value={"Send"}
             type="submit"
             className="sm:w-[30%] w-full text-white  p-[0.6rem] sm:py-[1.1rem] rounded-lg  lg:mt-0"
           >
-            {button}
+            {isLoading ? (
+              <div className="flex items-center justify-center gap-2">
+                {button}{" "}
+                <ReactLoading
+                  type="spin"
+                  width={"28px"}
+                  height={"28px"}
+                  color={"white"}
+                />
+              </div>
+            ) : (
+              button
+            )}
           </button>
         </form>
       </div>

@@ -6,6 +6,6 @@ export interface EventTypes {
   time: string;
   location: string;
   price: number;
-  tags: string[];
-  ctaLink: string;
+  tags?: string[];
+  ctaLink?: string;
 }

@@ -1,26 +1,23 @@
 import { MessageTypes } from "../types/message.types";
 
-export const addOrder = async ({name, price }: MessageTypes) => {
+export const addOrder = async ({ name, price, imageUrl }: MessageTypes) => {
   try {
-    const pageId = import.meta.env.VITE_PAGE_ID;
-    // const response = await makeRequest({
-    //   method: "post",
-    //   url: "/order",
-    //   data: {
-    //     imageUrl,
-    //     name,
-    //     price,
-    //   },
-    // });
-    // console.log(response);
-    const message = `New order: \n
-    Name: ${name} \n
-    Price: ${price} \n
-    `;
-    const fbMessengerUrl = `https://m.me/${pageId}?ref=${encodeURIComponent(
-      message
-    )}`;
-    window.open(fbMessengerUrl, "_blank");
+    const generateWhatsAppLink = () => {
+      const phoneNumber = import.meta.env.VITE_WHATSHAPP;
+      const messageText = `
+        Hi! I'd like to confirm my order.
+  
+        Product: ${name}
+        Price: $${price}
+        Image: ${imageUrl}
+  
+        Please reply with "Confirm" to proceed or "Cancel" to cancel the order.
+      `;
+      return `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(
+        messageText
+      )}`;
+    };
+    window.location.href = generateWhatsAppLink();
   } catch (error) {
     throw new Error("Error while send message " + error);
   }

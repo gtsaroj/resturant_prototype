@@ -208,7 +208,9 @@ export const Navbar = () => {
           ))}
         </select>
         <a
-          href="#"
+          target="_blank"
+          href={`https://wa.me/9848255044
+          `}
           className="px-6  lg:flex py-3 text-white bg-[var(--primary-color)] rounded-full hover:bg-[var(--secondary-dark)] transition duration-300"
         >
           Reserve Now

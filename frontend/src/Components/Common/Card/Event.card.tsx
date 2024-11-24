@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { EventTypes } from "../../../types/event.types";
+import { bookEvent } from "../../../services/event.services";
 
 const EventCard = ({
-  ctaLink,
   date,
   image,
   location,
@@ -38,7 +38,7 @@ const EventCard = ({
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mt-2">
-          {tags.map((tag, index) => (
+          {tags?.map((tag, index) => (
             <span
               key={index}
               className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
@@ -54,12 +54,14 @@ const EventCard = ({
         </p>
 
         {/* CTA Button */}
-        <a
-          href={ctaLink}
+        <button
+          onClick={() =>
+            bookEvent({ date, time, image, location, price, title })
+          }
           className="block border-[1px] hover:text-white border-[var(--border-color)] font-semibold w-full text-center text-sm text-[var(--primary-text)] bg-transparent py-2 rounded-md mt-4 hover:bg-[var(--primary-dark)] transition-colors"
         >
           {reserve}
-        </a>
+        </button>
       </div>
     </div>
   );
