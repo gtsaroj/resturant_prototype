@@ -21,11 +21,11 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
       pathname: "/menu",
     },
     {
-      name: event,
+      name: about,
       pathname: "/about",
     },
     {
-      name: about,
+      name: event,
       pathname: "/event",
     },
   ];
