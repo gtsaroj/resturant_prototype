@@ -10,6 +10,7 @@ import React, { useEffect } from "react";
 import { Loader } from "./Components/Common/Loader/Loader";
 import i18next from "i18next";
 import LanguageModal from "./Components/LanguageModal/LanguageModal";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 export const MainPage = () => {
   useScrollToTop();
@@ -71,17 +72,29 @@ export const MainPage = () => {
 };
 
 function App() {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+        staleTime: 5 * 60 * 60,
+        cacheTime: 5 * 60 * 60,
+      },
+    },
+  });
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage />}>
-          <Route index element={<Homepage />}></Route>
-          <Route path="about" element={<About />} />
-          <Route path="menu" element={<MenuPage />} />
-          <Route path="event" element={<EventPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />}>
+            <Route index element={<Homepage />}></Route>
+            <Route path="about" element={<About />} />
+            <Route path="menu" element={<MenuPage />} />
+            <Route path="event" element={<EventPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

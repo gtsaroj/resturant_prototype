@@ -3,6 +3,7 @@ import {
   Clock,
   Facebook,
   Instagram,
+  Link2Icon,
   Linkedin,
   Mail,
   MapPin,
@@ -12,9 +13,11 @@ import CollegeLogo from "../../assets/logo/pingputali.jpg";
 import { useTranslation } from "react-i18next";
 import { FormEvent } from "react";
 import React from "react";
+import { useSuscribeFn } from "../../Hook/useSuscribe";
+import ReactLoading from "react-loading";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
-  const [mail, setMail] = React.useState<string>("");
   const { t } = useTranslation();
   const {
     followUs,
@@ -42,10 +45,7 @@ const Footer: React.FC = () => {
     and,
   } = t("footer") as any;
 
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault();
-    alert(mail);
-  };
+  const { mutate, email: mail, isLoading, setEmail: setMail } = useSuscribeFn();
 
   return (
     <div className="flex flex-col w-full text-white px-2 ">
@@ -129,37 +129,37 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-start gap-5 px-5 py-8">
             <p className="font-bold tracking-wider">{quickLinks}</p>
             <div className="flex  flex-col gap-3 text-sm text-[var(--primary-text)] ">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
                 {home}
-              </a>
+              </Link>
               <a
-                href="/"
+                href="#inquiry"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
                 {inquiry}
               </a>
-              <a
-                href="/"
+              <Link
+                to="/about"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
                 {aboutUs}
-              </a>{" "}
-              <a
-                href="/"
+              </Link>{" "}
+              <Link
+                to="/event"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
                 {event}
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col sm:col-span-1 col-span-2 items-start gap-5 px-5 py-8">
             <p className="font-bold tracking-wider">{resources}</p>
             <div className="flex flex-col gap-5 text-sm text-[var(--primary-text)] ">
               <a
-                href="/"
+                href="#"
                 target="_blank"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
@@ -167,7 +167,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 target="_blank"
-                href="/"
+                href="#"
                 className="cursor-pointer hover:underline hover:text-[var(--secondary-color)]"
               >
                 {privacy}
@@ -178,7 +178,7 @@ const Footer: React.FC = () => {
           <div className="flex  lg:col-span-1 col-span-2 flex-col items-start gap-5 px-5 py-8">
             <p className="font-bold tracking-wider">{subscribe}</p>
             <form
-              onSubmit={handleSubmit}
+              onSubmit={mutate}
               className="flex group/form border-[2px] ring-[var(--primary-color)] hover:ring-2 border-[var(--border-color)] rounded-lg text-[var(--primary-text)]  justify-center  w-full"
             >
               <input
@@ -194,7 +194,11 @@ const Footer: React.FC = () => {
                 type="submit"
                 className="py-[0.95rem]  border-0  px-3  rounded-r-lg  "
               >
-                <ChevronRight className="size-6" />
+                {isLoading ? (
+                  <ReactLoading type="spin" color="white" width={"28px"} height={"28px"} />
+                ) : (
+                  <ChevronRight className="size-6" />
+                )}
               </button>
             </form>
           </div>

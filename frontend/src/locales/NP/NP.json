@@ -140,76 +140,78 @@
 
   "products": [
     {
-      "id": "prod_01_001",
-      "name": "चिकन बर्गर",
-      "price": "३४०",
-      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
-      "category": "01"
+      "id": "Coca fsapojdascola",
+      "name": "कोका कोला",
+      "price": "६०",
+      "image": "https://thumbs.dreamstime.com/b/coca-cola-disposable-paper-cup-ice-cubes-ankara-turkey-may-coca-cola-cup-ice-cubes-glass-isolated-white-151775452.jpg",
+      "category": "05"
     },
     {
-      "id": "prod_01_002",
-      "name": "बीफ बर्गर",
-      "price": "३८०",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "01"
+      "id": "fkjsa;sajds904efpweflsdv",
+      "name": "चिकन ग्रिल",
+      "price": "८९९",
+      "image": "https://c.ndtvimg.com/pxnvr8gg3bg_barbecue_625x300.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886",
+      "category": "06"
     },
     {
-      "id": "prod_01_003",
-      "name": "वेजी बर्गर",
-      "price": "३००",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "01"
+      "id": "fkjsa;sajds904efpweflsdv",
+      "name": "मटन ग्रिल",
+      "price": "१६००",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9D8E011BJKuAsQUephlpsLLsyJqn0zaRfPA&s",
+      "category": "06"
     },
     {
-      "id": "prod_02_001",
-      "name": "मार्घेरिटा पिज्जा",
-      "price": "५००",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "02"
-    },
-    {
-      "id": "prod_02_002",
-      "name": "पेपरोनी पिज्जा",
-      "price": "५५०",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "02"
-    },
-    {
-      "id": "prod_02_003",
-      "name": "बारबिक्यु चिकन पिज्जा",
-      "price": "६००",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "02"
-    },
-    {
-      "id": "prod_02_004",
-      "name": "वेजी सुप्रीम पिज्जा",
-      "price": "५८०",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "02"
-    },
-    {
-      "id": "prod_03_001",
-      "name": "स्पैगेटी बोलोग्नेसे",
+      "id": "fkjsa;sajds90gdfpdsjf4efpweflsdv",
+      "name": "चिकन बिर्यानी",
       "price": "३५०",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "03"
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/hyderabadi-biryani-recipe-chicken.jpg",
+      "category": "07"
     },
     {
-      "id": "prod_03_002",
-      "name": "पेन्ने अराबियाता",
-      "price": "३००",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "03"
+      "id": "fkjsfsdjlldfsa;sajds904efpweflsdv",
+      "name": "मटन बिर्यानी",
+      "price": "४६०",
+      "image": "https://www.cubesnjuliennes.com/wp-content/uploads/2021/03/Best-Mutton-Biryani-Recipe.jpg",
+      "category": "07"
     },
     {
-      "id": "prod_03_003",
-      "name": "फेटुकिनी आल्फ्रेडो",
-      "price": "३२०",
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
-      "category": "03"
+      "id": "fkjsfsdjlldfsa;sajds904dsjfodsaefpweflsdv",
+      "name": "बफ सुकेको",
+      "price": "३९०",
+      "image": "https://khanaadda.com/wp-content/uploads/2024/04/sukuti.jpg",
+      "category": "10"
+    },
+    {
+      "id": "fkjsfsdf92-9epdwjlldfsa;sajds904efpweflsdv",
+      "name": "बाजेको सुकेको",
+      "price": "४६०",
+      "image": "https://www.muncha.com/img/l86291.jpg",
+      "category": "10"
+    },
+    {
+      "id": "fkfsoijsjsfsdf92-9epdwjlldfsa;sajds904efpweflsdv",
+      "name": "दूध चिया",
+      "price": "३०",
+      "image": "https://www.muncha.com/img/l86291.jpg",
+      "category": "11"
+    },
+    {
+      "id": "fkfsoifsoijd0a3j-wojsjiafdkpomsdsfsdf92-9epdwjlldfsa;sajds904efpweflsdv",
+      "name": "चिकन चौमिन",
+      "price": "१२०",
+      "image": "https://www.recipetineats.com/tachyon/2018/08/Chow-Mein_1.jpg?resize=500%2C500",
+      "category": "12"
+    },
+    {
+      "id": "fkfsoifsoijfidsjofsd;d0a3j-wojsjiafdkpomsdsfsdf92-9epdwjlldfsa;sajds904efpweflsdv",
+      "name": "वेद चौमिन",
+      "price": "९०",
+      "image": "https://palatablepastime.com/wp-content/uploads/2022/05/copycat-panda-express-chow-mein-sq.jpg",
+      "category": "12"
     }
-  ],
+]
+,
+
   "eventData": [
     {
       "title": "लाइभ जाज नाइट",

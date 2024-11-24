@@ -40,7 +40,6 @@ export const ProductCard: React.FC<ProductTypes> = ({
               imageUrl: image,
               name: name,
               price: price,
-              recipientId: "psid",
             })
           }
           className="w-full border-[var(--border-color)] border-[1px] py-2 text-[13px]  text-[var(--primary-text)] font-semibold hover:text-white  rounded-md mt-3 bg-transparent hover:bg-[var(--primary-dark)] transition-colors"
