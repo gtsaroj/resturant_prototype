@@ -1,3 +1,4 @@
+import { isMobile } from "../utility/deviceDetect";
 import { EventTypes } from "./../types/event.types";
 export const bookEvent = async ({
   title,
@@ -21,13 +22,18 @@ export const bookEvent = async ({
   
         Please confirm or cancel my booking.`;
     const encodedMessage = encodeURIComponent(messageText);
-    const whatsappLink = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
+    let whatsappLink = '';
+
+    // Generate the WhatsApp link based on device type
+    if (isMobile()) {
+      whatsappLink = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
+    } else {
+      whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    }
+  
 
     window.location.href = whatsappLink;
 
-    window.location.href = whatsappLink;
-
-    window.location.href = whatsappLink;
   } catch (error) {
     throw new Error(
       "An error occurred while sending the event booking message. " + error
