@@ -1,18 +1,15 @@
 import { MessageTypes } from "../types/message.types";
 import { isMobile } from "../utility/deviceDetect";
 
-export const addOrder = async ({ name, price, imageUrl }: MessageTypes) => {
+export const addOrder = async ({ name }: MessageTypes) => {
   try {
     const generateWhatsAppLink = () => {
       const phoneNumber = import.meta.env.VITE_WHATSHAPP;
       const messageText = `
-        Hi! I'd like to confirm my order.
-  
-        Product: ${name}
-        Price: $${price}
-        Image: ${imageUrl}
-  
-        Please reply with "Confirm" to proceed or "Cancel" to cancel the order.
+      *Order Request*
+        Hello! I'd like to confirm my following order.
+        - *Item*: ${name}
+        Thank you.
       `;
       // Function to check if the device is mobile
 
