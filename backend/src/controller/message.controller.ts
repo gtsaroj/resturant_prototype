@@ -1,14 +1,14 @@
-import axios from "axios";
+// import axios from "axios";
 import { asyncHandler } from "../helper/AsyncHandler.js";
 import { ApiResponse } from "../helper/ApiResponse.js";
-import { sendMessageToFb } from "../message/sendMessage.js";
+// import { sendMessageToFb } from "../message/sendMessage.js";
+import sendWhatsAppMessage from "../message/whatsAppMessage.js";
 
 export const sendMessage = asyncHandler(async (req: any, res: any) => {
   console.log("reached send message controller");
   try {
     const { price, imageUrl, name } = req.body;
     const message = `New order: \n
-    image: ${imageUrl} \n
     Name: ${name}, \n
     Price: ${price} \n
     `;
@@ -32,8 +32,7 @@ export const sendMessage = asyncHandler(async (req: any, res: any) => {
     //   },
     // };
 
-    const response = await sendMessageToFb(message);
-    console.log(response);
+    await sendWhatsAppMessage(imageUrl, message);
     return res
       .status(201)
       .json(new ApiResponse(201, [], "Order message sent successfully.", true));

@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import orderRouter from "./routes/message.routes.js";
 import { getWebhook, verifyWebhook } from "./controller/webhook.controller.js";
 import { sendMessage } from "./controller/message.controller.js";
+import sendWhatsAppMessage from "./message/whatsAppMessage.js";
 dotenv.config();
 
 const app = express();
@@ -23,4 +24,9 @@ app.get("/test", (_, res) => {
 app.get("/webhook", verifyWebhook);
 app.post("/webhook", getWebhook);
 app.post("/order", sendMessage);
+
+sendWhatsAppMessage(
+  "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+  "New order: Chicken Burger, price:Rs 500"
+);
 export default app;
