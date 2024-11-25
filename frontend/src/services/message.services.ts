@@ -6,9 +6,9 @@ export const addOrder = async ({ name }: MessageTypes) => {
     const generateWhatsAppLink = () => {
       const phoneNumber = import.meta.env.VITE_WHATSHAPP;
       const messageText = `
-      *Order Request*
-        Hello! I'd like to confirm my following order.
-        - *Item*: ${name}
+      *Order Request*\n
+        Hello! I'd like to confirm my following order.\n
+        - *Item*: ${name}\n
         Thank you.
       `;
       // Function to check if the device is mobile
