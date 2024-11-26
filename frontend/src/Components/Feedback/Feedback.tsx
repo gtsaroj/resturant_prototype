@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { useFeedbackFn } from "../../Hook/useFeedback";
 import ReactLoading from "react-loading";
@@ -6,7 +6,7 @@ import ReactLoading from "react-loading";
 export const Feedback: React.FC = () => {
   const { t } = useTranslation();
 
-  const { title, h1, submit, message } = t("feedback") as any;
+  const { title, h1, submit } = t("feedback") as any;
 
   const { comment, isLoading, mutate, rating, setComment, setRating } =
     useFeedbackFn();

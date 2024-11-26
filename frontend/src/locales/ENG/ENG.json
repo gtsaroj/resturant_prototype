@@ -1,4 +1,19 @@
 {
+  "mission": [
+    {
+      "title": "Mision",
+      "description": " To offer the best fusion of Nepalese flavors in a cozy and inviting atmosphere, paired with innovative cocktails."
+    },
+    {
+      "title": "Vision",
+      "description": "To become the premier destination for Nepalese fusion cuisine and cocktails, creating unforgettable dining experiences."
+    }
+  ],
+  "about_button":"Find out",
+ "mission_title" :"Our Mission & Vision",
+  "visit": "Vist us",
+  "gallery": "Our Gallery",
+  "customer_title": "What Our Customers Say",
   "title": "Pink Putali Restaurant",
   "HomePage_banner": {
     "title": "Welcome to Pink Putali",
@@ -18,6 +33,32 @@
     "description1": "Discover the perfect harmony of Nepalese flavors and a warm, inviting atmosphere at Pink Putali Restaurant and Bar. Nestled in New Baneshwor, near Everest Hotel, we take pride in curating an unforgettable dining experience, celebrating culinary artistry with every dish and drink we serve.",
     "description2": "Whether you're savoring a comforting classic or indulging in an innovative twist, our offerings are crafted to delight your senses and make every moment memorable. Join us and let your taste buds embark on an extraordinary journey."
   },
+  "reviews": [
+    {
+      "name": "John Doe",
+      "rating": 5,
+      "comment": "Amazing fusion of flavors! The cocktails are a must-try.",
+      "image": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671122.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "rating": 4,
+      "comment": "Great atmosphere and friendly staff. Will definitely return.",
+      "image": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671140.jpg"
+    },
+    {
+      "name": "Mike Johnson",
+      "rating": 5,
+      "comment": "The best Nepalese cuisine I've had outside of Nepal!",
+      "image": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671116.jpg"
+    },
+    {
+      "name": "Alice Brown",
+      "rating": 3,
+      "comment": "Good food, but the service was a bit slow during peak hours.",
+      "image": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671132.jpg"
+    }
+  ],
   "EventPage_banner": {
     "title": "Join Our Exciting Events",
     "description": "Don't miss out on our special events - good food, great company, and unforgettable moments.  "

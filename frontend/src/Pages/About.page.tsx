@@ -3,7 +3,6 @@ import React from "react";
 import { Star } from "lucide-react";
 import { Banner } from "../Components/Banner/Banner";
 import { useTranslation } from "react-i18next";
-import { t } from "i18next";
 
 // Custom Card component
 const Card = ({
@@ -75,44 +74,19 @@ const galleryImages = [
   },
 ];
 
-const reviews = [
-  {
-    name: "John Doe",
-    rating: 5,
-    comment: "Amazing fusion of flavors! The cocktails are a must-try.",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671122.jpg",
-  },
-  {
-    name: "Jane Smith",
-    rating: 4,
-    comment: "Great atmosphere and friendly staff. Will definitely return.",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671140.jpg",
-  },
-  {
-    name: "Mike Johnson",
-    rating: 5,
-    comment: "The best Nepalese cuisine I've had outside of Nepal!",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671116.jpg",
-  },
-  {
-    name: "Alice Brown",
-    rating: 3,
-    comment: "Good food, but the service was a bit slow during peak hours.",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671132.jpg",
-  },
-];
-
 export default function About() {
   const { t } = useTranslation();
+  const reviews = t("reviews") as any;
+
   const { title, description } = t("AboutPage_banner") as unknown as {
     title: string;
     description: string;
   };
   const { title: T, subTitle, description1, description2 } = t("about") as any;
+  const misions = t("mission") as unknown as {
+    title: string;
+    description: string;
+  }[];
   return (
     <div className="w-full px-2">
       <Banner
@@ -151,7 +125,7 @@ export default function About() {
               href="https://maps.app.goo.gl/NmqbahcxCsrSxbcRA"
               className="w-[150px] bg-[var(--primary-color)] hover:bg-[var(--primary-dark)] duration-150 text-lg  text-white text-center rounded-lg py-3 px-3 lg:mt-8"
             >
-              Find out
+           {t("about_button")}
             </a>
           </div>
         </div>
@@ -160,31 +134,21 @@ export default function About() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="sm:text-3xl text-xl font-bold mb-8">
-            Our Mission & Vision
+            {t("mission_title")}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardContent>
-                <h3 className="sm:text-2xl text-xl font-semibold mb-4">
-                  Mission
-                </h3>
-                <p className="text-gray-600 sm:text-[16px] text-[15px] ">
-                  To offer the best fusion of Nepalese flavors in a cozy and
-                  inviting atmosphere, paired with innovative cocktails.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <h3 className="sm:text-2xl text-xl font-semibold mb-4">
-                  Vision
-                </h3>
-                <p className="text-gray-600 sm:text-[16px] text-[15px] ">
-                  To become the premier destination for Nepalese fusion cuisine
-                  and cocktails, creating unforgettable dining experiences.
-                </p>
-              </CardContent>
-            </Card>
+            {misions?.map((mission, index) => (
+              <Card key={index}>
+                <CardContent>
+                  <h3 className="sm:text-2xl text-xl font-semibold mb-4">
+                    {mission.title}
+                  </h3>
+                  <p className="text-gray-600 sm:text-[16px] text-[15px] ">
+                    {mission.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -193,7 +157,7 @@ export default function About() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="sm:text-3xl text-xl font-bold mb-8 text-center">
-            Our Gallery
+            {t("gallery")}
           </h2>
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {galleryImages.map((image, index) => (
@@ -211,7 +175,7 @@ export default function About() {
       {/* Location Section */}
       <section className="py-16 px-5 w-full flex flex-col items-stretch justify-center ">
         <h2 className="sm:text-3xl text-xl text-center tracking-wider font-bold mb-8">
-          Visit Us
+          {t("visit")}
         </h2>
         <div className="flex w-full h-[400px] flex-col md:flex-row items-center justify-center gap-8">
           <iframe
@@ -228,10 +192,10 @@ export default function About() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="sm:text-3xl text-xl tracking-wider font-bold mb-8 text-center">
-            What Our Customers Say
+           {t("customer_title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
+            {reviews.map((review: any, index: number) => (
               <Card key={index}>
                 <CardContent>
                   <div className="flex flex-col justify-start">
