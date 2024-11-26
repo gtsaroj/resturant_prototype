@@ -3,7 +3,6 @@ import React from "react";
 import { Star } from "lucide-react";
 import { Banner } from "../Components/Banner/Banner";
 import { useTranslation } from "react-i18next";
-import { t } from "i18next";
 
 // Custom Card component
 const Card = ({
@@ -30,7 +29,7 @@ const CardContent = ({
 // Dummy data for gallery and reviews
 const galleryImages = [
   {
-    src: "https://lh5.googleusercontent.com/p/AF1QipPgOgEl3NkXL3MWoNML867LPN8Ljrr2zBoYULFl=s516-k-no",
+    src: "https://plus.unsplash.com/premium_photo-1724707432701-cb7808e3c3fa?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Restaurant Interior",
   },
 
@@ -55,7 +54,7 @@ const galleryImages = [
     alt: "Signature Dish",
   },
   {
-    src: "https://lh5.googleusercontent.com/p/AF1QipOWqJy7jLTXO8YcLdt6skXhhSts4HsfxfB8mN6H=w203-h152-k-no",
+    src: "https://images.unsplash.com/photo-1696062985889-de626efe0148?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Cocktail Selection",
   },
 
@@ -122,11 +121,11 @@ export default function About() {
         title={title}
         description={description}
       />
-      <div className="w-full py-16  gap-7 lg:gap-10 flex flex-col items-center">
-        <h2 className="sm:text-3xl tracking-wider text-lg font-bold text-gray-800 mb-4">
+      <div className="flex flex-col items-center w-full py-16 gap-7 lg:gap-10">
+        <h2 className="mb-4 text-lg font-bold tracking-wider text-gray-800 sm:text-3xl">
           {T}
         </h2>
-        <div className="flex  flex-col lg:flex-row  items-start gap-10">
+        <div className="flex flex-col items-start gap-10 lg:flex-row">
           {/* Image Section */}
           <div className="w-full lg:w-1/2 h-[250px] sm:h-[400px] lg:h-[500px] ">
             <img
@@ -137,11 +136,11 @@ export default function About() {
           </div>
 
           {/* Text Section */}
-          <div className="w-full flex flex-col gap-3 sm:gap-8 lg:w-1/2">
-            <h2 className="sm:text-2xl text-lg font-bold text-gray-800 lg:mb-4">
+          <div className="flex flex-col w-full gap-3 sm:gap-8 lg:w-1/2">
+            <h2 className="text-lg font-bold text-gray-800 sm:text-2xl lg:mb-4">
               {subTitle}
             </h2>
-            <p className="text-gray-600   flex flex-col gap-2 lg:text-lg text-sm  leading-relaxed">
+            <p className="flex flex-col gap-2 text-sm leading-relaxed text-gray-600 lg:text-lg">
               {description1}
               <span>{description2}</span>
             </p>
@@ -157,15 +156,15 @@ export default function About() {
         </div>
       </div>
       {/* Mission & Vision Section */}
-      <section className="py-16 px-4">
+      <section className="px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="sm:text-3xl text-xl font-bold mb-8">
+          <h2 className="mb-8 text-xl font-bold sm:text-3xl">
             Our Mission & Vision
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8 md:grid-cols-2">
             <Card>
               <CardContent>
-                <h3 className="sm:text-2xl text-xl font-semibold mb-4">
+                <h3 className="mb-4 text-xl font-semibold sm:text-2xl">
                   Mission
                 </h3>
                 <p className="text-gray-600 sm:text-[16px] text-[15px] ">
@@ -176,7 +175,7 @@ export default function About() {
             </Card>
             <Card>
               <CardContent>
-                <h3 className="sm:text-2xl text-xl font-semibold mb-4">
+                <h3 className="mb-4 text-xl font-semibold sm:text-2xl">
                   Vision
                 </h3>
                 <p className="text-gray-600 sm:text-[16px] text-[15px] ">
@@ -190,18 +189,18 @@ export default function About() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16 px-4">
+      <section className="px-4 py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="sm:text-3xl text-xl font-bold mb-8 text-center">
+          <h2 className="mb-8 text-xl font-bold text-center sm:text-3xl">
             Our Gallery
           </h2>
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
+          <div className="gap-4 columns-2 md:columns-3 lg:columns-4">
             {galleryImages.map((image, index) => (
               <img
                 key={index}
                 src={image.src}
                 alt={image.alt}
-                className="mb-4 w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="w-full mb-4 transition-shadow duration-300 rounded-lg shadow-md hover:shadow-lg"
               />
             ))}
           </div>
@@ -209,14 +208,14 @@ export default function About() {
       </section>
 
       {/* Location Section */}
-      <section className="py-16 px-5 w-full flex flex-col items-stretch justify-center ">
-        <h2 className="sm:text-3xl text-xl text-center tracking-wider font-bold mb-8">
+      <section className="flex flex-col items-stretch justify-center w-full px-5 py-16 ">
+        <h2 className="mb-8 text-xl font-bold tracking-wider text-center sm:text-3xl">
           Visit Us
         </h2>
         <div className="flex w-full h-[400px] flex-col md:flex-row items-center justify-center gap-8">
           <iframe
             allowFullScreen={true}
-            className="w-full h-full rounded-lg transform transition-all duration-500 hover:scale-105"
+            className="w-full h-full transition-all duration-500 transform rounded-lg hover:scale-105"
             loading="lazy"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.897405829733!2d85.33158407477636!3d27.689059176193012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e99b7e259f%3A0xe77e0b6b366f6c1c!2sDailo%20Daily%20See%20Us!5e1!3m2!1sen!2snp!4v1731576014026!5m2!1sen!2snp"
             title="Restaurant Location"
@@ -225,31 +224,31 @@ export default function About() {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-16 px-4">
+      <section className="px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="sm:text-3xl text-xl tracking-wider font-bold mb-8 text-center">
+          <h2 className="mb-8 text-xl font-bold tracking-wider text-center sm:text-3xl">
             What Our Customers Say
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((review, index) => (
               <Card key={index}>
                 <CardContent>
                   <div className="flex flex-col justify-start">
-                    <div className="w-full flex items-start justify-start gap-5">
+                    <div className="flex items-start justify-start w-full gap-5">
                       <img
                         src={review.image}
-                        className="size-12 rounded-full border "
+                        className="border rounded-full size-12 "
                         alt={review.name}
                       />
-                      <div className="flex flex-col  gap-2 items-start justify-end">
+                      <div className="flex flex-col items-start justify-end gap-2">
                         <span className="text-[1rem] font-semibold">
                           {review.name}
                         </span>
-                        <div className="flex items-center justify-start  gap-1 mb-4">
+                        <div className="flex items-center justify-start gap-1 mb-4">
                           {[...Array(review.rating)].map((_, i) => (
                             <Star
                               key={i}
-                              className="w-5 h-5 fill-current text-yellow-500"
+                              className="w-5 h-5 text-yellow-500 fill-current"
                             />
                           ))}
                         </div>
@@ -257,7 +256,7 @@ export default function About() {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 mb-4 italic">
+                  <p className="mb-4 italic text-gray-600">
                     " {review.comment} "
                   </p>
                 </CardContent>
