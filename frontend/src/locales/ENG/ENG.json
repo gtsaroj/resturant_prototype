@@ -195,7 +195,7 @@
     },
     {
       "id": "prod_01_002",
-      "name": "Beef Burger",
+      "name": "Buff Burger",
       "price": 380,
       "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
       "category": "01"
@@ -286,7 +286,7 @@
     },
     {
       "id": "fjw89rjoisj",
-      "name": "Hot cherry peppers and red onion pizza",
+      "name": "Pepperoni pizza",
       "price": "230",
       "image": "https://www.columbuscraftmeats.com/wp-content/uploads/2023/05/Web_1600_Italian-Dry-Salami-Hot-Cherry-Peppers-and-Red-Onion-Pizza.jpg",
       "category": "04"
