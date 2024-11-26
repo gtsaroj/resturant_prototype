@@ -12,6 +12,13 @@
     "title": "हाम्रो बारेमा",
     "description": "काठमाडौंको मुटुमा अवस्थित, पिंक पुतली रेस्टुरेन्ट एन्ड बार तपाईंको रमाइलो माहोलमा स्वादिष्ट नेपाली परिकार र ताजा ककटेलहरूको अद्भुत मिश्रणको आनन्द लिन सक्ने स्थान हो। नयाँ बानेश्वर, एभरेस्ट होटल नजिकै रहेको हामीले तपाईंको प्रत्येक भोजनलाई सम्झनालायक बनाउन यहाँ उपस्थित छौं। पाहुनाको रूपमा आउनुहोस्, परिवारको रूपमा जानुहोस्!"
   },
+  "about": {
+    "title": "हामीलाई चिनौं",
+    "subTitle": "हाम्रो कथा: जोश र स्वादको संगम",
+    "description1": "पिंक पुतली रेस्टुरेन्ट र बारमा नेपाली स्वाद र एक उब्जाउने वातावरणको उत्कृष्ट सामन्जस्यको अनुभव गर्नुहोस्। नयाँ बानेश्वर, एभरेष्ट होटल नजिक स्थित, हामी प्रत्येक व्यंजन र पेय पदार्थमा क्युलिनरी कला प्रस्तुत गर्दै अस्मरणीय भोजन अनुभवको गर्व गर्दछौं।",
+    "description2": "चाहे तपाईं एक आरामदायक क्लासिक स्वाद लिइरहनु भएको होस् या नवप्रवर्तनात्मक पद्धतिमा रमाइलो गर्दै हुनुहुन्छ, हाम्रो सेवा तपाईंको इन्द्रियलाई आनन्दित बनाउन र प्रत्येक क्षणलाई सम्झनलायक बनाउन तयार गरिएको छ। हामीसँग जडान गर्नुहोस् र तपाईंको स्वादको कलिका साथ असाधारण यात्रा सुरु गर्नुहोस्।"
+  },
+
   "EventPage_banner": {
     "title": "हाम्रा रोमाञ्चक इभेन्टहरूमा सहभागी हुनुहोस्",
     "description": "हाम्रो विशेष इभेन्टहरू नछुटाउनुहोस् - राम्रो खाना, उत्कृष्ट साथीहरूको साथ, र अविस्मरणीय क्षणहरू।"
@@ -213,14 +220,14 @@
       "id": "prod_03_00thukpa01",
       "name": "तरकारी थुक्पा",
       "price": 220,
-      "image": "https://files.oaiusercontent.com/file-BHmX4BWjKczxDVsKQXUuBj?se=2024-11-24T13%3A29%3A53Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D59e9d5b7-f794-4b48-9c57-c5b6ef3a6b86.webp&sig=0anwYCWCNI/KGLsnFled6r537iYuwCXjMVJJuWQuIxQ%3D",
+      "image": "https://www.chefkunalkapur.com/wp-content/uploads/2022/10/DSC02785-1300x733.jpg?v=1664982558",
       "category": "09"
     },
     {
       "id": "prod_03_00thukpa02",
       "name": "चिकन थुक्पा",
       "price": 300,
-      "image": "https://files.oaiusercontent.com/file-4vCQtvrPf1HjP15q8P3q9g?se=2024-11-24T13%3A30%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4ac69227-47fd-49a1-8eb6-64e91edcafd2.webp&sig=XbUabFZEYZjib%2BBTMxPt6CELXI8sCsjpE0KjNH5f7FQ%3D",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "category": "09"
     },
     {

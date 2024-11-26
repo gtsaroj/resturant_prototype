@@ -37,8 +37,8 @@ export const Menu = () => {
     setSelectedProducts(selectedMenu);
   }, [initialMenu, products]);
 
-  const name = selectedProducts?.find(
-    (product) => product.category === initialMenu
+  const name = menu?.find(
+    (product) => product.id === initialMenu
   )?.name;
 
   const menuReference = useRef<null | HTMLDivElement>(null);
@@ -83,10 +83,10 @@ export const Menu = () => {
 
       {/* Product Listing or Empty State */}
       <div className="w-full flex flex-col p-5 rounded-xl  items-start justify-center gap-3 bg-neutral-50">
-        <h1 className=" sm:text-xl text-[16px] tracking-wide ">
+        <h1 className=" sm:text-xl font-semibold text-[16px] tracking-wide ">
           {name as string}
         </h1>
-        <div className="w-full place-items-center grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2   gap-5 mt-5">
+        <div className="w-full  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2   gap-5 mt-5">
           {selectedProducts && selectedProducts.length > 0 ? (
             selectedProducts.map((product) => (
               <ProductCard

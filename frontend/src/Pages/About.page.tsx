@@ -3,6 +3,7 @@ import React from "react";
 import { Star } from "lucide-react";
 import { Banner } from "../Components/Banner/Banner";
 import { useTranslation } from "react-i18next";
+import { t } from "i18next";
 
 // Custom Card component
 const Card = ({
@@ -72,7 +73,6 @@ const galleryImages = [
     src: "https://us.123rf.com/450wm/maxbelchenko777/maxbelchenko7772407/maxbelchenko777240700691/231844227-fans-enjoying-rock-concert-with-light-show-and-clapping-hands.jpg?ver=6",
     alt: "Signature Dish",
   },
-  
 ];
 
 const reviews = [
@@ -112,18 +112,52 @@ export default function About() {
     title: string;
     description: string;
   };
+  const { title: T, subTitle, description1, description2 } = t("about") as any;
   return (
     <div className="w-full px-2">
       <Banner
         image={
-          "https://www.burgessrawson.com.au/wp-content/uploads/2024/01/a0E0I0000139JE1UAM_P170-Internet-Image-768x576.jpg"
+          "https://img.freepik.com/premium-photo/tokyo-japan-january-09-2018-chefs-are-cooking-restaurant-most-popular-delicious-japanese-snack-food-japan_175935-25.jpg?semt=ais_hybrid"
         }
         title={title}
         description={description}
       />
+      <div className="w-full py-16  gap-7 lg:gap-10 flex flex-col items-center">
+        <h2 className="sm:text-3xl tracking-wider text-lg font-bold text-gray-800 mb-4">
+          {T}
+        </h2>
+        <div className="flex  flex-col lg:flex-row  items-start gap-10">
+          {/* Image Section */}
+          <div className="w-full lg:w-1/2 h-[250px] sm:h-[400px] lg:h-[500px] ">
+            <img
+              src="https://www.burgessrawson.com.au/wp-content/uploads/2024/01/a0E0I0000139JE1UAM_P170-Internet-Image-768x576.jpg" // Replace with a free resource image
+              alt="Delicious food at Pink Putali"
+              className="w-full h-full rounded-md"
+            />
+          </div>
 
+          {/* Text Section */}
+          <div className="w-full flex flex-col gap-3 sm:gap-8 lg:w-1/2">
+            <h2 className="sm:text-2xl text-lg font-bold text-gray-800 lg:mb-4">
+              {subTitle}
+            </h2>
+            <p className="text-gray-600   flex flex-col gap-2 lg:text-lg text-sm  leading-relaxed">
+              {description1}
+              <span>{description2}</span>
+            </p>
+
+            <a
+              target="_blank"
+              href="https://maps.app.goo.gl/NmqbahcxCsrSxbcRA"
+              className="w-[150px] bg-[var(--primary-color)] hover:bg-[var(--primary-dark)] duration-150 text-lg  text-white text-center rounded-lg py-3 px-3 lg:mt-8"
+            >
+              Find out
+            </a>
+          </div>
+        </div>
+      </div>
       {/* Mission & Vision Section */}
-      <section className="py-16 px-4 bg-pink-50">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="sm:text-3xl text-xl font-bold mb-8">
             Our Mission & Vision
@@ -146,7 +180,7 @@ export default function About() {
                   Vision
                 </h3>
                 <p className="text-gray-600 sm:text-[16px] text-[15px] ">
-                  To become the  premier destination for Nepalese fusion cuisine
+                  To become the premier destination for Nepalese fusion cuisine
                   and cocktails, creating unforgettable dining experiences.
                 </p>
               </CardContent>

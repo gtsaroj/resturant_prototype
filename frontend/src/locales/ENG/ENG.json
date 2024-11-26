@@ -12,6 +12,12 @@
     "title": "About Us",
     "description": "Nestled in the heart of Kathmandu, Pink Putali is your cozy spot to enjoy the perfect blend of delicious Nepalese flavors and refreshing cocktails. Located near Everest Hotel in New Baneshwor, we’re here to make every meal a memorable experience. Come as guests, leave as family!"
   },
+  "about": {
+    "title": "Get to Know Us",
+    "subTitle": "Our Story Crafted with Passion, Served with Flavor.",
+    "description1": "Discover the perfect harmony of Nepalese flavors and a warm, inviting atmosphere at Pink Putali Restaurant and Bar. Nestled in New Baneshwor, near Everest Hotel, we take pride in curating an unforgettable dining experience, celebrating culinary artistry with every dish and drink we serve.",
+    "description2": "Whether you're savoring a comforting classic or indulging in an innovative twist, our offerings are crafted to delight your senses and make every moment memorable. Join us and let your taste buds embark on an extraordinary journey."
+  },
   "EventPage_banner": {
     "title": "Join Our Exciting Events",
     "description": "Don't miss out on our special events - good food, great company, and unforgettable moments.  "
@@ -213,14 +219,14 @@
       "id": "prod_03_00thukpa01",
       "name": "Vegetable Thukpa",
       "price": 220,
-      "image": "https://files.oaiusercontent.com/file-BHmX4BWjKczxDVsKQXUuBj?se=2024-11-24T13%3A29%3A53Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D59e9d5b7-f794-4b48-9c57-c5b6ef3a6b86.webp&sig=0anwYCWCNI/KGLsnFled6r537iYuwCXjMVJJuWQuIxQ%3D",
+      "image": "https://www.chefkunalkapur.com/wp-content/uploads/2022/10/DSC02785-1300x733.jpg?v=1664982558",
       "category": "09"
     },
     {
       "id": "prod_03_00thukpa02",
       "name": "Chicken Thukpa",
       "price": 300,
-      "image": "https://files.oaiusercontent.com/file-4vCQtvrPf1HjP15q8P3q9g?se=2024-11-24T13%3A30%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4ac69227-47fd-49a1-8eb6-64e91edcafd2.webp&sig=XbUabFZEYZjib%2BBTMxPt6CELXI8sCsjpE0KjNH5f7FQ%3D",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "category": "09"
     },
     {
@@ -309,12 +315,12 @@
     },
     {
       "id": "fkfsoifsoijfidsjofsd;d0a3j-wojsjiafdkpomsdsfsdf92-9epdwjlldfsa;sajds904efpweflsdv",
-      "name": "Ved chowmein",
+      "name": "Veg chowmein",
       "price": "90",
       "image": "https://palatablepastime.com/wp-content/uploads/2022/05/copycat-panda-express-chow-mein-sq.jpg",
       "category": "12"
     }
-  ] ,
+  ],
   "eventData": [
     {
       "title": "Live Jazz Night",

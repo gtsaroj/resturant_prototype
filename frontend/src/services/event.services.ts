@@ -22,18 +22,16 @@ export const bookEvent = async ({
   
         Please confirm or cancel my booking.`;
     const encodedMessage = encodeURIComponent(messageText);
-    let whatsappLink = '';
+    let whatsappLink = "";
 
     // Generate the WhatsApp link based on device type
     if (isMobile()) {
       whatsappLink = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
+      window.location.href = whatsappLink;
     } else {
       whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      window.open(whatsappLink, "_blank");
     }
-  
-
-    window.location.href = whatsappLink;
-
   } catch (error) {
     throw new Error(
       "An error occurred while sending the event booking message. " + error
