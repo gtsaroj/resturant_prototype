@@ -29,7 +29,7 @@ const CardContent = ({
 // Dummy data for gallery and reviews
 const galleryImages = [
   {
-    src: "https://plus.unsplash.com/premium_photo-1724707432701-cb7808e3c3fa?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://lh5.googleusercontent.com/p/AF1QipPgOgEl3NkXL3MWoNML867LPN8Ljrr2zBoYULFl=s516-k-no",
     alt: "Restaurant Interior",
   },
 
@@ -54,7 +54,7 @@ const galleryImages = [
     alt: "Signature Dish",
   },
   {
-    src: "https://images.unsplash.com/photo-1696062985889-de626efe0148?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://lh5.googleusercontent.com/p/AF1QipOWqJy7jLTXO8YcLdt6skXhhSts4HsfxfB8mN6H=w203-h152-k-no",
     alt: "Cocktail Selection",
   },
 
@@ -74,44 +74,19 @@ const galleryImages = [
   },
 ];
 
-const reviews = [
-  {
-    name: "John Doe",
-    rating: 5,
-    comment: "Amazing fusion of flavors! The cocktails are a must-try.",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671122.jpg",
-  },
-  {
-    name: "Jane Smith",
-    rating: 4,
-    comment: "Great atmosphere and friendly staff. Will definitely return.",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671140.jpg",
-  },
-  {
-    name: "Mike Johnson",
-    rating: 5,
-    comment: "The best Nepalese cuisine I've had outside of Nepal!",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671116.jpg",
-  },
-  {
-    name: "Alice Brown",
-    rating: 3,
-    comment: "Good food, but the service was a bit slow during peak hours.",
-    image:
-      "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671132.jpg",
-  },
-];
-
 export default function About() {
   const { t } = useTranslation();
+  const reviews = t("reviews") as any;
+
   const { title, description } = t("AboutPage_banner") as unknown as {
     title: string;
     description: string;
   };
   const { title: T, subTitle, description1, description2 } = t("about") as any;
+  const misions = t("mission") as unknown as {
+    title: string;
+    description: string;
+  }[];
   return (
     <div className="w-full px-2">
       <Banner
@@ -121,11 +96,11 @@ export default function About() {
         title={title}
         description={description}
       />
-      <div className="flex flex-col items-center w-full py-16 gap-7 lg:gap-10">
-        <h2 className="mb-4 text-lg font-bold tracking-wider text-gray-800 sm:text-3xl">
+      <div className="w-full py-16  gap-7 lg:gap-10 flex flex-col items-center">
+        <h2 className="sm:text-3xl tracking-wider text-lg font-bold text-gray-800 mb-4">
           {T}
         </h2>
-        <div className="flex flex-col items-start gap-10 lg:flex-row">
+        <div className="flex  flex-col lg:flex-row  items-start gap-10">
           {/* Image Section */}
           <div className="w-full lg:w-1/2 h-[250px] sm:h-[400px] lg:h-[500px] ">
             <img
@@ -136,11 +111,11 @@ export default function About() {
           </div>
 
           {/* Text Section */}
-          <div className="flex flex-col w-full gap-3 sm:gap-8 lg:w-1/2">
-            <h2 className="text-lg font-bold text-gray-800 sm:text-2xl lg:mb-4">
+          <div className="w-full flex flex-col gap-3 sm:gap-8 lg:w-1/2">
+            <h2 className="sm:text-2xl text-lg font-bold text-gray-800 lg:mb-4">
               {subTitle}
             </h2>
-            <p className="flex flex-col gap-2 text-sm leading-relaxed text-gray-600 lg:text-lg">
+            <p className="text-gray-600   flex flex-col gap-2 lg:text-lg text-sm  leading-relaxed">
               {description1}
               <span>{description2}</span>
             </p>
@@ -150,57 +125,47 @@ export default function About() {
               href="https://maps.app.goo.gl/NmqbahcxCsrSxbcRA"
               className="w-[150px] bg-[var(--primary-color)] hover:bg-[var(--primary-dark)] duration-150 text-lg  text-white text-center rounded-lg py-3 px-3 lg:mt-8"
             >
-              Find out
+           {t("about_button")}
             </a>
           </div>
         </div>
       </div>
       {/* Mission & Vision Section */}
-      <section className="px-4 py-16">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="mb-8 text-xl font-bold sm:text-3xl">
-            Our Mission & Vision
+          <h2 className="sm:text-3xl text-xl font-bold mb-8">
+            {t("mission_title")}
           </h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            <Card>
-              <CardContent>
-                <h3 className="mb-4 text-xl font-semibold sm:text-2xl">
-                  Mission
-                </h3>
-                <p className="text-gray-600 sm:text-[16px] text-[15px] ">
-                  To offer the best fusion of Nepalese flavors in a cozy and
-                  inviting atmosphere, paired with innovative cocktails.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <h3 className="mb-4 text-xl font-semibold sm:text-2xl">
-                  Vision
-                </h3>
-                <p className="text-gray-600 sm:text-[16px] text-[15px] ">
-                  To become the premier destination for Nepalese fusion cuisine
-                  and cocktails, creating unforgettable dining experiences.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-8">
+            {misions?.map((mission, index) => (
+              <Card key={index}>
+                <CardContent>
+                  <h3 className="sm:text-2xl text-xl font-semibold mb-4">
+                    {mission.title}
+                  </h3>
+                  <p className="text-gray-600 sm:text-[16px] text-[15px] ">
+                    {mission.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="px-4 py-16">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-8 text-xl font-bold text-center sm:text-3xl">
-            Our Gallery
+          <h2 className="sm:text-3xl text-xl font-bold mb-8 text-center">
+            {t("gallery")}
           </h2>
-          <div className="gap-4 columns-2 md:columns-3 lg:columns-4">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {galleryImages.map((image, index) => (
               <img
                 key={index}
                 src={image.src}
                 alt={image.alt}
-                className="w-full mb-4 transition-shadow duration-300 rounded-lg shadow-md hover:shadow-lg"
+                className="mb-4 w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             ))}
           </div>
@@ -208,14 +173,14 @@ export default function About() {
       </section>
 
       {/* Location Section */}
-      <section className="flex flex-col items-stretch justify-center w-full px-5 py-16 ">
-        <h2 className="mb-8 text-xl font-bold tracking-wider text-center sm:text-3xl">
-          Visit Us
+      <section className="py-16 px-5 w-full flex flex-col items-stretch justify-center ">
+        <h2 className="sm:text-3xl text-xl text-center tracking-wider font-bold mb-8">
+          {t("visit")}
         </h2>
         <div className="flex w-full h-[400px] flex-col md:flex-row items-center justify-center gap-8">
           <iframe
             allowFullScreen={true}
-            className="w-full h-full transition-all duration-500 transform rounded-lg hover:scale-105"
+            className="w-full h-full rounded-lg transform transition-all duration-500 hover:scale-105"
             loading="lazy"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.897405829733!2d85.33158407477636!3d27.689059176193012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e99b7e259f%3A0xe77e0b6b366f6c1c!2sDailo%20Daily%20See%20Us!5e1!3m2!1sen!2snp!4v1731576014026!5m2!1sen!2snp"
             title="Restaurant Location"
@@ -224,31 +189,31 @@ export default function About() {
       </section>
 
       {/* Reviews Section */}
-      <section className="px-4 py-16">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="mb-8 text-xl font-bold tracking-wider text-center sm:text-3xl">
-            What Our Customers Say
+          <h2 className="sm:text-3xl text-xl tracking-wider font-bold mb-8 text-center">
+           {t("customer_title")}
           </h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            {reviews.map((review, index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {reviews.map((review: any, index: number) => (
               <Card key={index}>
                 <CardContent>
                   <div className="flex flex-col justify-start">
-                    <div className="flex items-start justify-start w-full gap-5">
+                    <div className="w-full flex items-start justify-start gap-5">
                       <img
                         src={review.image}
-                        className="border rounded-full size-12 "
+                        className="size-12 rounded-full border "
                         alt={review.name}
                       />
-                      <div className="flex flex-col items-start justify-end gap-2">
+                      <div className="flex flex-col  gap-2 items-start justify-end">
                         <span className="text-[1rem] font-semibold">
                           {review.name}
                         </span>
-                        <div className="flex items-center justify-start gap-1 mb-4">
+                        <div className="flex items-center justify-start  gap-1 mb-4">
                           {[...Array(review.rating)].map((_, i) => (
                             <Star
                               key={i}
-                              className="w-5 h-5 text-yellow-500 fill-current"
+                              className="w-5 h-5 fill-current text-yellow-500"
                             />
                           ))}
                         </div>
@@ -256,7 +221,7 @@ export default function About() {
                     </div>
                   </div>
 
-                  <p className="mb-4 italic text-gray-600">
+                  <p className="text-gray-600 mb-4 italic">
                     " {review.comment} "
                   </p>
                 </CardContent>
