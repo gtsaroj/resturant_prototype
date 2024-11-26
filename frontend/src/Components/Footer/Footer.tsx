@@ -3,7 +3,7 @@ import {
   Clock,
   Facebook,
   Instagram,
-  Link2Icon,
+
   Linkedin,
   Mail,
   MapPin,
@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import CollegeLogo from "../../assets/logo/pingputali.jpg";
 import { useTranslation } from "react-i18next";
-import { FormEvent } from "react";
 import React from "react";
 import { useSuscribeFn } from "../../Hook/useSuscribe";
 import ReactLoading from "react-loading";
@@ -81,7 +80,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className=" flex lg:gap-x-20  text-[var(--primary-text)] justify-start flex-wrap w-full  ">
+        <div className=" flex lg:gap-x-40 2xl:justify-evenly  text-[var(--primary-text)] justify-start flex-wrap w-full  ">
           <div className="flex lg:col-span-1 sm:col-span-2 col-span-3 flex-col gap-6 px-5 py-8 ">
             <p className="font-bold tracking-wider">{quickContact}</p>
             <div className="flex flex-col gap-5">

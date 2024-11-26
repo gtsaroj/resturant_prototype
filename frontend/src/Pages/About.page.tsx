@@ -29,7 +29,7 @@ const CardContent = ({
 // Dummy data for gallery and reviews
 const galleryImages = [
   {
-    src: "https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/466741974_122098905560619692_6413809504327135313_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGnkrqlPc4uwyLZ5rxofZcf6eluqhVfcJPp6W6qFV9wk8U9MY9_kNTOuWUvIFlmxoMpYzTTKH6em014_DQuNKKF&_nc_ohc=TrCwLqLnBYkQ7kNvgG0mD43&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=APGuT0bir2OzVZMFqD3ohil&oh=00_AYDOcxLAAewU2lwCSt-E0MsYqObe7-Bt300zbSwxNhrFcw&oe=673FEAE7",
+    src: "https://lh5.googleusercontent.com/p/AF1QipPgOgEl3NkXL3MWoNML867LPN8Ljrr2zBoYULFl=s516-k-no",
     alt: "Restaurant Interior",
   },
 
@@ -38,24 +38,23 @@ const galleryImages = [
     alt: "Signature Dish",
   },
   {
-    src: "https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/465783691_122093653358619692_9174135003382140474_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHr-GVe3kEoXDkhi0nQkMGt5ei7xeUmpu3l6LvF5Sam7dOonfbuO78t3i4QvOeYOF2idki1QG5srER7Th4xiUrz&_nc_ohc=4WED2K0K194Q7kNvgFuThB-&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=AC7B9h54TwaUcV4LK2VhOkk&oh=00_AYCErpJLf5sJC8f7c6qAeQRZOnUT1aSfAqnbi93Ma8azIA&oe=673FE1E3",
+    src: "https://cdn.pixabay.com/photo/2015/09/14/11/43/restaurant-939435_640.jpg",
     alt: "Cocktail Selection",
   },
   {
-    src: "https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/465796974_122093653292619692_1958588039483646147_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFAEH-1Esh5vv_RXYttloiEDhO0Cit-oJUOE7QKK36glb-fh3pSqp2K_faswpqxqO-0HV4hwKW_eTUbnllkkcY_&_nc_ohc=-h8huoLeAbEQ7kNvgHnyW9g&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=AYG-gkP5-bwnWDM4vjm3TCf&oh=00_AYDaRlw0liy5VL7YshUKPqh6YyKDATRI9WnYbcd7UEg_CQ&oe=673FE49E",
+    src: "https://srilanka.gg/wp-content/uploads/2023/11/The-Gallery-Cafe-large.jpeg",
     alt: "Outdoor Seating",
   },
 
   {
-    src: "https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/466741974_122098905560619692_6413809504327135313_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGnkrqlPc4uwyLZ5rxofZcf6eluqhVfcJPp6W6qFV9wk8U9MY9_kNTOuWUvIFlmxoMpYzTTKH6em014_DQuNKKF&_nc_ohc=TrCwLqLnBYkQ7kNvgG0mD43&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=APGuT0bir2OzVZMFqD3ohil&oh=00_AYDOcxLAAewU2lwCSt-E0MsYqObe7-Bt300zbSwxNhrFcw&oe=673FEAE7",
-    alt: "Restaurant Interior",
+    src: "https://img.freepik.com/premium-photo/tokyo-japan-january-09-2018-chefs-are-cooking-restaurant-most-popular-delicious-japanese-snack-food-japan_175935-25.jpg?semt=ais_hybrid",
   },
   {
-    src: "https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/466129505_122093653400619692_4376605311407162761_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEwpd_HibdtrkapTl41XoNIeHbSj-Isv094dtKP4iy_T361Gz16-ZNv_cw4Qrg6rMtY1Joho8IWO5TV1zYAfdCy&_nc_ohc=PDn9y-m_5uwQ7kNvgGOxuAE&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=AugAh6iC0H6t_On3HtkfniD&oh=00_AYCi6IpZqRJLOtb46qFrMbLYFelAnpeKhIU2W8ZhJbZ7NA&oe=673FEC01",
+    src: "https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg",
     alt: "Signature Dish",
   },
   {
-    src: "https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/465783691_122093653358619692_9174135003382140474_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHr-GVe3kEoXDkhi0nQkMGt5ei7xeUmpu3l6LvF5Sam7dOonfbuO78t3i4QvOeYOF2idki1QG5srER7Th4xiUrz&_nc_ohc=4WED2K0K194Q7kNvgFuThB-&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=AC7B9h54TwaUcV4LK2VhOkk&oh=00_AYCErpJLf5sJC8f7c6qAeQRZOnUT1aSfAqnbi93Ma8azIA&oe=673FE1E3",
+    src: "https://lh5.googleusercontent.com/p/AF1QipOWqJy7jLTXO8YcLdt6skXhhSts4HsfxfB8mN6H=w203-h152-k-no",
     alt: "Cocktail Selection",
   },
 
@@ -65,7 +64,7 @@ const galleryImages = [
   },
 
   {
-    src: "https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/466129505_122093653400619692_4376605311407162761_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEwpd_HibdtrkapTl41XoNIeHbSj-Isv094dtKP4iy_T361Gz16-ZNv_cw4Qrg6rMtY1Joho8IWO5TV1zYAfdCy&_nc_ohc=PDn9y-m_5uwQ7kNvgGOxuAE&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=AugAh6iC0H6t_On3HtkfniD&oh=00_AYCi6IpZqRJLOtb46qFrMbLYFelAnpeKhIU2W8ZhJbZ7NA&oe=673FEC01",
+    src: "https://lh5.googleusercontent.com/p/AF1QipORIAjiv4MAv9tqRbDof_zz75RwFSoQihFTduU=w203-h270-k-no",
     alt: "Signature Dish",
   },
 
@@ -73,6 +72,7 @@ const galleryImages = [
     src: "https://us.123rf.com/450wm/maxbelchenko777/maxbelchenko7772407/maxbelchenko777240700691/231844227-fans-enjoying-rock-concert-with-light-show-and-clapping-hands.jpg?ver=6",
     alt: "Signature Dish",
   },
+  
 ];
 
 const reviews = [
@@ -116,7 +116,7 @@ export default function About() {
     <div className="w-full px-2">
       <Banner
         image={
-          "https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D"
+          "https://www.burgessrawson.com.au/wp-content/uploads/2024/01/a0E0I0000139JE1UAM_P170-Internet-Image-768x576.jpg"
         }
         title={title}
         description={description}
