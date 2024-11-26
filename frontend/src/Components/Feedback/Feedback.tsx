@@ -12,18 +12,18 @@ export const Feedback: React.FC = () => {
     useFeedbackFn();
 
   return (
-    <div className="w-full flex py-10 flex-col gap-10 items-center justify-center">
-      <div className="w-full flex items-center ">
+    <div className="flex flex-col items-center justify-center w-full gap-10 py-10">
+      <div className="flex items-center w-full ">
         <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-black/100  to-black/0 dark:to-black/0"></h3>
         <p className="font-bold text-center sm:text-[22px] text-[15px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
           {h1}
         </p>
         <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-black/0 to-black/100 dark:to-black/100"></h3>
       </div>
-      <div className="max-w-3xl  w-full p-6 mt-10 bg-white rounded-lg shadow border border-gray-200">
+      <div className="w-full max-w-3xl p-6 mt-10 bg-white border border-gray-200 rounded-lg shadow">
         <form
           onSubmit={(e) => mutate(e)}
-          className="space-y-6 flex flex-col w-full"
+          className="flex flex-col w-full space-y-6"
         >
           <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
 
