@@ -49,9 +49,9 @@ const Footer: React.FC = () => {
   return (
     <div className="flex flex-col w-full text-white px-2 ">
       <footer className="w-full mt-16  rounded-t bg-white border-[1px] border-[var(--border-color)] text-black  place-items-center grid px-5">
-        <div className="flex flex-col items-center justify-between w-full gap-5 p-3 border-b-4 border-b-[var(--border-color)] sm:flex-row">
-          <div className="px-5 py-3 bg-[var(--light-background)]  text-[var(--primary-text)] rounded">
-            <img src={CollegeLogo} alt="logo" className="max-h-[60px] " />
+        <div className="flex  items-center justify-between w-full gap-5 sm:p-3 border-b-4 border-b-[var(--border-color)] ">
+          <div className="px-5 py-3   text-[var(--primary-text)] rounded">
+            <img src={CollegeLogo} alt="logo" className="max-h-[60px] sm:scale-[1.3] scale-[1.1] rounded-full " />
           </div>
           <div className="flex flex-col text-[var(--primary-text)] items-center justify-center gap-3">
             <p className="text-lg font-bold  tracking-wide ">{followUs} </p>
