@@ -50,7 +50,7 @@ export const Inquiry = () => {
             </a>
             <a
               className="bg-[#7200C8] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#5C00A2]"
-              href="viber://forward?text=`Is anyone available to chat ?"
+              href="viber://chat?text=`Is anyone available to chat ?"
             >
               <FaViber className="text-xl sm:text-2xl" />
             </a>
