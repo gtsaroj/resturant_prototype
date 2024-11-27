@@ -3,8 +3,6 @@ import {
   Clock,
   Facebook,
   Instagram,
-
-  Linkedin,
   Mail,
   MapPin,
   Phone,

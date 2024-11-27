@@ -3,6 +3,7 @@ import React from "react";
 import { Star } from "lucide-react";
 import { Banner } from "../Components/Banner/Banner";
 import { useTranslation } from "react-i18next";
+import AboutImg from "../assets/about.jpg";
 
 // Custom Card component
 const Card = ({
@@ -104,7 +105,7 @@ export default function About() {
           {/* Image Section */}
           <div className="w-full lg:w-1/2 h-[250px] sm:h-[400px] lg:h-[500px] ">
             <img
-              src="https://www.burgessrawson.com.au/wp-content/uploads/2024/01/a0E0I0000139JE1UAM_P170-Internet-Image-768x576.jpg" // Replace with a free resource image
+              src={AboutImg}
               alt="Delicious food at Pink Putali"
               className="w-full h-full rounded-md"
             />
@@ -125,7 +126,7 @@ export default function About() {
               href="https://maps.app.goo.gl/NmqbahcxCsrSxbcRA"
               className="w-[150px] bg-[var(--primary-color)] hover:bg-[var(--primary-dark)] duration-150 text-lg  text-white text-center rounded-lg py-3 px-3 lg:mt-8"
             >
-           {t("about_button")}
+              {t("about_button")}
             </a>
           </div>
         </div>
@@ -192,7 +193,7 @@ export default function About() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="sm:text-3xl text-xl tracking-wider font-bold mb-8 text-center">
-           {t("customer_title")}
+            {t("customer_title")}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {reviews.map((review: any, index: number) => (
