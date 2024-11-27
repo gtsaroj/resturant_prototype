@@ -3,8 +3,6 @@ import {
   Clock,
   Facebook,
   Instagram,
-
-  Linkedin,
   Mail,
   MapPin,
   Phone,
@@ -59,23 +57,16 @@ const Footer: React.FC = () => {
               <a
                 aria-label="go to facebook"
                 target="_blank"
-                href="https://www.facebook.com/texasintlcollege"
+                href="https://www.facebook.com/profile.php?id=61568590761738"
               >
                 <Facebook className="sm:size-6 size-5 duration-150 hover:text-[var(--secondary-color)] " />
               </a>
               <a
                 aria-label="go to instagram"
-                href="https://www.instagram.com/texasinternationalcollege/"
+                href="https://www.instagram.com/pinkputali/"
                 target="_blank"
               >
                 <Instagram className="sm:size-6 size-5 duration-150 hover:text-[var(--secondary-color)] " />
-              </a>
-              <a
-                aria-label="go to linkedin"
-                href="https://www.linkedin.com/company/texas-college-of-management-it/"
-                target="_blank"
-              >
-                <Linkedin className="sm:size-6 size-5 duration-150 hover:text-[var(--secondary-color)] " />
               </a>
             </div>
           </div>

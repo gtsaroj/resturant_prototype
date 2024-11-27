@@ -9,8 +9,9 @@ export const useFeedbackFn = () => {
   const [comment, setComment] = useState("");
 
   const handleSubmit = async (event: FormEvent) => {
-    if (!rating || !comment) return toast.error("All fields are required");
     event.preventDefault();
+    if (!rating || !comment) throw new Error("All field are required");
+
     const formData = new FormData(this);
     formData.append("service_id", import.meta.env.VITE_SERVICE_ID);
     formData.append("template_id", "template_m3ogwdr");
@@ -35,8 +36,8 @@ export const useFeedbackFn = () => {
     onSuccess: () => {
       toast.success("Thank you for feedback!");
     },
-    onError: () => {
-      toast.error("Something went wrong");
+    onError: (error: any) => {
+      if (error instanceof Error) toast.error(error.message);
     },
   });
 

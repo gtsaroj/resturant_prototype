@@ -35,22 +35,22 @@ export const Inquiry = () => {
             <a
               target="_blank"
               className="bg-[#0078FF] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#0061D1] "
-              href="https://www.facebook.com/messages/t/100032742726174"
+              href="https://www.messenger.com/t/100032742726174/"
+              rel="noopener noreferrer"
             >
               <FaFacebookMessenger className="text-xl sm:text-2xl" />
             </a>
             <a
               target="_blank"
-              href={`https://wa.me/9848255044
-                `}
+              rel="noopener noreferrer"
+              href={`https://wa.me/9779848255044`}
               className="bg-[#1a9e30] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#128c3b] "
             >
               <FaWhatsapp className="text-xl sm:text-2xl" />
             </a>
             <a
               className="bg-[#7200C8] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#5C00A2]"
-              href="viber://send?&phone=9848255044
-              "
+              href="viber://forward?text=`Is anyone available to chat ?"
             >
               <FaViber className="text-xl sm:text-2xl" />
             </a>
