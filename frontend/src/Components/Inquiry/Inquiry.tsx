@@ -41,15 +41,16 @@ export const Inquiry = () => {
             </a>
             <a
               target="_blank"
-              href={`https://wa.me/9848255044
+              href={`https://wa.me/+977-9848255044
                 `}
               className="bg-[#1a9e30] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#128c3b] "
             >
               <FaWhatsapp className="text-xl sm:text-2xl" />
             </a>
             <a
+              target="_blank"
               className="bg-[#7200C8] p-4 rounded-full transition-colors duration-300 text-white hover:bg-[#5C00A2]"
-              href="viber://send?&phone=9848255044
+              href="viber://add?number=9848255044
               "
             >
               <FaViber className="text-xl sm:text-2xl" />

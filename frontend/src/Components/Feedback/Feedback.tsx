@@ -61,7 +61,7 @@ export const Feedback: React.FC = () => {
             className={`w-full ${
               !rating || !comment ? "cursor-not-allowed" : ""
             }   py-2 tracking-wider px-4 hover:text-white bg-transparent  text-[var(--primary-text)] font-medium rounded-lg transition-colors duration-200`}
-            disabled={!rating || !comment}
+            disabled={!comment}
           >
             {isLoading ? (
               <div className="flex items-center justify-center gap-2">
