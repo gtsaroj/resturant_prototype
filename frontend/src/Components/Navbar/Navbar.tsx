@@ -5,6 +5,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
+import { AuthNavbar } from "./AuthNavbar";
 
 export const NavbarContainer = ({ action }: { action?: () => void }) => {
   const { t } = useTranslation();
@@ -32,19 +33,19 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
 
   const { pathname } = useLocation();
   return (
-    <ul className="flex sm:flex-row flex-col text-lg items-center  sm:justify-center pt-10 sm:pt-0 gap-10 sm:gap-8 text-[var(--light-text)] ">
+    <ul className="flex sm:flex-row flex-col text-lg items-center  sm:justify-center pt-10 sm:pt-0 gap-10 sm:gap-16 text-[var(--light-text)] ">
       {navbarData?.map((data) => (
         <li className="relative group " key={data.name}>
           <Link
             onClick={() => action && action()}
             to={data.pathname}
-            className={`hover:text-[var(--secondary-color)] sm:text-[1rem] text-[16px] ${
-              pathname === data.pathname ? "text-[var(--secondary-color)] " : ""
+            className={`hover:font-bold sm:text-[1rem] text-[16px] ${
+              pathname === data.pathname ? "font-bold" : ""
             } transition duration-300`}
           >
             {data.name}
           </Link>
-          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--secondary-color)] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
         </li>
       ))}
     </ul>
@@ -107,27 +108,22 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav
-      className={`w-full  
+    <div className="w-full flex  flex-col items-center justify-center">
+      <AuthNavbar/>
+        <nav
+      className={`w-full fixed duration-150 
           ${
             isScrolled
-              ? "fixed  -top-20 translate-y-20  "
-              : " -translate-y-0 static"
+              ? "  top-0   "
+              : " -translate-y-0 top-[7.4rem] "
           }
-            z-[1000] shadow-sm shadow-black 
+            z-[1000]  
       
-       flex items-center justify-between px-6 py-4 bg-[var(--dark-background)] transition-all duration-300`}
+       flex items-center justify-between px-6 py-2 bg-[var(--primary-color)] transition-all duration-300`}
     >
-      {/* Logo Section */}
-      <div
-        onClick={() => navigate("/")}
-        className="flex items-center gap-4 cursor-pointer"
-      >
-        <div className="sm:w-[4rem]  w-[3rem] h-[3rem] sm:h-[4rem] rounded-full overflow-hidden">
-          <img className="object-cover w-full h-full" src={Logo} alt="logo" />
-        </div>
-      </div>
+
       <div className="hidden sm:flex ">
+      
         <NavbarContainer />
       </div>
       {/* mobile navbar */}
@@ -217,5 +213,6 @@ export const Navbar = () => {
         </a>
       </div>
     </nav>
+   </div>
   );
 };

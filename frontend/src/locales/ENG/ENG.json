@@ -11,7 +11,7 @@
   ],
   "about_button":"Find out",
  "mission_title" :"Our Mission & Vision",
-  "visit": "Vist us",
+  "visit": "FIND US HERE",
   "gallery": "Our Gallery",
   "customer_title": "What Our Customers Say",
   "title": "Pink Putali Restaurant",
@@ -411,5 +411,50 @@
       "ctaLink": "#",
       "availableSeats": 50
     }
+  ],
+  "specials": [
+    {
+      "name": "Margherita Pizza",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
+      "percentage": 20,
+      "day": "Monday"
+    },
+    {
+      "name": "Chicken Burger",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
+      "percentage": 15,
+      "day": "Tuesday"
+    },
+    {
+      "name": "Caesar Salad",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
+      "percentage": 10,
+      "day": "Wednesday"
+    },
+    {
+      "name": "Spaghetti Carbonara",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
+      "percentage": 25,
+      "day": "Thursday"
+    },
+    {
+      "name": "Sushi Platter",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
+      "percentage": 30,
+      "day": "Friday"
+    },
+    {
+      "name": "Grilled Salmon",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
+      "percentage": 18,
+      "day": "Saturday"
+    },
+    {
+      "name": "Tacos",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
+      "percentage": 22,
+      "day": "Sunday"
+    }
   ]
+  
 }

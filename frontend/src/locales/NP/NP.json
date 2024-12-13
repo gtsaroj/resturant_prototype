@@ -363,6 +363,51 @@
       "category": "12"
     }
   ],
+  "specials" :  [
+    {
+      "name": "मार्घेरिटा पिज्जा",
+      "image": "https://via.placeholder.com/150?text=मार्घेरिटा+पिज्जा",
+      "percentage": 20,
+      "day": "सोमबार"
+    },
+    {
+      "name": "चिकेन बर्गर",
+      "image": "https://via.placeholder.com/150?text=चिकेन+बर्गर",
+      "percentage": 15,
+      "day": "मंगलबार"
+    },
+    {
+      "name": "सिजर सलाद",
+      "image": "https://via.placeholder.com/150?text=सिजर+सलाद",
+      "percentage": 10,
+      "day": "बुधबार"
+    },
+    {
+      "name": "स्पाघेटी कार्बोनारा",
+      "image": "https://via.placeholder.com/150?text=स्पाघेटी+कार्बोनारा",
+      "percentage": 25,
+      "day": "बिहीबार"
+    },
+    {
+      "name": "सुशी प्लेटर",
+      "image": "https://via.placeholder.com/150?text=सुशी+प्लेटर",
+      "percentage": 30,
+      "day": "शुक्रबार"
+    },
+    {
+      "name": "ग्रिल्ड सालमन",
+      "image": "https://via.placeholder.com/150?text=ग्रिल्ड+सालमन",
+      "percentage": 18,
+      "day": "शनिबार"
+    },
+    {
+      "name": "टाकोस",
+      "image": "https://via.placeholder.com/150?text=टाकोस",
+      "percentage": 22,
+      "day": "आइतबार"
+    }
+  ]
+,  
 
   "eventData": [
     {

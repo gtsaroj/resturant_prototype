@@ -37,9 +37,7 @@ export const Menu = () => {
     setSelectedProducts(selectedMenu);
   }, [initialMenu, products]);
 
-  const name = menu?.find(
-    (product) => product.id === initialMenu
-  )?.name;
+  const name = menu?.find((product) => product.id === initialMenu)?.name;
 
   const menuReference = useRef<null | HTMLDivElement>(null);
 
@@ -47,12 +45,15 @@ export const Menu = () => {
     <div className="flex w-full flex-col items-start px-5 pt-10 justify-center gap-8">
       {/* Menu Selector */}
       <div className="w-full group/category relative flex flex-col gap-10 items-center justify-center">
-        <div className="w-full flex items-center ">
-          <h3 className="h-[2px] w-full sm:text-[22px] text-[16px]  bg-gradient-to-r from-black/100 dark:from-black/100  to-black/0 dark:to-black/0"></h3>
-          <p className="font-bold text-center sm:text-[22px] text-[15px] sm:min-w-[300px] w-[512px] tracking-wide text-[var(--dark-text)]">
-            {title}
-          </p>
-          <h3 className="h-[2px] w-full  bg-gradient-to-r from-black/0 dark:from-black/0 to-black/100 dark:to-black/100"></h3>
+        <div className="w-full flex items-center justify-between ">
+          <h1 className=" text-xl sm:text-3xl  font-semibold tracking-wide ">
+            Search By Food
+          </h1>
+          <button className="flex items-center justify-start hover:gap-1 duration-150 gap-0.5
+           text-[var(--primary-color)] text-sm font-bold ">
+            <span>View All</span>
+            <ChevronRight />
+          </button>
         </div>
         <div ref={menuReference} className=" w-full  overflow-x-auto ">
           <Menus menu={menu} action={(id) => setInitialMenu(id)} />
@@ -128,15 +129,15 @@ export const Menus = ({ action, menu }: MenuProps) => {
       {menu?.map((product) => (
         <div
           onClick={() => action(product.id)}
-          className="flex w-16 gap-1 cursor-pointer flex-col items-center justify-center"
+          className="flex  gap-1 cursor-pointer flex-col items-center justify-center"
           key={product.id}
         >
           <img
             src={product.image}
-            className="sm:size-12 size-10 rounded-full overflow-hidden object-cover"
+            className="sm:size-32  size-10 rounded-full overflow-hidden object-cover"
             alt="product"
           />
-          <p className="sm:text-[15px] text-[12px] tracking-wide text-[var(--primary-text)]">
+          <p className="sm:text-[15px] font-semibold text-[12px] tracking-wider text-[var(--primary-text)]">
             {product.name}
           </p>
         </div>

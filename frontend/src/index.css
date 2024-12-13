@@ -4,8 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --primary-color: #b60054;
-  --primary-dark: #9c0c4f;
+  --primary-color: #FFB30E;
+  --primary-light: #fc7995;
+  --primary-dark: #FAAA01;
 
   --secondary-color: #3035c5;
   --secondary-dark: #2428aa;
@@ -22,6 +23,7 @@
 
   --accent-color: #ffb347;
   --border-color: #e0e0e0;
+  --dark-border : #5d50772d;
 
   /* Typography */
   --font-family-base: "Arial", sans-serif;
@@ -71,16 +73,7 @@ p {
   color: var(--text-secondary);
 }
 
-button {
-  background-color: var(--primary-color);
-  color: #fff;
-  transition: 0.2s;
-  border: 1px solid var(--border-color);
-}
 
-button:hover {
-  background-color: var(--primary-dark);
-}
 
 @keyframes fadeIn {
   0% {
