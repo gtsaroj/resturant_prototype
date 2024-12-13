@@ -30,6 +30,7 @@
     "react-query": "^3.39.3",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.28.0",
+    "swiper": "^11.1.15",
     "transliteration": "^2.3.5"
   },
   "devDependencies": {

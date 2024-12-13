@@ -4,10 +4,12 @@ import "./index.css";
 import App from "./App.tsx";
 import "./translator/Translator.ts";
 import { Toaster } from "react-hot-toast";
+import { SocialMedia } from "./Components/Media/Social.Media.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
     <Toaster position="top-right" />
+    <SocialMedia/>
   </StrictMode>
 );

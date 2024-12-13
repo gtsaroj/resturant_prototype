@@ -63,7 +63,7 @@ const Carousel: React.FC<CarouselProp> = ({ props, time, actions = true }) => {
         target="_blank"
       >
         <div
-          className="w-full h-full overflow-hidden duration-500  bg-no-repeat bg-cover rounded-xl"
+          className="w-full h-full n duration-500  bg-no-repeat bg-cover "
           ref={imageRef}
           style={{
             backgroundImage: `url(${props[currentSlide]})`,

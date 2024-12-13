@@ -8,7 +8,8 @@
   --primary-light: #fc7995;
   --primary-dark: #FAAA01;
 
-  --secondary-color: #3035c5;
+  --secondary-color: #fc7995;
+  --secondary-light : #ffb3c6;
   --secondary-dark: #2428aa;
 
   --body-bg: #fcfbfb;
@@ -57,7 +58,6 @@ body {
   line-height: var(--line-height);
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 h1,
@@ -90,41 +90,4 @@ p {
   animation: fadeIn 2s ease-out forwards;
 }
 
-@layer components {
-  .scrollbar-invisible {
-    @apply overscroll-y-auto;
-    width: 6px;
-  }
-  .scrollbar-custom {
-    @apply overflow-y-scroll; /* Enables scrolling */
-  }
 
-  .item-scrollbar {
-    @apply overflow-x-auto;
-  }
-  .item-scrollbar::-webkit-scrollbar {
-    width: 4px;
-    height: 3px;
-    cursor: pointer;
-  }
-  .item-scrollbar::-webkit-scrollbar-thumb {
-    cursor: pointer;
-    width: 3px;
-    height: 3px;
-    @apply bg-gray-500 rounded-md; /* Customize the scrollbar thumb */
-  }
-
-  .scrollbar-custom::-webkit-scrollbar {
-    width: 4.5px; /* Adjust scrollbar width */
-    height: 5px;
-  }
-
-  .scrollbar-custom::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 rounded-md; /* Customize the scrollbar thumb */
-  }
-
-  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-400; /* Hover effect */
-    @apply cursor-pointer;
-  }
-}

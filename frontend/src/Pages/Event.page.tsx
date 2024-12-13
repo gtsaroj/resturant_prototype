@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Banner } from "../Components/Banner/Banner";
-import { Event } from "../Components/Event";
+import { Event } from "../Components/Event/Recent.Event";
 
 export const EventPage = () => {
   const { t } = useTranslation();
