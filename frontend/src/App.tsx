@@ -12,6 +12,7 @@ import i18next from "i18next";
 import LanguageModal from "./Components/LanguageModal/LanguageModal";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Reserve } from "./Components/Reserve/Reserve";
+import { CartPage } from "./Pages/CartPage";
 
 export const MainPage = () => {
   useScrollToTop();
@@ -62,7 +63,7 @@ export const MainPage = () => {
       onLanguageSelect={(value: "EN" | "NP") => changeLanguageFn(value)}
     />
   ) : (
-    <div className="w-full flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center w-full ">
       <Navbar />
       <div className="max-w-[1500px] w-full flex flex-col items-center justify-center">
         <Outlet />
@@ -91,6 +92,7 @@ function App() {
             <Route index element={<Homepage />}></Route>
             <Route path="about" element={<About />} />
             <Route path="menu" element={<MenuPage />} />
+            <Route path="cart" element={<CartPage />} />
             <Route path="event" element={<EventPage />} />
             <Route path="reserve" element={<Reserve />} />
           </Route>

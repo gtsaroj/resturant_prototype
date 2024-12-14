@@ -8,12 +8,12 @@ export const Reserve = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className=" flex flex-col items-end justify-start gap-16 px-2">
+    <div className="flex flex-col items-end justify-start gap-16 px-2 ">
       <div className="flex flex-col items-center justify-center gap-10">
         <div className="w-[400px]  flex items-center mt-20 justify-center gap-2">
           {[...Array(3)].map((_, index) => (
             <div className="relative" key={index}>
-              <div className="bg-slate-400 h-1 w-52 "></div>
+              <div className="h-1 bg-slate-400 w-52 "></div>
               <div
                 className={`absolute w-52 ${
                   activeIndex === index ? "bg-green-500" : ""
@@ -30,17 +30,17 @@ export const Reserve = () => {
           />
         )}
       </div>
-      <div className="w-full flex items-center justify-between">
+      <div className="flex items-center justify-between w-full">
         <button
           onClick={() => setActiveIndex((prev) => (prev === 0 ? 0 : prev - 1))}
-          className="border px-8 rounded-lg flex items-center justify-end py-2 gap-1 hover:gap-2 duration-150 "
+          className="flex items-center justify-end gap-1 px-8 py-2 duration-150 border rounded-lg hover:gap-2 "
         >
           <ChevronLeft />
           Back
         </button>
         <button
           onClick={() => setActiveIndex((prev) => prev + 1)}
-          className="border px-8 rounded-lg flex items-center justify-end py-2 gap-1 hover:gap-2 duration-150 "
+          className="flex items-center justify-end gap-1 px-8 py-2 duration-150 border rounded-lg hover:gap-2 "
         >
           Next <ChevronRight />
         </button>
@@ -125,9 +125,9 @@ const Tables = () => {
     },
   ];
   return (
-    <div className="flex flex-wrap px-10  items-center justify-evenly gap-20">
+    <div className="flex flex-wrap items-center gap-20 px-10 justify-evenly">
       {tables?.map((table) => (
-        <div className=" relative ">
+        <div className="relative ">
           <div className=" w-[50px]  rounded-full h-[100px]  border-[var(--dark-border)] border-[2px] "></div>
           <div className="absolute left-[-30px] top-0 gap-y-5   gap-x-16  grid grid-cols-2 rounded-full">
             {[...Array(table.seat)]?.map((table) => (
@@ -155,8 +155,8 @@ const UserDetails = () => {
   }, [user]);
 
   return (
-    <div className=" flex flex-col items-start justify-start gap-10">
-      <h1 className=" sm:text-3xl tracking-wide font-bold ">
+    <div className="flex flex-col items-start justify-start gap-10 ">
+      <h1 className="font-bold tracking-wide sm:text-3xl">
         Information Details
       </h1>
       <form
@@ -164,7 +164,7 @@ const UserDetails = () => {
         action=""
       >
         {/* fullName */}
-        <div className="flex w-full flex-col items-start justify-center  gap-1">
+        <div className="flex flex-col items-start justify-center w-full gap-1">
           <label className=" text-[18px] tracking-wide  " htmlFor="">
             Full name
           </label>
@@ -178,7 +178,7 @@ const UserDetails = () => {
           />
         </div>
         {/* phoneNumber */}
-        <div className="flex flex-col items-start justify-start gap-1  w-full">
+        <div className="flex flex-col items-start justify-start w-full gap-1">
           <label className=" text-[18px] tracking-wide  " htmlFor="">
             Phone number
           </label>
@@ -193,8 +193,8 @@ const UserDetails = () => {
         </div>
         {/* date */}
 
-        <div className=" flex w-full items-center justify-between gap-5">
-          <div className="flex   flex-col items-start gap-1">
+        <div className="flex items-center justify-between w-full gap-5 ">
+          <div className="flex flex-col items-start gap-1">
             <label className=" text-[18px] tracking-wide  " htmlFor="">
               Date to come
             </label>
@@ -227,7 +227,7 @@ const UserDetails = () => {
         </div>
 
         {/* Number of person */}
-        <div className="flex flex-col items-start justify-start gap-1  w-full">
+        <div className="flex flex-col items-start justify-start w-full gap-1">
           <label className=" text-[18px] tracking-wide  " htmlFor="">
             No of person
           </label>
@@ -241,7 +241,7 @@ const UserDetails = () => {
           />
         </div>
         {/* notes */}
-        <div className="flex flex-col items-start justify-start gap-1  w-full">
+        <div className="flex flex-col items-start justify-start w-full gap-1">
           <label className=" text-[18px] tracking-wide  " htmlFor="">
             Notes
           </label>
@@ -269,10 +269,10 @@ const ReserveSummary = ({
   notes,
 }) => {
   return (
-    <div className="flex w-full flex-col items-start justify-start gap-5">
-      <h1 className=" sm:text-3xl text-xl tracking-wide ">Order summary</h1>
-      <div className="flex flex-col items-start justify-center gap-9 w-full">
-        <div className="w-full flex flex-col items-start justify-start gap-8">
+    <div className="flex flex-col items-start justify-start w-full gap-5">
+      <h1 className="text-xl tracking-wide sm:text-3xl">Order summary</h1>
+      <div className="flex flex-col items-start justify-center w-full gap-9">
+        <div className="flex flex-col items-start justify-start w-full gap-8">
           <div className="w-full  pb-1 flex border-b-[1px] border-[var(--dark-border)] items-center justify-between gap-5">
             <label className=" text-[18px] text-[var(--secondary-text)] tracking-wide  ">
               Name:
@@ -305,8 +305,8 @@ const ReserveSummary = ({
             <p className=" text-[18px] tracking-wide  ">{noOfPerson}</p>
           </div>
         </div>
-        <div className="flex flex-col w-full items-start justify-start gap-2">
-          <div className="flex w-full items-center justify-between">
+        <div className="flex flex-col items-start justify-start w-full gap-2">
+          <div className="flex items-center justify-between w-full">
             <h1 className=" text-[18px] text-[var(--secondary-text)] ">
               Subtotal
             </h1>
@@ -316,7 +316,7 @@ const ReserveSummary = ({
             <h1 className=" text-[18px] text-[var(--secondary-text)] ">Tax</h1>
             <p className=" text-[18px] ">Rs. 0</p>
           </div>
-          <div className="flex items-center w-full justify-between">
+          <div className="flex items-center justify-between w-full">
             <h1 className=" text-[18px] text-[var(--secondary-text)] ">
               Total
             </h1>
