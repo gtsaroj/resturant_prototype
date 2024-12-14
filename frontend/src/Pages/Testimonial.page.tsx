@@ -33,10 +33,7 @@ const dummyData = [
   
 export const TestimonialPage = () => {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start gap-10 ">
-      <h1 className=" text-xl tracking-wide font-bold sm:text-3xl ">
-        Testimonials
-      </h1>
+    <div className="w-screen bg-[#F2E3D5]  h-full flex flex-col items-center justify-start gap-10 py-6 ">
       <Testimonial users={dummyData} />
     </div>
   );

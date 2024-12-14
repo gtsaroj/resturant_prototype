@@ -47,7 +47,7 @@ export const Location = () => {
   };
 
   return (
-    <section className="py-16 gap-[16px] w-full flex flex-col items-start justify-start ">
+    <section className="py-16 gap-10 w-full flex flex-col items-start justify-start ">
       <h2 className="sm:text-3xl text-xl  tracking-wider font-bold ">
         {t("visit")}
       </h2>

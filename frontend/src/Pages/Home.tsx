@@ -14,6 +14,7 @@ import { Specials } from "../Components/Specials/Specials";
 import { Location } from "../Components/Location/Location";
 import { UpcomingEvent } from "../Components/Event/Upcoming.Event";
 import { TestimonialPage } from "./Testimonial.page";
+import { Gallery } from "../Components/Gallery/Gallery";
 
 export const Homepage = () => {
   const { t } = useTranslation();
@@ -33,8 +34,8 @@ export const Homepage = () => {
       <Menu />
       <Event />
       <UpcomingEvent />
-      <TestimonialPage/>
-      <Feedback />
+      <TestimonialPage />
+      <Gallery/>
     </div>
   );
 };

@@ -13,9 +13,9 @@ export const UpcomingEvent: React.FC = () => {
 
   return (
     <div className="w-full flex flex-col items-start justify-center gap-10 px-3 py-10">
-      <div className="w-full flex-col gap-3 sm:text-3xl text-xl tracking-wide  justify-start font-bold flex items-start ">
+      <div className="w-full flex-col gap-1 sm:text-3xl text-xl tracking-wide  justify-start font-bold flex items-start ">
         <h1 className="  ">Upcoming Event</h1>
-        <p className=" text-sm  font-thin ">
+        <p className="sm:text-lg text-[var(--secondary-text)] text-sm  font-thin ">
           Want to be part of our great events in Kathmandu, Join our events. For
           more inquiry, Please message us.{" "}
         </p>

@@ -4,6 +4,10 @@ import { Star } from "lucide-react";
 import { Banner } from "../Components/Banner/Banner";
 import { useTranslation } from "react-i18next";
 import AboutImg from "../assets/about.jpg";
+import { Gallery } from "../Components/Gallery/Gallery";
+import { Location } from "../Components/Location/Location";
+import { Testimonial } from "../Components/Testimonial/Testimonial";
+import { TestimonialPage } from "./Testimonial.page";
 
 // Custom Card component
 const Card = ({
@@ -89,7 +93,7 @@ export default function About() {
     description: string;
   }[];
   return (
-    <div className="w-full px-2">
+    <div className="w-full mt-16 px-2">
       <Banner
         image={
           "https://img.freepik.com/premium-photo/tokyo-japan-january-09-2018-chefs-are-cooking-restaurant-most-popular-delicious-japanese-snack-food-japan_175935-25.jpg?semt=ais_hybrid"
@@ -154,83 +158,9 @@ export default function About() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="sm:text-3xl text-xl font-bold mb-8 text-center">
-            {t("gallery")}
-          </h2>
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
-            {galleryImages.map((image, index) => (
-              <img
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                className="mb-4 w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Location Section */}
-      <section className="py-16 px-5 w-full flex flex-col items-stretch justify-center ">
-        <h2 className="sm:text-3xl text-xl text-center tracking-wider font-bold mb-8">
-          {t("visit")}
-        </h2>
-        <div className="flex w-full h-[400px] flex-col md:flex-row items-center justify-center gap-8">
-          <iframe
-            allowFullScreen={true}
-            className="w-full h-full rounded-lg transform transition-all duration-500 hover:scale-105"
-            loading="lazy"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.897405829733!2d85.33158407477636!3d27.689059176193012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e99b7e259f%3A0xe77e0b6b366f6c1c!2sDailo%20Daily%20See%20Us!5e1!3m2!1sen!2snp!4v1731576014026!5m2!1sen!2snp"
-            title="Restaurant Location"
-          ></iframe>
-        </div>
-      </section>
-
-      {/* Reviews Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="sm:text-3xl text-xl tracking-wider font-bold mb-8 text-center">
-            {t("customer_title")}
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review: any, index: number) => (
-              <Card key={index}>
-                <CardContent>
-                  <div className="flex flex-col justify-start">
-                    <div className="w-full flex items-start justify-start gap-5">
-                      <img
-                        src={review.image}
-                        className="size-12 rounded-full border "
-                        alt={review.name}
-                      />
-                      <div className="flex flex-col  gap-2 items-start justify-end">
-                        <span className="text-[1rem] font-semibold">
-                          {review.name}
-                        </span>
-                        <div className="flex items-center justify-start  gap-1 mb-4">
-                          {[...Array(review.rating)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className="w-5 h-5 fill-current text-yellow-500"
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-600 mb-4 italic">
-                    " {review.comment} "
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Gallery />
+      <Location />
+      <TestimonialPage />
     </div>
   );
 }

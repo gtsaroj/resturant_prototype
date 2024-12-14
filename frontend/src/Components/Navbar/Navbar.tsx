@@ -77,9 +77,12 @@ export const Navbar = () => {
 
   useEffect(() => {
     const scrollerDetect = () => {
-      if (window.scrollY >= 20) {
+      const rect =
+        navbarRef.current && navbarRef.current.getBoundingClientRect();
+      console.log(rect?.top);
+      if (rect?.top && rect.top <= -4) {
         setIsScrolled(true);
-      } else {
+      } else if (window.scrollY <= 100) {
         setIsScrolled(false);
       }
     };
@@ -115,16 +118,21 @@ export const Navbar = () => {
   }, [isSetLanguage]);
 
   const navigate = useNavigate();
+  const reference = useRef<null | HTMLDivElement>(null);
 
   return (
-    <div className="w-full flex  flex-col items-center justify-center">
+    <div
+      ref={reference}
+      className="w-full flex  flex-col items-center justify-center"
+    >
       <AuthNavbar />
       <nav
-        className={`w-full fixed duration-150 
-          ${isScrolled ? "  top-0   " : " -translate-y-0 top-[10rem] "}
+        ref={navbarRef}
+        className={`w-full  duration-150 
+          ${isScrolled ? "  top-0 fixed   " : "  static  "}
             z-[1000]  
       
-       flex items-center justify-center px-6 py-2 bg-[var(--primary-color)] transition-all duration-300`}
+       flex items-center justify-center px-6 py-2 duration-150 bg-[var(--primary-color)] `}
       >
         <div className="hidden sm:flex ">
           <NavbarContainer />
