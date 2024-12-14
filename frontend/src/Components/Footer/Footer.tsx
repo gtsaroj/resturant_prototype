@@ -1,20 +1,145 @@
-import {
-  ChevronRight,
-  Clock,
-  Facebook,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
-import CollegeLogo from "../../assets/logo/pingputali.jpg";
-import { useTranslation } from "react-i18next";
 import React from "react";
-import { useSuscribeFn } from "../../Hook/useSuscribe";
-import ReactLoading from "react-loading";
-import { Link } from "react-router-dom";
+import Logo from "../../assets/logo/pink_putali-logo_main.png";
+import {
+  Cake,
+  Clock,
+  Mail,
+  MapPinPlusInside,
+  Music4Icon,
+  PartyPopper,
+  Phone,
+  Users2,
+} from "lucide-react";
+import Facebook from "../../assets/icons/facebook.png";
+import Messenger from "../../assets/icons/messenger.png";
+import Viber from "../../assets/icons/viber.png";
+import Whatsapp from "../../assets/icons/whatsapp.png";
 
 const Footer: React.FC = () => {
+  return (
+    <div className="w-full h-full p-5 bg-[#f8f1ea] mt-5">
+      <div className="grid items-center grid-cols-1 gap-12 px-5 py-10 md:grid-cols-3">
+        <div className="flex flex-col gap-8 mx-auto">
+          <div className="flex flex-col gap-5 py-5 ">
+            <h4 className="text-xl font-semibold tracking-wider">
+              Want to visit us?
+            </h4>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3 ">
+                <FooterIcon icon={<MapPinPlusInside />} />
+                <p>New Baneshwor, Kathmandu</p>
+              </div>
+              <div className="flex items-center gap-3 ">
+                <FooterIcon icon={<Phone />} />
+                <p>01-4589134, 01-4588627, 9801644462</p>
+              </div>
+              <div className="flex items-center gap-3 ">
+                <FooterIcon icon={<Mail />} />
+                <p>inquiry@putalipink.com</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-xl font-semibold tracking-wider">
+              Opening Hours
+            </h4>
+            <div className="flex items-center gap-3 ">
+              <FooterIcon icon={<Clock />} />
+              <p className="text-lg">10:00 AM - 09:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <img
+          src={Logo}
+          alt="Pink Putali"
+          className="flex w-full h-full max-w-[450px] max-h-[450px] min-w-[300px] min-h-[300px] place-self-center lg:place-self-start items-center"
+        />
+        <div className="flex flex-col gap-8 mx-auto">
+          <div className="flex flex-col gap-5 py-5 ">
+            <h4 className="text-xl font-semibold tracking-wider">
+              We are known for
+            </h4>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3 ">
+                <FooterIcon icon={<Cake />} />
+                <p>Birthday and Anniversary</p>
+              </div>
+              <div className="flex items-center gap-3 ">
+                <FooterIcon icon={<Users2 />} />
+                <p>Friends and Family Gathering</p>
+              </div>
+              <div className="flex items-center gap-3 ">
+                <FooterIcon icon={<PartyPopper />} />
+                <p>Events and Parties</p>
+              </div>
+              <div className="flex items-center gap-3 ">
+                <FooterIcon icon={<Music4Icon />} />
+                <p>Music and Performance</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-xl font-semibold tracking-wider">
+              Connect with Us
+            </h4>
+            <div className="flex flex-wrap gap-8">
+              <img
+                src={Facebook}
+                alt="Facebook"
+                className="cursor-pointer size-10"
+              />
+              <img
+                src={Messenger}
+                alt="Messenger"
+                className="cursor-pointer size-10"
+              />
+              <img src={Viber} alt="Viber" className="cursor-pointer size-10" />
+              <img
+                src={Whatsapp}
+                alt="Whatsapp"
+                className="cursor-pointer size-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center w-full px-5 py-3">
+        <p>
+          Designed and Developed by
+          <a
+            href="https://aayush-al.web.app/"
+            target="_blank"
+            className=" hover:text-[#FF3864] hover:underline"
+          >
+            {" "}
+            Aayush{" "}
+          </a>
+          and
+          <a
+            href="https://saroj-gt.web.app/"
+            target="_blank"
+            className="hover:text-[#FF3864] hover:underline "
+          >
+            {" "}
+            Saroj{" "}
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
+
+export const FooterIcon = ({ icon }: { icon: React.ReactNode }) => {
+  return (
+    <div className="w-10 h-10 p-2 rounded-full bg-[#FC7995] text-[#fff] flex items-center justify-center">
+      {icon}
+    </div>
+  );
+};
+
+/*
   const { t } = useTranslation();
   const {
     followUs,
@@ -44,15 +169,14 @@ const Footer: React.FC = () => {
 
   const { mutate, email: mail, isLoading, setEmail: setMail } = useSuscribeFn();
 
-  return (
-    <div className="flex flex-col w-full text-white px-2 ">
+ <div className="flex flex-col w-full px-2 text-white ">
       <footer className="w-full mt-16  rounded-t bg-white border-[1px] border-[var(--border-color)] text-black  place-items-center grid px-5">
         <div className="flex  items-center justify-between w-full gap-5 sm:p-3 border-b-4 border-b-[var(--border-color)] ">
           <div className="px-5 py-3   text-[var(--primary-text)] rounded">
             <img src={CollegeLogo} alt="logo" className="max-h-[60px] sm:scale-[1.3] scale-[1.1] rounded-full " />
           </div>
           <div className="flex flex-col text-[var(--primary-text)] items-center justify-center gap-3">
-            <p className="text-lg font-bold  tracking-wide ">{followUs} </p>
+            <p className="text-lg font-bold tracking-wide ">{followUs} </p>
             <div className="flex items-center gap-9">
               <a
                 aria-label="go to facebook"
@@ -72,10 +196,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className=" flex lg:gap-x-40 2xl:justify-evenly  text-[var(--primary-text)] justify-start flex-wrap w-full  ">
-          <div className="flex lg:col-span-1 sm:col-span-2 col-span-3 flex-col gap-6 px-5 py-8 ">
+          <div className="flex flex-col col-span-3 gap-6 px-5 py-8 lg:col-span-1 sm:col-span-2 ">
             <p className="font-bold tracking-wider">{quickContact}</p>
             <div className="flex flex-col gap-5">
-              <div className="flex  items-center gap-2 text-sm">
+              <div className="flex items-center gap-2 text-sm">
                 <div className="p-2 bg-[var(--light-foreground)] text-[var(--primary-text)] rounded-full flex items-center justify-center">
                   <MapPin />
                 </div>
@@ -145,7 +269,7 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col sm:col-span-1 col-span-2 items-start gap-5 px-5 py-8">
+          <div className="flex flex-col items-start col-span-2 gap-5 px-5 py-8 sm:col-span-1">
             <p className="font-bold tracking-wider">{resources}</p>
             <div className="flex flex-col gap-5 text-sm text-[var(--primary-text)] ">
               <a
@@ -164,8 +288,8 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          {/* suscriber */}
-          <div className="flex  lg:col-span-1 col-span-2 flex-col items-start gap-5 px-5 py-8">
+      
+          <div className="flex flex-col items-start col-span-2 gap-5 px-5 py-8 lg:col-span-1">
             <p className="font-bold tracking-wider">{subscribe}</p>
             <form
               onSubmit={mutate}
@@ -216,7 +340,4 @@ const Footer: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default Footer;
+*/
