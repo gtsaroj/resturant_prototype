@@ -36,7 +36,7 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
     },
     {
       name: "Reserve",
-      pathname: "/reserve",
+      pathname: "/seat",
     },
   ];
 
@@ -132,13 +132,13 @@ export const Navbar = () => {
           ${isScrolled ? "  top-0 fixed   " : "  static  "}
             z-[1000]  
       
-       flex items-center justify-center px-6 py-2 duration-150 bg-[var(--primary-color)] `}
+       flex items-center justify-end md:justify-center px-6 py-2 duration-150 bg-[var(--primary-color)] `}
       >
         <div className="hidden sm:flex ">
           <NavbarContainer />
         </div>
         {/* mobile navbar */}
-        <div ref={navbarRef} className="relative flex sm:hidden ">
+        <div ref={navbarRef} className="relative flex justify-end sm:hidden ">
           <button
             onClick={() => setOpen(!open)}
             className="bg-transparent border-none hover:bg-transparent"
@@ -146,28 +146,28 @@ export const Navbar = () => {
             {open ? (
               <X className="size-7" />
             ) : (
-              <CiMenuFries className=" size-7" />
+              <CiMenuFries className=" text-white size-7" />
             )}
           </button>
           <div
-            className={` flex flex-col items-center pt-6   justify-stretch bottom-0 duration-150 bg-[var(--dark-background)] w-[13rem]   z-[100] h-screen  fixed top-6 ${
+            className={` flex flex-col items-center py-3   justify-stretch bottom-0 duration-150 bg-[var(--primary-color)] w-[13rem]   z-[100] h-screen  fixed top-0 ${
               open ? "right-[0px] visible " : "right-[-1000px] hidden "
             } `}
           >
-            <div className="flex flex-col items-center justify-end w-full gap-4">
+            <div className="flex flex-col items-center justify-end w-full ">
               <button
                 onClick={() => setOpen(!open)}
                 className="flex items-center justify-end w-full pb-5 pr-2 bg-transparent border-none hover:bg-transparent"
               >
                 {open ? (
-                  <X className="size-7" />
+                  <X className="size-7 text-white " />
                 ) : (
                   <MenuSquare className=" size-7" />
                 )}
               </button>
               <div
                 onClick={() => navigate("/")}
-                className="w-full  cursor-pointer flex flex-col items-center justify-center gap-3 border-b-[1px] pb-4 border-gray-900 "
+                className="w-full  cursor-pointer flex flex-col items-center justify-center gap-3 border-b-[1px] pb-4 border-[var(--dark-border)] "
               >
                 <div className="size-[60px] rounded-full overflow-hidden">
                   <img
@@ -190,7 +190,7 @@ export const Navbar = () => {
               <select
                 value={language}
                 id="language-select"
-                className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 bg-gray-800 text-white border border-gray-700 "
+                className="outline-none  cursor-pointer text-sm rounded-md py-0.5 px-1 bg-[white] text-[var(--primary-text)] border border-[var(--dark-border)] "
                 onChange={(e) => changeLanguage(e.target.value as "EN" | "NP")}
               >
                 {["NP", "EN"].map((ln) => (

@@ -13,6 +13,7 @@ import LanguageModal from "./Components/LanguageModal/LanguageModal";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Reserve } from "./Components/Reserve/Reserve";
 import { CartPage } from "./Pages/CartPage";
+import { Seats } from "./Components/Reserve/Seat";
 
 export const MainPage = () => {
   useScrollToTop();
@@ -94,7 +95,10 @@ function App() {
             <Route path="menu" element={<MenuPage />} />
             <Route path="cart" element={<CartPage />} />
             <Route path="event" element={<EventPage />} />
-            <Route path="reserve" element={<Reserve />} />
+            <Route path="seat/" element={<Seats />}>
+            </Route>
+            <Route path="seat/reserve" element={<Reserve />} />
+            <Route path="cart" element={<CartPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

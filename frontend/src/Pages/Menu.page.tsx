@@ -10,7 +10,7 @@ export const MenuPage = () => {
     description: string;
   };
   return (
-    <div className="w-full mt-32 flex flex-col items-center justify-center px-3 ">
+    <div className="w-full  mt-5  flex flex-col items-center justify-center px-3 ">
     <Specials/>
       <Menu />
     </div>

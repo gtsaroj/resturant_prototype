@@ -52,7 +52,7 @@ const Carousel: React.FC<CarouselProp> = ({ props, time, actions = true }) => {
   }, [currentSlide]);
 
   return (
-    <div className="relative w-full h-full py-8 group z-1">
+    <div className="relative w-full h-full  group z-1">
       <a
         aria-label={`go to ${props[currentSlide]}`}
         onClick={(e) => {
