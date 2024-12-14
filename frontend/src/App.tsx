@@ -11,6 +11,7 @@ import { Loader } from "./Components/Common/Loader/Loader";
 import i18next from "i18next";
 import LanguageModal from "./Components/LanguageModal/LanguageModal";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { Reserve } from "./Components/Reserve/Reserve";
 
 export const MainPage = () => {
   useScrollToTop();
@@ -91,6 +92,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="menu" element={<MenuPage />} />
             <Route path="event" element={<EventPage />} />
+            <Route path="reserve" element={<Reserve />} />
           </Route>
         </Routes>
       </BrowserRouter>

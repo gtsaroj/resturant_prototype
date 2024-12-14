@@ -49,8 +49,10 @@ export const Menu = () => {
           <h1 className=" text-xl sm:text-3xl  font-semibold tracking-wide ">
             Search By Food
           </h1>
-          <button className="flex items-center justify-start hover:gap-1 duration-150 gap-0.5
-           text-[var(--primary-color)] text-sm font-bold ">
+          <button
+            className="flex items-center justify-start hover:gap-1 duration-150 gap-0.5
+           text-[var(--primary-color)] text-sm font-bold "
+          >
             <span>View All</span>
             <ChevronRight />
           </button>
@@ -64,7 +66,7 @@ export const Menu = () => {
                 left: -300,
               })
             }
-            className="absolute invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-0.5 left-[-1rem] top-[65%] rounded-full bg-[#80808081] "
+            className="absolute  invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-3 left-[-1rem] top-[53%] rounded-full bg-[var(--primary-color)] text-white "
           >
             <ChevronLeft className="size-5" />
           </button>
@@ -75,7 +77,7 @@ export const Menu = () => {
                 left: 300,
               })
             }
-            className="absolute invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-0.5 right-[-1rem] top-[65%] rounded-full  bg-[#80808081]  "
+            className="absolute invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-3 right-[-1rem] top-[53%] rounded-full  bg-[var(--primary-color)] text-white  "
           >
             <ChevronRight className="size-5" />
           </button>
@@ -87,7 +89,7 @@ export const Menu = () => {
         <h1 className=" sm:text-xl font-semibold text-[16px] tracking-wide ">
           {name as string}
         </h1>
-        <div className="w-full  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2   gap-5 mt-5">
+        <div className="w-full  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2    gap-16 mt-5">
           {selectedProducts && selectedProducts.length > 0 ? (
             selectedProducts.map((product) => (
               <ProductCard
@@ -124,17 +126,17 @@ export const Menus = ({ action, menu }: MenuProps) => {
         display: "grid",
         gridTemplateColumns: `repeat(${menu.length / 2}, minmax(0,1fr) ) `,
       }}
-      className={`sm:w-[1500px] w-[600px] text-nowrap grid px-4 sm:gap-x-2 gap-y-5 sm:gap-y-10`}
+      className={`sm:w-[1600px] w-[600px] text-nowrap grid  gap-x-16 justify-items-start gap-y-5  sm:gap-y-10`}
     >
       {menu?.map((product) => (
         <div
           onClick={() => action(product.id)}
-          className="flex  gap-1 cursor-pointer flex-col items-center justify-center"
+          className="flex min-w-28  gap-1 cursor-pointer flex-col items-center justify-center"
           key={product.id}
         >
           <img
             src={product.image}
-            className="sm:size-32  size-10 rounded-full overflow-hidden object-cover"
+            className="sm:size-32  size-20 rounded-full overflow-hidden object-cover"
             alt="product"
           />
           <p className="sm:text-[15px] font-semibold text-[12px] tracking-wider text-[var(--primary-text)]">
