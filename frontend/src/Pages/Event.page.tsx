@@ -10,7 +10,7 @@ export const EventPage = () => {
     description: string;
   };
   return (
-    <div className="w-full mt-10 flex flex-col items-center justify-center px-3">
+    <div className="w-full  flex flex-col items-center justify-center px-3">
       <Event />
       <UpcomingEvent />
     </div>

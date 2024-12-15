@@ -42,7 +42,7 @@ export const Menu = () => {
   const menuReference = useRef<null | HTMLDivElement>(null);
 
   return (
-    <div className="flex w-full flex-col items-start px-5 pt-10 justify-center gap-8">
+    <div className="flex w-full flex-col items-start sm:px-5 pt-10 justify-center gap-8">
       {/* Menu Selector */}
       <div className="w-full group/category relative flex flex-col gap-10 items-center justify-center">
         <div className="w-full flex items-center justify-between ">
@@ -51,10 +51,10 @@ export const Menu = () => {
           </h1>
           <button
             className="flex items-center justify-start hover:gap-1 duration-150 gap-0.5
-           text-[var(--primary-color)] text-sm font-bold "
+           text-[var(--primary-color)] text-xs sm:text-sm font-bold "
           >
             <span>View All</span>
-            <ChevronRight />
+            <ChevronRight className=" sm:size-6 size-5 " />
           </button>
         </div>
         <div ref={menuReference} className=" w-full  overflow-x-auto ">
