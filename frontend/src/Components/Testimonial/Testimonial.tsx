@@ -2,6 +2,7 @@ import { useState } from "react";
 import Testimonials from "../../assets/Testimonial.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css"
 import "../../index.css";
 
 export const Testimonial = ({ users } : any) => {
