@@ -158,4 +158,8 @@ p {
   }
  }
 
+ .swiper-slide-prev , .swiper-slide-next,.swiper-slide{
+  opacity: 1 !important;
+ }
+
 
