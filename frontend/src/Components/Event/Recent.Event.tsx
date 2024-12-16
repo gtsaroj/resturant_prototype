@@ -15,8 +15,8 @@ export const Event: React.FC = () => {
         <h1 className="  ">Recent Event</h1>
         <p className=" text-sm sm:text-lg text-[var(--secondary-text)]  font-thin ">Here are some of the glimpse of our recent events.</p>
       </div>
-      <div className="overflow-auto  w-full">
-      <div className="sm:w-[1500px] w-[1000px] flex  gap-4">
+      <div className="sm:w-[1500px] w-[1000px] animate-marquee ">
+      <div className="w-full flex  gap-4">
         {events?.map((event, index) => (
           <RecentCard {...event} key={index} />
         ))}
