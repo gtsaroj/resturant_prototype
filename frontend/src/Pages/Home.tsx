@@ -13,7 +13,7 @@ export const Homepage = () => {
 
 
   return (
-    <div className="w-full  px-2  gap-20 flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center w-full gap-20 px-2 ">
       <div className="w-screen h-[300px] sm:h-[450px] md:h-[550px]">
         <Carousel
           props={[
@@ -26,12 +26,12 @@ export const Homepage = () => {
       </div>
 
       <Specials />
-      <Location />
       <Menu />
       <Event />
       <UpcomingEvent />
-      <TestimonialPage />
       <Gallery />
+      <TestimonialPage />
+      <Location />
     </div>
   );
 };

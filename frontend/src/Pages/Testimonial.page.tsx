@@ -33,7 +33,7 @@ const dummyData = [
   
 export const TestimonialPage = () => {
   return (
-    <div className="w-screen bg-[#F2E3D5]  h-full flex flex-col items-center justify-start gap-10 py-6 ">
+    <div className="w-screen bg-[#f8f1ea]  h-full flex flex-col items-center justify-start gap-10 py-6 ">
       <Testimonial users={dummyData} />
     </div>
   );

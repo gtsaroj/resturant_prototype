@@ -19,6 +19,10 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
       pathname: "/",
     },
     {
+      name: about,
+      pathname: "/about",
+    },
+    {
       name: menu,
       pathname: "/menu",
     },
@@ -31,10 +35,6 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
       pathname: "/event",
     },
 
-    {
-      name: about,
-      pathname: "/about",
-    },
     {
       name: reserve,
       pathname: "/seat",
@@ -86,15 +86,14 @@ export const Navbar = () => {
       }
     };
 
-    const debounceScroller = debounce(scrollerDetect,0)
-  
+    const debounceScroller = debounce(scrollerDetect, 0);
+
     window.addEventListener("scroll", debounceScroller);
-  
+
     return () => {
       window.removeEventListener("scroll", debounceScroller);
     };
-  }, []); 
-  
+  }, []);
 
   useEffect(() => {
     const closeModal = (event: MouseEvent) => {
@@ -123,12 +122,11 @@ export const Navbar = () => {
 
   const navigate = useNavigate();
   const reference = useRef<null | HTMLDivElement>(null);
-  
 
   return (
     <div
       ref={reference}
-      className="w-full flex  flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center w-full"
     >
       <AuthNavbar />
       <nav
@@ -151,7 +149,7 @@ export const Navbar = () => {
             {open ? (
               <X className="size-7" />
             ) : (
-              <CiMenuFries className=" text-white size-7" />
+              <CiMenuFries className="text-white size-7" />
             )}
           </button>
           <div
@@ -165,7 +163,7 @@ export const Navbar = () => {
                 className="flex items-center justify-end w-full pb-5 pr-2 bg-transparent border-none hover:bg-transparent"
               >
                 {open ? (
-                  <X className="size-7 text-white " />
+                  <X className="text-white size-7 " />
                 ) : (
                   <MenuSquare className=" size-7" />
                 )}
