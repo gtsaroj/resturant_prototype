@@ -3,7 +3,7 @@ import { SpecialCard } from "../Common/Card/Special.card";
 
 export const Specials = () => {
   const { t } = useTranslation();
-  const specials = t("specials") as any[];
+  const specials = t("specials") as unknown as any[];
   return (
     <div className="w-full flex h-full flex-col items-start justify-center sm:gap-16 ">
       <h1 className=" sm:text-3xl  text-xl font-bold tracking-wide ">

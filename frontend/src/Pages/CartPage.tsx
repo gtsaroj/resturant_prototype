@@ -64,7 +64,7 @@ export const CartPage = () => {
   return (
     <div className="w-full h-full max-w-[1800px] p-5">
       <div className="flex flex-col w-full gap-8">
-        <h1 className="py-8 text-4xl text-center">Your Cart</h1>
+        <h1 className="py-8 text-2xl sm:text-3xl text-center">Your Cart</h1>
 
         <div className="flex flex-col justify-center w-full gap-5">
           <div className="grid grid-cols-8 w-full space-x-8 text-[#9A9A9A] border-b pb-3 border-[#9A9A9A] px-3 text-sm">

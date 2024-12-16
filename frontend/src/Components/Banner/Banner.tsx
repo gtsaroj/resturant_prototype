@@ -8,12 +8,12 @@ export const Banner = ({
   description?: string;
 }) => {
   return (
-    <div className="relative group/banner w-full h-full  py-1 sm:py-2">
+    <div className="relative group/banner w-full h-full ">
       {/* Banner Image */}
-      <div className="w-full group-hover/banner:blur-[1px] blur-0 duration-150  lg:h-[70vh] 2xl:h-max-[40vh]  sm:h-[50vh] h-[30vh] relative rounded-lg overflow-hidden">
+      <div className=" w-full group-hover/banner:blur-[1px] blur-0 duration-150  lg:h-[70vh] 2xl:h-max-[60vh]  sm:h-[50vh] h-[40vh] relative rounded-lg overflow-hidden">
         <img
           src={image}
-          className="w-full group-hover/banner:scale-[1.01] scale-[1]   duration-150 h-full object-cover rounded-lg transform transition-transform "
+          className="w-full group-hover/banner:scale-[1.01] scale-[1]   duration-150 h-full object-cover transform transition-transform "
           alt="banner"
         />
         {/* Dark Overlay for Better Text Contrast */}

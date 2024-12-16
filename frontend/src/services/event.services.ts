@@ -1,7 +1,5 @@
-import { useSelector } from "react-redux";
 import { isMobile } from "../utility/deviceDetect";
 import { EventTypes } from "./../types/event.types";
-import { RootState } from "../Store";
 import { ReserveTypes } from "../types/reserve.types";
 import { User } from "../types/user.types";
 export const bookEvent = async ({

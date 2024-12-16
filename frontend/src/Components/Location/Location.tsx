@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { Icon } from "leaflet";
+import { Icon,  LatLngExpression } from "leaflet";
 import BikeGps from "../../assets/bikeGPS.png"
 import CarGps from "../../assets/carGPS.png"
 import RestaurantGps from "../../assets/restaurantGPS.png"
@@ -47,7 +47,7 @@ export const Location = () => {
   };
 
   return (
-    <section className="py-16 gap-5 sm:gap-16 w-full flex flex-col items-start justify-start ">
+    <section className=" gap-5 sm:gap-16 w-full flex flex-col items-start justify-start ">
       <h2 className="sm:text-3xl text-xl  tracking-wider font-bold ">
         {t("visit")}
       </h2>
@@ -68,7 +68,7 @@ export const Location = () => {
             <>
               <Marker eventHandlers={{
                 click: ()=> navigateToMap(marker.geoCode[0], marker.geoCode[1])
-              }} key={index} icon={marker.icon} position={marker.geoCode}>
+              }} key={index} icon={marker.icon} position={marker.geoCode as LatLngExpression}>
             
               </Marker>
             </>

@@ -2,11 +2,11 @@ import { Minus, Plus, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const SpecialCard = ({ name, image, percentage, day }) => {
+export const SpecialCard = ({  image, percentage, } : any) => {
   const [activeCart, setActiveCart] = useState<boolean>(false);
   const [cartQuantity, setCartQuantity] = useState<number>(1);
   
-  const handleClick = (productId?: string) => {
+  const handleClick = () => {
     if (cartQuantity == 1) {
       setActiveCart(!activeCart);
     }
