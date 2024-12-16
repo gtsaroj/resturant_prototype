@@ -114,7 +114,7 @@ export const Seats = () => {
   return (
     <div className="w-full mb-24  py-8 flex flex-col items-start justify-center gap-10">
       <div className="flex px-5 flex-col items-start gap-3">
-        <h2 className="text-lg font-medium text-gray-800 ">Category</h2>
+        <h2 className="sm:text-3xl text-xl mt-4 sm:mt-8 font-medium text-gray-800 ">Category</h2>
         <div className="flex items-center gap-3">
           <button
             onClick={() => setCategory("leftSide")}
@@ -208,7 +208,7 @@ const BookingModal = () => {
     <div
       className={`w-screen p-3 sm:p-5 bg-white shadow-md shadow-black duration-150  ${
         showModal ? "bottom-0" : "bottom-[-100px] invisible "
-      } left-0 z-[10000] fixed flex flex-col items-end justify-start gap-5 h-[200px]`}
+      } left-0 z-[1001] fixed flex flex-col items-end justify-start gap-5 h-[200px]`}
     >
       <div className="w-full border-b-[1px] pb-7 border-[var(--dark-border)] flex items-center justify-between">
         <div className="flex gap-2  items-center justify-center">

@@ -1,17 +1,13 @@
 import { useState } from "react";
 import Testimonials from "../../assets/Testimonial.png";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "../../index.css";
 
-export const Testimonial = ({ users }) => {
+export const Testimonial = ({ users } : any) => {
   const [activeSlide, setActiveSlide] = useState<number>();
   return (
-    <div className="container max-w-[1480px] flex flex-col items-start justify-start gap-16">
+    <div className="container max-w-[1480px] px-2 flex flex-col items-start justify-start gap-16">
       <h1 className=" text-xl  tracking-wide font-bold sm:text-3xl ">
         Testimonials
       </h1>
@@ -46,7 +42,7 @@ export const Testimonial = ({ users }) => {
             }}
             className="w-full sm:min-w-[500px] "
           >
-            {users?.map((user, index) => (
+            {users?.map((user : any, index : number) => (
               <SwiperSlide key={index} className="flex justify-center">
                 <User
                   {...user}
@@ -63,7 +59,7 @@ export const Testimonial = ({ users }) => {
   );
 };
 
-const User = ({ name, image, description, activeSlide, index }) => {
+const User = ({ name, image, description }: any) => {
   return (
     <div
       className={`min-w-[250px] p-6   bg-white

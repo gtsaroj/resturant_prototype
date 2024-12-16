@@ -1,11 +1,9 @@
-import Image from "../../assets/gallery/image (1).png";
-import Image1 from "../../assets/gallery/image.png";
-import Image2 from "../../assets/gallery/image (2).png";
+import Image from "../../assets/gallery/restaurant.jpeg";
+import Image1 from "../../assets/gallery/chef.png";
+import Image2 from "../../assets/gallery/waiter.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/pagination";
 
 export const Gallery = () => {
   return (
@@ -23,7 +21,7 @@ export const Gallery = () => {
         {[Image, Image1, Image2]?.map((image) => (
           <SwiperSlide>
             <img
-              className="w-full min-h-[150px] sm:min-h-[450px] h-full"
+              className="w-full min-h-[150px] object-cover max-h-[600px] sm:min-h-[450px] h-full"
               src={image}
               alt="image"
             />

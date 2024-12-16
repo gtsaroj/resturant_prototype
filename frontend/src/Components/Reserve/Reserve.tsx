@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { User } from "../../types/user.types";
 import { DatePicker, TimePicker } from "antd";
 import dayjs from "dayjs";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../Store";
 import { addUser } from "../../Reducer/reserver.reducer";
-import { BookTable, bookEvent } from "../../services/event.services";
+import { bookEvent } from "../../services/event.services";
 
 export const Reserve = () => {
   return (
@@ -26,12 +26,12 @@ const UserDetails = () => {
   }, [user, dispatch]);
 
   return (
-    <div className=" flex flex-col items-start justify-start gap-10">
+    <div className=" flex w-full flex-col items-start justify-start gap-10">
       <h1 className=" text-2xl tracking-wide font-bold ">
         Information Details
       </h1>
       <form
-        className="flex gap-6 flex-col items-start justify-start w-[400px]"
+        className="flex gap-6 flex-col items-start justify-start w-full sm:w-[400px]"
         action=""
       >
         {/* fullName */}
@@ -65,12 +65,12 @@ const UserDetails = () => {
         {/* date */}
 
         <div className="flex items-center justify-between w-full gap-5 ">
-          <div className="flex flex-col items-start gap-1">
+          <div className="flex  w-1/2 flex-col items-start gap-1">
             <label className=" text-[18px] tracking-wide  " htmlFor="">
               Date to come
             </label>
             <DatePicker
-              className=" !w-[180px] h-[35px] "
+              className=" !w-full h-[35px] "
               multiple
               onChange={(date) =>
                 setUser((prev) => ({
@@ -82,13 +82,13 @@ const UserDetails = () => {
               size="small"
             />
           </div>
-          <div className="flex flex-col items-start gap-1">
+          <div className="flex w-1/2 flex-col items-start gap-1">
             <label className=" text-[18px] tracking-wide  " htmlFor="">
               Date to come
             </label>
             <TimePicker
-              className=" !w-[180px] h-[35px] "
-              onChange={(_, timeString: string) =>
+              className=" !w-full h-[35px] "
+              onChange={(_, timeString: any) =>
                 setUser((prev) => ({ ...prev!, timeToCome: timeString }))
               }
             />
@@ -179,7 +179,7 @@ const ReserveSummary = () => {
         </div>
       </div>
       <button
-        onClick={() => bookEvent(store)}
+        onClick={() => bookEvent(store as any)}
         className=" w-full text-[16px] font-semibold tracking-wider text-white bg-[var(--primary-color)] p-2 rounded-md hover:bg-[var(--primary-dark)] "
       >
         Book now

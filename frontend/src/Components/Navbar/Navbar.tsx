@@ -6,11 +6,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { AuthNavbar } from "./AuthNavbar";
+import { debounce } from "../../utility/debounce";
 
 export const NavbarContainer = ({ action }: { action?: () => void }) => {
   const { t } = useTranslation();
 
-  const { home, menu, event, about } = t("navbar") as any;
+  const { home, menu, event, about, cart, reserve } = t("navbar") as any;
 
   const navbarData = [
     {
@@ -22,7 +23,7 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
       pathname: "/menu",
     },
     {
-      name: "Cart",
+      name: cart,
       pathname: "/cart",
     },
     {
@@ -35,7 +36,7 @@ export const NavbarContainer = ({ action }: { action?: () => void }) => {
       pathname: "/about",
     },
     {
-      name: "Reserve",
+      name: reserve,
       pathname: "/seat",
     },
   ];
@@ -77,20 +78,23 @@ export const Navbar = () => {
 
   useEffect(() => {
     const scrollerDetect = () => {
-      const rect =
-        navbarRef.current && navbarRef.current.getBoundingClientRect();
-      console.log(rect?.top);
-      if (rect?.top && rect.top <= -4) {
+      const rect = navbarRef.current?.getBoundingClientRect();
+      if (rect && rect.top <= -4) {
         setIsScrolled(true);
-      } else if (window.scrollY <= 100) {
+      } else if (window.scrollY <= 1) {
         setIsScrolled(false);
       }
     };
-    window.addEventListener("scroll", scrollerDetect);
+
+    const debounceScroller = debounce(scrollerDetect,0)
+  
+    window.addEventListener("scroll", debounceScroller);
+  
     return () => {
-      window.removeEventListener("scroll", scrollerDetect);
+      window.removeEventListener("scroll", debounceScroller);
     };
-  }, []);
+  }, []); 
+  
 
   useEffect(() => {
     const closeModal = (event: MouseEvent) => {
@@ -119,6 +123,7 @@ export const Navbar = () => {
 
   const navigate = useNavigate();
   const reference = useRef<null | HTMLDivElement>(null);
+  
 
   return (
     <div
@@ -130,7 +135,7 @@ export const Navbar = () => {
         ref={navbarRef}
         className={`w-full  duration-150 
           ${isScrolled ? "  top-0 fixed   " : "  static  "}
-            z-[1000]  
+            z-[1002]  
       
        flex items-center justify-end md:justify-center px-6 py-2 duration-150 bg-[var(--primary-color)] `}
       >
@@ -180,7 +185,7 @@ export const Navbar = () => {
               </div>
             </div>
             <NavbarContainer action={() => setOpen(!open)} />
-            <div className="flex items-center justify-start gap-2 mt-10">
+            <div className="flex items-center justify-start gap-2 mt-[8.5rem] ">
               <label
                 className="block text-sm font-semibold text-white"
                 htmlFor="language-select"

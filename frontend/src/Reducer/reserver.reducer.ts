@@ -8,7 +8,7 @@ const bookState: ReserveTypes = {
     phoneNumber: "",
     dateToCome: "",
     timeToCome: "",
-    noOfPerson: 0,
+    noOfPerson: "",
     notes: "",
   },
 };

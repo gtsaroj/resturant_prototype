@@ -59,8 +59,8 @@ const Carousel: React.FC<CarouselProp> = ({ props, time, actions = true }) => {
           if (!props[currentSlide]) e.preventDefault();
         }}
         aria-disabled={!props[currentSlide]}
-        href={props[currentSlide] ? props[currentSlide] : ""}
-        target="_blank"
+        href="#"
+    
       >
         <div
           className="w-full h-full n duration-500  bg-no-repeat bg-cover "

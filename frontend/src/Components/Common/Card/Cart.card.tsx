@@ -10,16 +10,16 @@ export const CartItem = ({
   onQuantityChange: (id: number, change: number) => void;
 }) => {
   return (
-    <div className="grid w-full grid-cols-8 px-3 py-4 space-x-8 border-b border-gray-200 ">
-      <div className="flex items-start w-full col-span-3 gap-5 md:col-span-4">
+    <div className="grid w-full grid-cols-8 px-3 py-4 space-x-10 border-b border-gray-200 ">
+      <div className="flex items-start w-full col-span-3  gap-5 md:col-span-4">
         <img
           src={item.image}
           alt={item.name}
-          className="object-cover object-center w-20 h-20 rounded-md"
+          className="object-cover object-center w-16 h-16 sm:w-20 sm:h-20 rounded-md"
         />
 
         <div className="flex flex-col justify-center h-full gap-2 py-2 md:justify-start">
-          <h3 className="font-medium md:text-lg">{item.name}</h3>
+          <h3 className="font-medium  text-sm  md:text-lg">{item.name}</h3>
           <p className="text-sm text-[#6F6F6F] max-w-[300px] md:block hidden">
             {item.description}
           </p>

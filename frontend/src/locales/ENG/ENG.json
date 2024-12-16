@@ -67,7 +67,9 @@
     "home": "Home",
     "menu": "Menu",
     "about": "About",
-    "event": "Event"
+    "event": "Event",
+    "cart" :"Cart",
+    "reserve" :"Reserve"
   },
   "inquiry": {
     "title": "Do you have an inquiry?",

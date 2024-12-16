@@ -69,7 +69,9 @@
     "home": "गृहपृष्ठ",
     "menu": "मेनु",
     "about": "हाम्रो बारेमा",
-    "event": "कार्यक्रम"
+    "event": "कार्यक्रम",
+    "cart": "कार्ट",
+    "reserve": "आरक्षण"
   },
   "inquiry": {
     "title": "के तपाईंसँग कुनै जिज्ञासा छ?",
@@ -363,48 +365,48 @@
       "category": "12"
     }
   ],
-  "specials" :  [
+  "specials": [
     {
-      "name": "मार्घेरिटा पिज्जा",
-      "image": "https://via.placeholder.com/150?text=मार्घेरिटा+पिज्जा",
+      "name": "Margherita Pizza",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "percentage": 20,
-      "day": "सोमबार"
+      "day": "Monday"
     },
     {
-      "name": "चिकेन बर्गर",
-      "image": "https://via.placeholder.com/150?text=चिकेन+बर्गर",
+      "name": "Chicken Burger",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "percentage": 15,
-      "day": "मंगलबार"
+      "day": "Tuesday"
     },
     {
-      "name": "सिजर सलाद",
-      "image": "https://via.placeholder.com/150?text=सिजर+सलाद",
+      "name": "Caesar Salad",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "percentage": 10,
-      "day": "बुधबार"
+      "day": "Wednesday"
     },
     {
-      "name": "स्पाघेटी कार्बोनारा",
-      "image": "https://via.placeholder.com/150?text=स्पाघेटी+कार्बोनारा",
+      "name": "Spaghetti Carbonara",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "percentage": 25,
-      "day": "बिहीबार"
+      "day": "Thursday"
     },
     {
-      "name": "सुशी प्लेटर",
-      "image": "https://via.placeholder.com/150?text=सुशी+प्लेटर",
+      "name": "Sushi Platter",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "percentage": 30,
-      "day": "शुक्रबार"
+      "day": "Friday"
     },
     {
-      "name": "ग्रिल्ड सालमन",
-      "image": "https://via.placeholder.com/150?text=ग्रिल्ड+सालमन",
+      "name": "Grilled Salmon",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "percentage": 18,
-      "day": "शनिबार"
+      "day": "Saturday"
     },
     {
-      "name": "टाकोस",
-      "image": "https://via.placeholder.com/150?text=टाकोस",
+      "name": "Tacos",
+      "image": "https://myfoodstory.com/wp-content/uploads/2021/02/Instant-Pot-Chicken-Thukpa-2.jpg",
       "percentage": 22,
-      "day": "आइतबार"
+      "day": "Sunday"
     }
   ]
 ,  

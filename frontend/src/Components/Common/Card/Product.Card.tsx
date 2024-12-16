@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import { ProductTypes } from "../../../types/product.types";
-import { addOrder } from "../../../services/message.services";
-import { useTranslation } from "react-i18next";
 import { Minus, Plus, ShoppingCart } from "lucide-react";
 import toast from "react-hot-toast";
 
 // id, image, name, price
 
 export const ProductCard: React.FC<ProductTypes> = ({
-  id,
   image,
   name,
   price,
 }: ProductTypes) => {
-  const { t } = useTranslation();
 
   const [activeCart, setActiveCart] = useState<boolean>(false);
   const [cartQuantity, setCartQuantity] = useState<number>(1);
 
-  const handleClick = (productId?: string) => {
+  const handleClick = () => {
     if (cartQuantity == 1) {
       setActiveCart(!activeCart);
     }
@@ -79,7 +75,7 @@ export const ProductCard: React.FC<ProductTypes> = ({
         >
           {activeCart ? (
             <div className="flex items-center gap-2 px-1 text-xs select-none ">
-              <button aria-label="cart-button" onClick={() => handleClick(id)}>
+              <button aria-label="cart-button" onClick={() => handleClick()}>
                 <Minus
                   className={` sm:size-5 size-3 hover:text-[var(--secondary-color)]`}
                   aria-disabled={"true"}
@@ -96,7 +92,7 @@ export const ProductCard: React.FC<ProductTypes> = ({
             </div>
           ) : (
             <ShoppingCart
-              className="sm:size-6 size-5 "
+              className="sm:size-6 hover:text-white size-5 "
               onClick={() => addProductToCartFn()}
             />
           )}

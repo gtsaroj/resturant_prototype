@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
         <img
           src={Logo}
           alt="Pink Putali"
-          className="flex w-full h-full max-w-[450px] max-h-[450px] min-w-[300px] min-h-[300px] place-self-center lg:place-self-start items-center"
+          className="flex w-full h-full max-w-[450px] max-h-[450px] min-w-[250px] min-h-[200px] place-self-center lg:place-self-start items-center"
         />
         <div className="flex flex-col gap-8 mx-auto">
           <div className="flex flex-col gap-5 py-5 ">
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center w-full px-5 py-3">
+      <div className="flex items-center  text-[16px] justify-center w-full px-5 py-3">
         <p>
           Designed and Developed by
           <a

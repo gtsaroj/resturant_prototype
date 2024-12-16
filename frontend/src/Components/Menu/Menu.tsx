@@ -4,6 +4,7 @@ import { ProductCard } from "../Common/Card/Product.Card";
 import { MenuProps, MenuTypes, ProductTypes } from "../../types/product.types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export const Menu = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export const Menu = () => {
     [t]
   );
 
-  const { title, noProductsTitle, noProductsDescription } = t(
+  const {  noProductsTitle, noProductsDescription } = t(
     "category"
   ) as any;
 
@@ -38,11 +39,11 @@ export const Menu = () => {
   }, [initialMenu, products]);
 
   const name = menu?.find((product) => product.id === initialMenu)?.name;
-
+const navigate = useNavigate();
   const menuReference = useRef<null | HTMLDivElement>(null);
 
   return (
-    <div className="flex w-full flex-col items-start sm:px-5 pt-10 justify-center gap-8">
+    <div className="flex w-full flex-col items-start justify-center gap-8">
       {/* Menu Selector */}
       <div className="w-full group/category relative flex flex-col gap-10 items-center justify-center">
         <div className="w-full flex items-center justify-between ">
@@ -53,11 +54,11 @@ export const Menu = () => {
             className="flex items-center justify-start hover:gap-1 duration-150 gap-0.5
            text-[var(--primary-color)] text-xs sm:text-sm font-bold "
           >
-            <span>View All</span>
+            <span onClick={()=> navigate("menu")}>View All</span>
             <ChevronRight className=" sm:size-6 size-5 " />
           </button>
         </div>
-        <div ref={menuReference} className=" w-full  overflow-x-auto ">
+        <div ref={menuReference} className=" overflow-auto max-w-full ">
           <Menus menu={menu} action={(id) => setInitialMenu(id)} />
           <button
             onClick={() =>
@@ -66,7 +67,7 @@ export const Menu = () => {
                 left: -300,
               })
             }
-            className="absolute  invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-3 left-[-1rem] top-[53%] rounded-full bg-[var(--primary-color)] text-white "
+            className="absolute  invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-3 left-[0rem] top-[53%] rounded-full bg-[var(--primary-color)] text-white "
           >
             <ChevronLeft className="size-5" />
           </button>
@@ -77,7 +78,7 @@ export const Menu = () => {
                 left: 300,
               })
             }
-            className="absolute invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-3 right-[-1rem] top-[53%] rounded-full  bg-[var(--primary-color)] text-white  "
+            className="absolute invisible group-hover/category:visible group-hover/category:opacity-100 opacity-0 duration-150 p-3 right-[0rem] top-[53%] rounded-full  bg-[var(--primary-color)] text-white  "
           >
             <ChevronRight className="size-5" />
           </button>
